@@ -143,3 +143,25 @@ function get_comps(year, region, callback) {
 function loading() {
   $("#calendar").html("<tr><th>Chargement en cours...</th></tr>");
 }
+
+
+function load_comps(baseUrl, apiUrl) {
+  $.getJSON(baseUrl+apiUrl, function(data, status, xhr) {
+    var total_comp = xhr.getResponseHeader("Total");
+    var comp_per_page = xhr.getResponseHeader("Per-Page");
+    // TODO use something like this to get nice things from the
+    // 'Link' header : https://github.com/thlorenz/parse-link-header
+    var links = xhr.getResponseHeader("Link");
+    var html = "";
+    $.each(data, function(index, comp) {
+      html += "<tr>";
+      html += "<td><a target='_blank' href='"+baseUrl+"/competitions/"+comp.id+"'>"+comp.name+"</a></td>";
+      html += "<td>"+comp.cityName+"</td>";
+      html += "<td>"+comp.countryId+"</td>";
+      html += "<td>"+comp.year+"/"+comp.month+"/"+comp.day+"</td>";
+      html += "</tr>";
+    });
+    html += "<tr><td colspan='4'>Showing "+comp_per_page+" competitions out of "+total_comp+".</td></tr>";
+    $("#tbody-comp").html(html);
+  });
+}
