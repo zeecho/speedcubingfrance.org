@@ -6,9 +6,9 @@ var localComps = {};
 function menu_list(year, region, data) {
   var htmlmenu = "";
   $.each( data, function( key, val ) {
-    htmlmenu += "<li>" + val.date + ", " + val.year + "<br/>";
+    htmlmenu += "<li>" + val.start_date + "<br/>";
     htmlmenu += "<a href=\"" + wcaBaseUrlComp;
-    htmlmenu += val.cid + "\" target=\"_blank\">" + val.name + "</a></li>";
+    htmlmenu += val.id + "\" target=\"_blank\">" + val.name + "</a></li>";
   });
   $("#side-compet").html(htmlmenu);
 }
@@ -45,7 +45,8 @@ function generate_selector(year, region) {
 
   //Selector for regions
   html += "<td><select id='region' name='region'>";
-  var regions = {"France":"France", "_Europe":"Europe", "all":"Monde"};
+  //FIXME remove this selector, no one use it
+  var regions = {"FR":"France", "":"Monde"};
 
   $.each(regions, function(key, val) {
     html += "<option value='" + key + "' ";
@@ -103,14 +104,14 @@ function generate_calendar(year, region, data) {
 
     //Look for potential official comps to display
     $.each(data, function(key, val) {
-      var datecomp = val.timestamp * 1000;
-      if (datecomp >= monday.getTime() && datecomp < mondayInWeek(year, week+1).getTime()) {
+      var datecomp = new Date(val.start_date);
+      if (datecomp >= monday && datecomp < mondayInWeek(year, week+1)) {
         //Change the class depending on the country
-        html += '<span class="' + ((val.country == "France")?'fr':'other') + '">';
-        html += '<a href="' + wcaBaseUrlComp + val.cid + '" target="_blank">' + val.name + '</a> - ';
-        html += (val.country == "France")?val.city:val.country;
+        html += '<span class="' + ((val.country_iso2 == "FR")?'fr':'other') + '">';
+        html += '<a href="' + wcaBaseUrlComp + val.id + '" target="_blank">' + val.short_name + '</a> - ';
+        html += (val.country_iso2 == "FR")?val.city:val.country_iso2;
         html += '</span>';
-        names.push(val.name);
+        names.push(val.short_name);
       }
     });
 
@@ -134,7 +135,7 @@ function generate_calendar(year, region, data) {
 
 function get_comps(year, region, callback) {
   //Avoid cross domain request by querying a php wrapper
-  var baseUrl = "http://speedcubingfrance.org/php/comps.php?region=" + region + "&years=" + year;
+  var baseUrl = "https://staging.worldcubeassociation.org/api/v0/competitions?sort=-start_date&country_iso2=" + region + "&start=" + year;
   $.getJSON(baseUrl, function(data) {
     callback(year, region, data);
   });
