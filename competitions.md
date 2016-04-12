@@ -24,7 +24,6 @@ loading();
 $.getJSON("{{site.baseurl}}/uploads/comps.json", function(data) {
     //Load local unofficial comps and display calendar
     localComps = data;
-    get_comps("2016", "FR", generate_calendar);
+    get_comps("2016-01-01", "FR", generate_calendar);
 });
 </script>
-

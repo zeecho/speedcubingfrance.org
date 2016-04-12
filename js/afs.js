@@ -61,7 +61,7 @@ function generate_selector(year, region) {
   html += "<td><select id='years' name='years'>";
 
   for (var i = currentYear - 1; i <= currentYear + 1; i++) {
-    html += "<option value='" + i + "' ";
+    html += "<option value='" + i + "-01-01' ";
     if (parseInt(year) == i)
       html += "selected='selected' ";
     html += ">" + i + "</option>";
@@ -76,8 +76,9 @@ function generate_selector(year, region) {
 }
 
 //Main logic to generate the calendar
-function generate_calendar(year, region, data) {
+function generate_calendar(fullYear, region, data) {
   var html = "<tr>";
+  var year = fullYear.split("-")[0];
   var week = 0;
   var currentMonth = -1;
   //Hihi
@@ -134,7 +135,6 @@ function generate_calendar(year, region, data) {
 }
 
 function get_comps(year, region, callback) {
-  //Avoid cross domain request by querying a php wrapper
   var baseUrl = "https://staging.worldcubeassociation.org/api/v0/competitions?sort=-start_date&country_iso2=" + region + "&start=" + year;
   $.getJSON(baseUrl, function(data) {
     callback(year, region, data);
