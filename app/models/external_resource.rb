@@ -1,0 +1,2 @@
+class ExternalResource < ApplicationRecord
+end
