@@ -1,0 +1,11 @@
+--- 
+wca:
+  name: World Cube Association
+  link: https://www.worldcubeassociation.org/
+  description: La WCA est l'organisme qui organise des compétitions officielles partout dans le monde. Sur son site, vous pourrez donc trouvez tous les records officiels, les résultats des compétitions passées et futures, ainsi que le règlement officiel.
+  img: https://www.worldcubeassociation.org/files/WCAlogo.svg
+francocube:
+  name: Francocube
+  description: Le principal portail francophone pour apprendre à résoudre les casse-têtes de type rotatif. Ce site est à la fois populaire pour ses méthodes mais aussi pour son forum qui réunit la majeure partie de la communauté française.
+  link: https://www.francocube.com
+  img: https://www.francocube.com/sites/all/themes/francocube/images/entete-vide.png

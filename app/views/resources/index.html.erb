@@ -1,0 +1,11 @@
+<% provide(:title, "Ressources externes") %>
+<% provide(:active_section, "speedcubing") %>
+<%= render "layouts/page_wrapper", title:"Ressources externes" do %>
+  <% @resources.each do |resource| %>
+    <h5>
+      <a href="<%= resource[1]['link'] %>" target=_blank><%= resource[1]['name'] %></a>
+    </h5>
+    <img src="<%= resource[1]['img'] %>" alt="Logo <%= resource[1]['name'] %>">
+    <p><%= resource[1]['description'] %></p>
+  <% end %>
+<% end %>

@@ -36,4 +36,6 @@ Rails.application.routes.draw do
   get '/signin' => 'sessions#new', :as => :signin
   post '/signin_with_wca' => 'sessions#signin_with_wca', :as => :signin_with_wca
   get '/signout' => 'sessions#destroy', :as => :signout
+
+  get '/ressources' => 'resources#index'
 end
