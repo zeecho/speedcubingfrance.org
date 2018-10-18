@@ -1,0 +1,31 @@
+<% provide(:title, "Ressources externes") %>
+<% provide(:active_section, "speedcubing") %>
+<%= render "layouts/page_wrapper", title:"Ressources externes" do %>
+  <% if current_user&.can_manage_communication_matters? %>
+    <div class="pull-right">
+      <%= link_to 'Ajouter un élément', new_external_resource_path %>
+    </div>
+  <% end %>
+
+  <% @external_resources.each do |external_resource| %>
+    <h4 class="text-center">
+      <a href="<%= external_resource.link %>" target=_blank><%= external_resource.name %></a> 
+    </h4>
+    <p class="text-center">
+      <a href="<%= external_resource.link %>" target=_blank>
+        <img class="ext-resource-logo" src="<%= external_resource.img %>" alt="Logo <%= external_resource.name %>">
+      </a>
+    </p>
+    <p class="text-justify"><%= external_resource.description %></p>
+    <p>
+      Lien : <a href="<%= external_resource.link %>" target=_blank><%= external_resource.link %></a>
+    </p>
+    <% if current_user&.can_manage_communication_matters? %>
+      <div class="pull-right">
+        <%= link_to(fa_icon("pencil"), edit_external_resource_path(external_resource), class: "btn btn-sm btn-primary") %>
+        <%= link_to(fa_icon("trash"), external_resource, class: "btn btn-sm btn-danger", method: :delete, data: { confirm: 'Êtes-vous sûr·e de vouloir supprimer ' + external_resource.name + ' ?' }) %>
+      </div>
+    <% end %>
+<hr>
+  <% end %>
+<% end %>
