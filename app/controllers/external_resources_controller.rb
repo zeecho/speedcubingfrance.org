@@ -1,6 +1,7 @@
 class ExternalResourcesController < ApplicationController
-  before_action :set_external_resource, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
+  before_action :redirect_unless_comm!, except: [:index]
+  before_action :set_external_resource, only: [:edit, :update, :destroy]
 
   # GET /external_resources
   # GET /external_resources.json
