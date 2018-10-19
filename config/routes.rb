@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :external_resources
+  resources :external_resources, except: [:show], path: 'ressources'
   resources :calendar_events
   resources :bags
   root 'posts#home'
@@ -37,6 +37,4 @@ Rails.application.routes.draw do
   get '/signin' => 'sessions#new', :as => :signin
   post '/signin_with_wca' => 'sessions#signin_with_wca', :as => :signin_with_wca
   get '/signout' => 'sessions#destroy', :as => :signout
-
-  get '/ressources' => 'external_resources#index'
 end
