@@ -19,43 +19,30 @@ class ExternalResourcesController < ApplicationController
   end
 
   # POST /external_resources
-  # POST /external_resources.json
   def create
     @external_resource = ExternalResource.new(external_resource_params)
-
-    respond_to do |format|
       if @external_resource.save
-        format.html { redirect_to action: "index", notice: 'External resource was successfully created.' }
-        format.json { render :index, status: :created, location: @external_resource }
+        redirect_to external_resources_path, flash: { success: 'External resource was successfully created.' }
       else
-        format.html { render :new }
-        format.json { render json: @external_resource.errors, status: :unprocessable_entity }
+        render :new
       end
-    end
   end
 
   # PATCH/PUT /external_resources/1
   # PATCH/PUT /external_resources/1.json
   def update
-    respond_to do |format|
       if @external_resource.update(external_resource_params)
-        format.html { redirect_to action: "index", notice: 'External resource was successfully updated.' }
-        format.json { render :index, status: :ok, location: @external_resource }
+        redirect_to external_resources_path, flash: { success: 'External resource was successfully updated.' }
       else
-        format.html { render :edit }
-        format.json { render json: @external_resource.errors, status: :unprocessable_entity }
+        render :edit
       end
-    end
   end
 
   # DELETE /external_resources/1
   # DELETE /external_resources/1.json
   def destroy
     @external_resource.destroy
-    respond_to do |format|
-      format.html { redirect_to external_resources_url, notice: 'External resource was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to external_resources_url, flash: { success: 'External resource was successfully destroyed.' }
   end
 
   private
