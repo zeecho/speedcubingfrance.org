@@ -6,7 +6,7 @@ class ExternalResourcesController < ApplicationController
   # GET /external_resources
   # GET /external_resources.json
   def index
-    @external_resources = ExternalResource.all
+    @external_resources = ExternalResource.all.order(:rank)
   end
 
   # GET /external_resources/new
@@ -53,6 +53,6 @@ class ExternalResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def external_resource_params
-      params.require(:external_resource).permit(:name, :link, :description, :img)
+      params.require(:external_resource).permit(:name, :link, :description, :img, :rank)
     end
 end

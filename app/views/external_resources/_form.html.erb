@@ -7,6 +7,9 @@
     <%= f.input :link %>
     <%= f.input :description %>
     <%= f.input :img %>
+    <% if @external_resource.rank.present? %>
+      <%= f.input :rank %>
+    <% end %>
   </div>
 
   <div class="form-actions">

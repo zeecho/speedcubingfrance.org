@@ -5,6 +5,7 @@ class CreateExternalResources < ActiveRecord::Migration[5.1]
       t.string :link
       t.text :description
       t.string :img
+      t.integer :rank
 
       t.timestamps
     end
