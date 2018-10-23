@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20181018202525) do
     t.string "link"
     t.text "description"
     t.string "img"
+    t.integer "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
