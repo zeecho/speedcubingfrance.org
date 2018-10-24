@@ -76,6 +76,9 @@ Il suffit ensuite de redémarrer le serveur pour qu'il prenne en compte ces vari
 
 Elle se fait via `bin/rails scheduler:get_wca_competitions`.
 
+Le script va essayer d'envoyer un mail aux "admins" du site pour notifier du succès ou de l'échec du script ; en développement local vous *devez* avoir un programme qui écoute sur le port 1025 (par exemple l'excellent [Mailcatcher](https://mailcatcher.me/)).
+
+
 ### Ajout d'un administrateur
 
 Par défaut il n'y a aucun administrateur sur le site.
