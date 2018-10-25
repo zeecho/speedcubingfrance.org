@@ -4,25 +4,18 @@ class ExternalResource < ApplicationRecord
   validates :link, :format => URI::regexp(%w(http https))
   validates :img, :format => URI::regexp(%w(http https))
 
-  before_update :set_ranks_on_update, if: :will_save_change_to_rank?
-  private def set_ranks_on_update
-    er_count = ExternalResource.all.count
-    if rank > er_count
-      self.rank = er_count
-    end
-    if rank < 1
-      self.rank = 1
-    end
-    if self.rank > self.rank_was
-      ExternalResource.where("rank > ?", rank_was).where("rank <= ?", rank).update_all("rank = rank - 1")
+  before_save :set_ranks_on_save, if: :will_save_change_to_rank?
+  private def set_ranks_on_save
+    if self.rank_was.nil?
+      ExternalResource.where("rank >= ?", rank).update_all("rank = rank + 1")
     else
-      ExternalResource.where("rank < ?", rank_was).where("rank >= ?", rank).update_all("rank = rank + 1")
+      if self.rank > self.rank_was
+	self.rank = self.rank - 1
+        ExternalResource.where("rank > ?", rank_was).where("rank <= ?", rank).update_all("rank = rank - 1")
+      else
+        ExternalResource.where("rank < ?", rank_was).where("rank >= ?", rank).update_all("rank = rank + 1")
+      end
     end
-  end
-
-  after_create :set_rank_on_create
-  private def set_rank_on_create
-    update_column :rank, ExternalResource.all.count
   end
 
   after_destroy :fix_rank
