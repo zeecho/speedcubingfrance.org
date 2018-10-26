@@ -2,7 +2,6 @@ class ExternalResourcesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   before_action :redirect_unless_comm!, except: [:index]
   before_action :set_external_resource, only: [:edit, :update, :destroy]
-  before_action :set_existing_resources, only: [:edit, :update]
 
   # GET /external_resources
   # GET /external_resources.json
@@ -12,9 +11,7 @@ class ExternalResourcesController < ApplicationController
 
   # GET /external_resources/new
   def new
-    @external_resource = ExternalResource.new
-    @external_resource.rank = -1
-    set_existing_resources
+    @external_resource = ExternalResource.new(rank: -1)
   end
 
   # GET /external_resources/1/edit
@@ -52,11 +49,6 @@ class ExternalResourcesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_external_resource
       @external_resource = ExternalResource.find(params[:id])
-    end
-
-    def set_existing_resources
-      @existing_resources = ExternalResource.order(:rank).collect { |er| ['après ' + er.name, er.rank + 1] }
-      @existing_resources.unshift(['en première position', 1])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

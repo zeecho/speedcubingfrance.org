@@ -7,8 +7,7 @@
     <%= f.input :link %>
     <%= f.input :description %>
     <%= f.input :img %>
-    <%= f.label :rank, 'Placer ' %>
-    <%= f.select :rank, @existing_resources, {disabled: @external_resource.rank + 1} %>
+    <%= f.input :rank, collection: resources_as_options, disabled: @external_resource.rank + 1, label: "Placer la ressource" %>
   </div>
 
   <div class="form-actions">
