@@ -31,6 +31,19 @@ ActiveRecord::Schema.define(version: 20190326143535) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "clubs", force: :cascade do |t|
+    t.string "name"
+    t.string "website"
+    t.string "email"
+    t.text "description"
+    t.string "logo"
+    t.bigint "department_id", null: false
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["department_id"], name: "index_clubs_on_department_id"
+  end
+
   create_table "competitions", id: false, force: :cascade do |t|
     t.string "id", null: false
     t.string "name"
@@ -43,6 +56,15 @@ ActiveRecord::Schema.define(version: 20190326143535) do
     t.string "organizers"
     t.datetime "announced_at"
     t.index ["id"], name: "index_competitions_on_id", unique: true
+  end
+
+  create_table "departments", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.bigint "region_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_departments_on_region_id"
   end
 
   create_table "external_resources", force: :cascade do |t|
@@ -104,6 +126,13 @@ ActiveRecord::Schema.define(version: 20190326143535) do
     t.date "posted_at"
     t.index ["slug"], name: "index_posts_on_slug"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "iso_code"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "subscriptions", force: :cascade do |t|
