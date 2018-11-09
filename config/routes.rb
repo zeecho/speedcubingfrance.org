@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :departments
+  resources :regions
+  resources :clubs
   resources :external_resources, except: [:show], path: 'ressources'
   resources :calendar_events
   resources :bags

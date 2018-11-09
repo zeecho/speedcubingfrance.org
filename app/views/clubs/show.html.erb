@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @club.name %>
+</p>
+
+<p>
+  <strong>Site internet:</strong>
+  <%= @club.website %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @club.email %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @club.description %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @club.logo %>
+</p>
+
+<p>
+  <strong>Région:</strong>
+  <%= @club.region %>
+</p>
+
+<p>
+  <strong>Département:</strong>
+  <%= @club.department %>
+</p>
+
+<p>
+  <strong>Ville:</strong>
+  <%= @club.city %>
+</p>
+
+<%= link_to 'Éditer', edit_club_path(@club) %> |
+<%= link_to 'Retour', clubs_path %>

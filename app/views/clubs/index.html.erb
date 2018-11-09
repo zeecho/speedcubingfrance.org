@@ -1,0 +1,41 @@
+<% provide(:title, "Clubs et associations locales") %>
+<% provide(:active_section, "speedcubing") %>
+<%= render "layouts/page_wrapper", title:"Clubs et associations locales" do %>
+  <div class="d-flex flex-column">
+    <p style="font-size: 1.5em;" class="text-center">
+      Actuellement, les associations locales et les clubs de speedcubing ne sont pas affiliés à l'AFS. Cependant, nous vous listons ici ceux dont nous connaissons l'existence en France.
+    </p>
+    <% if current_user&.can_manage_communication_matters? %>
+      <div class="text-right">
+        <%= link_to 'Ajouter un élément', new_club_path, class: "btn btn-sm btn-success" %>
+      </div>
+    <% end %>
+
+    <% @clubs.each do |club| %>
+      <h4 class="text-center d-block">
+        <%= link_to club.name, club.website, target: '_blank' %> (<%= club.city + ', ' + club.department.name + ', ' + club.department.region.name %>)
+      </h4>
+      <% if club.website? %>
+        <p class="text-center">
+        <%= link_to(club.website, target: "_blank") do %>
+          <%= image_tag(club.logo, class: "ext-resource-logo", alt: "Logo #{club.name}") %>
+        <% end %>
+        </p>
+      <% end %>
+      <p class="text-justify"><%= club.description %></p>
+      <p>
+        Site internet : <%= link_to club.name, club.website, target: '_blank' %></a>
+      </p>
+      <p>
+        Email : <%= mail_to club.email, club.email %></a>
+      </p>
+      <% if current_user&.can_manage_communication_matters? %>
+        <div class="text-right">
+          <%= link_to(fa_icon("pencil"), edit_club_path(club), class: "btn btn-sm btn-primary") %>
+          <%= link_to(fa_icon("trash"), club, class: "btn btn-sm btn-danger", method: :delete, data: { confirm: "Êtes-vous sûr·e de vouloir supprimer #{club.name} ?" }) %>
+        </div>
+      <% end %>
+      <hr>
+    <% end %>
+  </div>
+<% end %>
