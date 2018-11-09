@@ -8,7 +8,8 @@
     <%= f.input :email %>
     <%= f.input :description %>
     <%= f.input :logo %>
-    <%= f.association :department, collection: Department.order(:code), label: 'Département', :label_method => lambda { |dep| "#{dep.code} #{dep.name} (#{dep.region.name})" } %>
+    <%= f.association :department, collection: Department.order(:code), label: ("Département (#{link_to 'Ajouter un département', new_department_path})").html_safe, :label_method => lambda { |dep| "#{dep.code} #{dep.name} (#{dep.region.name})" } %>
+        <%= link_to 'Ajouter un élément', new_club_path %>
     <%= f.input :city, label: 'Ville' %>
   </div>
 
