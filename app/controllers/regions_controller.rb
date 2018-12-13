@@ -1,59 +1,35 @@
 class RegionsController < ApplicationController
-  before_action :redirect_unless_comm!
-  before_action :set_region, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_unless_admin!
 
-  # GET /regions
-  def index
-    @regions = Region.all
-  end
+  REGIONS_FILE = "#{Rails.root}/data/regions.json"
+  DEPARTMENTS_FILE = "#{Rails.root}/data/departments.json"
 
-  # GET /regions/1
-  def show
-  end
+  def import
+    if Region.all.empty?
+      regions_content = File.read(REGIONS_FILE)
+      regions = JSON.parse(regions_content)
+      regions.each do |value|
+        value.delete('id')
+        value.delete('slug')
+      end
+      Region.create(regions)
 
-  # GET /regions/new
-  def new
-    @region = Region.new
-  end
-
-  # GET /regions/1/edit
-  def edit
-  end
-
-  # POST /regions
-  def create
-    @region = Region.new(region_params)
-
-    if @region.save
-      redirect_to @region, flash: { success: 'Region was successfully created.' }
+      if Department.all.empty?
+        departments_content = File.read(DEPARTMENTS_FILE)
+        departments_source = JSON.parse(departments_content)
+        departments_source.each do |value|
+          department = Department.new
+          department.code = value["code"]
+          department.name = value["name"]
+          department.region = Region.find_by(code: value["region_code"])
+          department.save
+        end
+      end
+      flash[:success] = 'Regions and departments have been imported'
     else
-      render :new
+      flash[:warning] = 'Regions and departments have already been imported'
     end
+
+    render :import
   end
-
-  # PATCH/PUT /regions/1
-  def update
-    if @region.update(region_params)
-      redirect_to @region, flash: { success: 'Region was successfully updated.' }
-    else
-      render :edit
-    end
-  end
-
-  # DELETE /regions/1
-  def destroy
-    @region.destroy
-    redirect_to regions_url, flash: { success: 'Region was successfully destroyed.' }
-  end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_region
-      @region = Region.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def region_params
-      params.require(:region).permit(:iso_code, :name)
-    end
 end
