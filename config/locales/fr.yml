@@ -56,7 +56,7 @@ fr:
         admin: "Administrateur"
         communication: "Équipe Communication"
         french_delegate: "Délégué Français"
-        notify_subscription: "M'avertir lorsque que mon adhésion se termine"
+        notify_subscription: "Je souhaite activer les notifications (avertissement de fin d'adhésion, nouvelles compétitions annoncées en France)"
       tag:
         name: "Alias du tag"
         color: "Couleur"

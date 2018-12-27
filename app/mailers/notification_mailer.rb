@@ -4,6 +4,12 @@ class NotificationMailer < ApplicationMailer
     mail(to: @user.email, subject: "Votre adhésion à l'AFS arrive à expiration")
   end
 
+  def notify_of_new_competition
+    @user = params[:user]
+    @competition = params[:competition]
+    mail(to: @user.email, subject: "La compétition #{@competition["name"]} vient d'être annoncée")
+  end
+
   def notify_team_of_failed_job
     @task_name = params[:task_name]
     @error = params[:error]
