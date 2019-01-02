@@ -3,7 +3,7 @@ class Competition < ApplicationRecord
   self.primary_key = :id
 
   # List of fields we accept in the db
-  @@obj_info = %w(id city name country_iso2 start_date end_date country_iso2 website delegates organizers)
+  @@obj_info = %w(id city name country_iso2 start_date end_date country_iso2 website delegates organizers announced_at)
 
   scope :upcoming, -> (n=100) { where("start_date > ?", 2.days.ago).order(:start_date).limit(n) }
   scope :in_france, -> { where(country_iso2: "FR") }
