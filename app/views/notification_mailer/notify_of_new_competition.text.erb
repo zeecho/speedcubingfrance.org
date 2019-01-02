@@ -1,6 +1,6 @@
 Bonjour <%= @user.name %>,
 
-La compétition <%= @competition["name"] %> a été annoncée hier. Comme d'habitude, vous trouverez toutes les informations la concernant sur <%= link_to "le site de la WCA", @competition["url"] %>.
+La compétition <%= @competition.name %> a été annoncée hier. Comme d'habitude, vous trouverez toutes les informations la concernant sur <%= link_to "le site de la WCA", 'https://www.worldcubeassociation.org/competitions/' + @competition.id %>.
 
 Vous recevez cette notification car vous l'avez choisi dans votre profil (et que vous êtes adhérent), pour la désactiver rendez-vous sur <%= link_to "votre profil", profile_url %>.
 
