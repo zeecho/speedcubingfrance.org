@@ -38,6 +38,10 @@ module ApplicationHelper
     "#{wca_base_url}/persons/#{wca_id}"
   end
 
+  def wca_competition_url(comp_id)
+    "#{wca_base_url}/competitions/#{comp_id}"
+  end
+
   def wca_persons_search_url
     "#{wca_base_url}/persons/?page=1&region=all&only_with_wca_ids=true&search="
   end

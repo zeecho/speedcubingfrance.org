@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181018202525) do
+ActiveRecord::Schema.define(version: 20190102234510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20181018202525) do
     t.string "website"
     t.string "delegates"
     t.string "organizers"
+    t.datetime "announced_at"
     t.index ["id"], name: "index_competitions_on_id", unique: true
   end
 
