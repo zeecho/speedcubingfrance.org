@@ -6,5 +6,8 @@ class CreateRegions < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    Region.delete_all
+    Region::ALL_REGIONS.each(&:save!)
   end
 end

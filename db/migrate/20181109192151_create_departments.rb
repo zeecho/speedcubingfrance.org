@@ -7,5 +7,8 @@ class CreateDepartments < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    Department.delete_all
+    Department::ALL_DEPARTMENTS.each(&:save!)
   end
 end
