@@ -4,7 +4,7 @@ class ClubsController < ApplicationController
   # GET /clubs
   # GET /clubs.json
   def index
-	  @clubs = Club.includes(:department).all.order('departments.name', 'city')
+    @clubs = Club.includes(:department).all.order('departments.name', 'city')
   end
 
   # GET /clubs/1
