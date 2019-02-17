@@ -16,13 +16,8 @@ namespace :scheduler do
       competitions.each do |c|
         puts "Importing #{c["name"]}"
         _, comp_obj = Competition.create_or_update(c)
-	if comp_obj.announced_at.to_date == Date.yesterday
-          users_to_notify = User.subscription_notification_enabled.select(&:last_subscription).select do |u|
-            u.last_subscription.until >= Date.today
-          end
-          users_to_notify.each do |u|
-            NotificationMailer.with(user: u, competition: comp_obj).notify_of_new_competition.deliver_now
-          end
+        if comp_obj.announced_at.to_date == Date.yesterday
+          NotificationMailer.with(competition: comp_obj).notify_of_new_competition.deliver_now
         end
       end
       puts "Done."
