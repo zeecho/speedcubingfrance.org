@@ -18,13 +18,13 @@ module GsuiteMailingLists
         email = email.gsub(/\+[^@]*/, '')
         messages << "Warning: '#{old_email}' contains a plus sign, and google groups seems to not support + signs in email addresses, so we're going to add '#{email}' instead."
       end
-      email
+      email.downcase
     end
 
     members = service.fetch_all(items: :members) do |token|
       service.list_members(group, page_token: token)
     end
-    current_emails = members.map(&:email)
+    current_emails = members.map(&:email).map(&:downcase)
 
     emails_to_remove = current_emails - desired_emails
     emails_to_add = desired_emails - current_emails
