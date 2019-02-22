@@ -70,10 +70,9 @@ namespace :scheduler do
     # Subscribers notifications list (new competition announced)
     sync_job_messages << GsuiteMailingLists.sync_group("adherents-notifications@speedcubingfrance.org", subscribers_with_notifications)
 
-    # TODO: uncomment that once it's proven stable on prod
-    #all_subscribers = Subscription.active.map(&:email).uniq
+    all_subscribers = Subscription.active.map(&:email).uniq
     # Subscribers mailing list
-    #sync_job_messages << GsuiteMailingLists.sync_group("adherents@speedcubingfrance.org", all_subscribers)
+    sync_job_messages << GsuiteMailingLists.sync_group("adherents@speedcubingfrance.org", all_subscribers)
     # TODO: Subscribers discussion list
 
     message = "La synchronisation des groupes a été effectuée.\n"
