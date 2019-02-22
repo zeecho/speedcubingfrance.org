@@ -73,7 +73,7 @@ namespace :scheduler do
     # Subscribers notifications list (new competition announced)
     sync_job_messages << GsuiteMailingLists.sync_group("adherents-notifications@speedcubingfrance.org", subscribers_with_notifications)
 
-    all_subscribers = Subscription.active.map(&:email).uniq
+    all_subscribers = Subscription.active.includes(:user).map { |s| s.user&.email || s.email }.uniq
     # Subscribers mailing list
     sync_job_messages << GsuiteMailingLists.sync_group("adherents@speedcubingfrance.org", all_subscribers)
     # TODO: Subscribers discussion list
