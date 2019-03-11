@@ -89,7 +89,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    permitted_params = [:notify_subscription]
+    permitted_params = [:notify_subscription, :city]
     if current_user.admin?
       permitted_params += [
         :admin,

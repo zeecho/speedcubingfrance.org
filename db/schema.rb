@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190102234510) do
+ActiveRecord::Schema.define(version: 20190311215115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -141,6 +141,7 @@ ActiveRecord::Schema.define(version: 20190102234510) do
     t.boolean "communication", default: false
     t.boolean "french_delegate", default: false
     t.boolean "notify_subscription", default: false
+    t.string "city"
   end
 
 end
