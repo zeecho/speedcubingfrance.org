@@ -3,7 +3,7 @@
 
 <%= link_to "Importer un utilisateur depuis la WCA", users_import_path, class: "btn btn-success mb-3" %>
 
-<%= render "shared/compact_table", headers: ["Nom complet", "ID WCA", "Pays", "Email"] do %>
+<%= render "shared/compact_table", headers: ["Nom complet", "ID WCA", "Pays", "Ville", "Email"] do %>
   <% @users.each do |user| %>
     <tr>
       <th scope="row">
@@ -16,6 +16,7 @@
       <td>
         <%= flag_icon(user.country_iso2) %> <span class="pull-right"><%= user.country_name %></span>
       </td>
+      <td><%= user.city %></td>
       <td><%= user.email %></td>
     </tr>
   <% end %>
