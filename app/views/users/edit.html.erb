@@ -27,6 +27,7 @@
   <%= f.input :communication, disabled: !is_admin %>
   <%= f.input :french_delegate, disabled: !is_admin %>
   <%= f.input :notify_subscription %>
+  <%= f.input :discussion_subscription %>
   <% if current_user&.can_edit_user?(@user) %>
     <%= f.button :submit %>
   <% end %>

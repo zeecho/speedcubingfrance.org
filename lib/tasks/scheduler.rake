@@ -76,7 +76,9 @@ namespace :scheduler do
     all_subscribers = Subscription.active.includes(:user).map { |s| s.user&.email || s.email }.uniq
     # Subscribers mailing list
     sync_job_messages << GsuiteMailingLists.sync_group("adherents@speedcubingfrance.org", all_subscribers)
-    # TODO: Subscribers discussion list
+    # Subscribers discussion list
+    subscribers_with_discussion = User.subscription_discussion_enabled.with_active_subscription.map(&:email)
+    sync_job_messages << GsuiteMailingLists.sync_group("adherents-discussion@speedcubingfrance.org", subscribers_with_discussion)
 
     message = "La synchronisation des groupes a été effectuée.\n"
     if sync_job_messages.empty?
