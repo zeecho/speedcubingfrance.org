@@ -22,7 +22,7 @@
           <%= link_to_wca_profile(s.wca_id) %>
         </td>
         <td>
-          <%=
+          <%= s.user&.city %>
             if s.user
               "#{s.user.city}"
             end
