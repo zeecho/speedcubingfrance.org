@@ -57,6 +57,7 @@ fr:
         communication: "Équipe Communication"
         french_delegate: "Délégué Français"
         notify_subscription: "Je souhaite activer les notifications (avertissement de fin d'adhésion, nouvelles compétitions annoncées en France)"
+        city: "Ville de résidence (code postal)"
       tag:
         name: "Alias du tag"
         color: "Couleur"
