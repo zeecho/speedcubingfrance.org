@@ -13,22 +13,27 @@
 
     <% @clubs.each do |club| %>
       <h4 class="text-center d-block">
-        <%= link_to club.name, club.website, target: '_blank' %> (<%= club.city + ', ' + club.department.name + ', ' + club.department.region.name %>)
-      </h4>
-      <% if club.website? %>
-        <p class="text-center">
-        <%= link_to(club.website, target: "_blank") do %>
-          <%= image_tag(club.logo, class: "ext-resource-logo", alt: "Logo #{club.name}") %>
+        <% if club.website? %>
+          <%= link_to club.name, club.website, target: '_blank' %>
+        <% else %>
+          <%= club.name %>
         <% end %>
+        (<%= club.city + ', ' + club.department.name + ', ' + club.department.region.name %>)
+      </h4>
+      <p class="text-center">
+        <%= image_tag(club.logo, class: "ext-resource-logo", alt: "Logo #{club.name}") %>
+      </p>
+      <p class="text-justify"><%= club.description %></p>
+      <% if club.website? %>
+        <p>
+          Site internet : <%= link_to club.website, club.website, target: '_blank' %></a>
         </p>
       <% end %>
-      <p class="text-justify"><%= club.description %></p>
-      <p>
-        Site internet : <%= link_to club.name, club.website, target: '_blank' %></a>
-      </p>
-      <p>
-        Email : <%= mail_to club.email, club.email %></a>
-      </p>
+      <% if club.email? %>
+        <p>
+          Email : <%= mail_to club.email, club.email %></a>
+        </p>
+      <% end %>
       <% if current_user&.can_manage_communication_matters? %>
         <div class="text-right">
           <%= link_to(fa_icon("pencil"), edit_club_path(club), class: "btn btn-sm btn-primary") %>
