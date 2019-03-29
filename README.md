@@ -77,6 +77,7 @@ Il suffit ensuite de redémarrer le serveur pour qu'il prenne en compte ces vari
 Elle se fait via `bin/rails scheduler:get_wca_competitions`.
 
 Le script va essayer d'envoyer un mail aux "admins" du site pour notifier du succès ou de l'échec du script ; en développement local vous *devez* avoir un programme qui écoute sur le port 1025 (par exemple l'excellent [Mailcatcher](https://mailcatcher.me/)).
+Si une compétition française a été annoncée la veille, ce script envoie également un email à toutes les personnes qui ont activé les notifications dans leur profil.
 
 
 ### Ajout d'un administrateur
