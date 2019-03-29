@@ -4,7 +4,7 @@
 <% if current_user.admin? %>
   <div class="card text-white bg-secondary mb-3">
     <div class="card-header">
-      Importer un CSV de HelloAsso.
+      Importer un CSV de <%= link_to "HelloAsso", "https://www.helloasso.com/associations/association-francaise-de-speedcubing/adhesions/adhesions-2016/administration", target: "_blank" %>.
     </div>
     <div class="card-body">
       <%= simple_form_for :import_form, url: subscriptions_review_csv_path, html: { class: "row" } do |f| %>
