@@ -13,11 +13,7 @@
 
     <% @clubs.each do |club| %>
       <h4 class="text-center d-block">
-        <% if club.website? %>
-          <%= link_to club.name, club.website, target: '_blank' %>
-        <% else %>
-          <%= club.name %>
-        <% end %>
+        <%= link_to_if club.website?, club.name, club.website, target: '_blank' %>
         (<%= club.city + ', ' + club.department.name + ', ' + club.department.region.name %>)
       </h4>
       <p class="text-center">
