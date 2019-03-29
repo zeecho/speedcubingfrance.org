@@ -1,26 +1,27 @@
 <% provide(:title, "Infos sur le sac " + @bag.name) %>
+<%= render "layouts/page_wrapper", title: @bag.name do %>
+  <p>
+    <strong>Nom :</strong>
+    <%= @bag.name %>
+  </p>
+  <% if @bag.hardwares.any? %>
+    <ul>
+      <% @bag.hardwares.each do |h| %>
+        <li><%= link_to "#{h.name} (#{h.hardware_type_string})", h, title: 'Voir' %></li>
+        <ul>
+          <li class="state-<%= h.state %>"><%= "#{h.state_string}" %> <%= fa_icon('circle') %></li>
+          <% if h.comment? %>
+            <li><%= "Commentaire : #{h.comment}" %></li>
+          <% else %>
+            <li>Pas de commentaire</li>
+          <% end %>
+        </ul>
+      <% end %>
+    </ul>
+  <% end %>
 
-<p>
-  <strong>Nom :</strong>
-  <%= @bag.name %>
-</p>
-<% if @bag.hardwares.any? %>
-  <ul>
-    <% @bag.hardwares.each do |h| %>
-      <li><%= link_to "#{h.name} (#{h.hardware_type_string})", h, title: 'Voir' %></li>
-      <ul>
-        <li><%= "#{h.state_string}"  %></li>
-        <% if h.comment? %>
-          <li><%= "Commentaire : #{h.comment}" %></li>
-        <% else %>
-          <li>Pas de commentaire</li>
-        <% end %>
-      </ul>
-    <% end %>
-  </ul>
+  <%= render "shared/show_owners_list", item: @bag %>
+
+  <%= link_to 'Éditer', edit_bag_path(@bag) %> |
+  <%= link_to 'Retour', bags_path %>
 <% end %>
-
-<%= render "shared/show_owners_list", item: @bag %>
-
-<%= link_to 'Éditer', edit_bag_path(@bag) %> |
-<%= link_to 'Retour', bags_path %>

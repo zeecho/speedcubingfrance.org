@@ -1,8 +1,27 @@
 <p>
   <strong>Chez :</strong>
   <% owners = [] %>
-  <% item.owners.each do |owner| %>
-    <% owners << "#{owner.user.name} (du #{l(owner.start)} au #{l(owner.end)})" %>
-  <% end %>
-  <%= owners.join(", ") %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Personne</th>
+        <th>Du</th>
+        <th>Au</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% item.owners.each do |owner| %>
+        <tr>
+          <td>
+            <%= owner.user.name %>
+          </td>
+          <td>
+            <%= l(owner.start) %>
+          </td>
+          <td>
+            <%= l(owner.end) %>
+          </td>
+      <% end %>
+    </tbody>
+  </table>
 </p>

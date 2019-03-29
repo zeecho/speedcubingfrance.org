@@ -1,8 +1,8 @@
 <% provide(:title, "Édition de " + @hardware.name) %>
+<%= render "layouts/page_wrapper", title: "Édition de " + @hardware.name + " (" + @hardware.hardware_type_string + ")" do %>
 
-<h1>Editing Hardware</h1>
+  <%= render 'form', hardware: @hardware %>
 
-<%= render 'form', hardware: @hardware %>
-
-<%= link_to 'Show', @hardware %> |
-<%= link_to 'Back', hardwares_path %>
+  <%= link_to 'Voir', @hardware %> |
+  <%= link_to 'Retour', hardwares_path %>
+<% end %>
