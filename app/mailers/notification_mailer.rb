@@ -24,6 +24,6 @@ class NotificationMailer < ApplicationMailer
   def send_backup_to_team
     @message = params[:message]
     attachments["prod.dump"] = File.read('/tmp/prod.dump')
-    mail(to: "adngfrance.org", subject: "[cron.afs][info] db backup")
+    mail(to: "admin@speedcubingfrance.org", subject: "[cron.afs][info] db backup")
   end
 end
