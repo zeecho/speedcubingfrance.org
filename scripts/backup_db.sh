@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /home/afs
 DESTINATION_DIR="/home/afs/backups"
 # create directory if it doesn't exist
 mkdir -p ${DESTINATION_DIR}
