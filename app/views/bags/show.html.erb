@@ -5,19 +5,32 @@
     <%= @bag.name %>
   </p>
   <% if @bag.hardwares.any? %>
-    <ul>
-      <% @bag.hardwares.each do |h| %>
-        <li><%= link_to "#{h.name} (#{h.hardware_type_string})", h, title: 'Voir' %></li>
-        <ul>
-          <li class="state-<%= h.state %>"><%= "#{h.state_string}" %> <%= fa_icon('circle') %></li>
-          <% if h.comment? %>
-            <li><%= "Commentaire : #{h.comment}" %></li>
-          <% else %>
-            <li>Pas de commentaire</li>
-          <% end %>
-        </ul>
-      <% end %>
-    </ul>
+    <table id="hardware-index-table" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom du matériel</th>
+          <th>Type</th>
+          <th>État</th>
+          <th>Commentaire</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @bag.hardwares.each do |h| %>
+          <tr>
+            <td><%= link_to h.name, h %></td>
+            <td><%= h.hardware_type_string %></td>
+            <td class="state-<%= h.state %>">
+              <div title="<%= h.state_string %>" data-toggle="tooltip">
+                <%= fa_icon('circle') %>
+                <span class="d-none"><%= h.state_string %></span>
+              </div>
+            </td>
+            <td><%= h.comment %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   <% end %>
 
   <%= render "shared/show_owners_list", item: @bag %>
