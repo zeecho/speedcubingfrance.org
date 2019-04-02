@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   scope :subscription_notification_enabled, -> { where(notify_subscription: true).where.not(email: nil) }
   scope :subscription_discussion_enabled, -> { where(discussion_subscription: true).where.not(email: nil) }
+  scope :subscription_newsletter_enabled, -> { where(newsletter_subscription: true).where.not(email: nil) }
   scope :french_delegates, -> { where(french_delegate: true).where.not(delegate_status: [nil, ""]) }
 
   # NOTE: /!\ Important: this is *not* the list of subscribers.
