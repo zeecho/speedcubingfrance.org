@@ -6,7 +6,7 @@ DESTINATION_DIR="/home/afs/backups"
 mkdir -p ${DESTINATION_DIR}
 
 # get the database password
-eval $(grep "DATABASE_PASSWORD=" /home/afs/speedcubingfrance.org/.env.production)
+source /home/afs/speedcubingfrance.org/.env.production
 
 # create a file which pg_dump will read (because there is no option to give it to the command line)
 echo "localhost:*:speedcubingfrance-prod:speedcubingfrance:${DATABASE_PASSWORD}" > .pgpass
