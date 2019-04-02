@@ -2,7 +2,7 @@ ruby '2.5.0'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.1.6.1'
+gem 'rails', '5.1.6.2'
 gem 'rails-i18n', '~> 5.1'
 gem 'i18n-country-translations'
 gem 'webpacker', '3.4.1'
