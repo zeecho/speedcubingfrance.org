@@ -78,10 +78,12 @@ namespace :scheduler do
     sync_job_messages << GsuiteMailingLists.sync_group("adherents@speedcubingfrance.org", all_subscribers)
     # Subscribers discussion list
     subscribers_with_discussion = User.subscription_discussion_enabled.with_active_subscription.map(&:email)
+    subscribers_with_discussion << "contact@speedcubingfrance.org"
     sync_job_messages << GsuiteMailingLists.sync_group("adherents-discussions@speedcubingfrance.org", subscribers_with_discussion)
     # Subscribers newsletter
     subscribers_with_newsletter = User.subscription_newsletter_enabled.with_active_subscription.map(&:email)
-    sync_job_messages << GsuiteMailingLists.sync_group("newsletter@speedcubingfrance.org", subscribers_with_discussion)
+    subscribers_with_newsletter << "contact@speedcubingfrance.org"
+    sync_job_messages << GsuiteMailingLists.sync_group("newsletter@speedcubingfrance.org", subscribers_with_newsletter)
 
     message = "La synchronisation des groupes a été effectuée.\n"
     if sync_job_messages.empty?
