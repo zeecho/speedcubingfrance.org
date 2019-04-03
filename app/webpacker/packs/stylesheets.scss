@@ -127,3 +127,10 @@ blockquote {
 input[type=color].form-control {
     height: 2.25rem;
 }
+
+.remove-padding .card-body {
+  padding: 0;
+  table {
+    margin-bottom: 0;
+  }
+}
