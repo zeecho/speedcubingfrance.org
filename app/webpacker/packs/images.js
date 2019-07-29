@@ -1,1 +1,2 @@
-import '../images'
+// import all image files in the folder.
+require.context('../images', true)

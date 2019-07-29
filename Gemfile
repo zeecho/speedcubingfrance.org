@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '5.1.6.2'
 gem 'rails-i18n', '~> 5.1'
 gem 'i18n-country-translations'
-gem 'webpacker', '3.4.1'
+gem 'webpacker', '~> 4.x'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Form helper
