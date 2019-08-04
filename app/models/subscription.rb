@@ -34,7 +34,7 @@ class Subscription < ApplicationRecord
     end
     # Try first by WCA ID
     unless wca_id.blank?
-      user = User.find_by(wca_id: wca_id)
+      user = User.find_by(wca_id: wca_id.upcase)
       if user
         self.user_id = user.id
         self.save
