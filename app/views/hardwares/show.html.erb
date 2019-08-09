@@ -1,27 +1,28 @@
 <% provide(:title, "Infos sur " + @hardware.name) %>
+<%= render "layouts/page_wrapper", title: @hardware.name + " (" + @hardware.hardware_type_string + ")" do %>
+  <p>
+    <strong>Nom :</strong>
+    <%= @hardware.name %> (<%= @hardware.hardware_type_string %>)
+  </p>
 
-<p>
-  <strong>Nom :</strong>
-  <%= @hardware.name %> (<%= @hardware.hardware_type_string %>)
-</p>
+  <p class="state-<%= @hardware.state %>">
+    <%= @hardware.state_string %> <%= fa_icon('circle') %>
+  </p>
 
-<p>
-  <%= @hardware.state_string %>
-</p>
+  <p>
+    <strong>Commentaire :</strong>
+    <%= @hardware.comment %>
+  </p>
 
-<p>
-  <strong>Commentaire :</strong>
-  <%= @hardware.comment %>
-</p>
+  <%= render "shared/show_owners_list", item: @hardware %>
 
-<%= render "shared/show_owners_list", item: @hardware %>
-
-<% if @hardware.bag %>
-  <h3>Dans le sac <%= link_to @hardware.bag.name, @hardware.bag %></h3>
-  <% if @hardware.bag.owners.any? %>
-    <%= render "shared/show_owners_list", item: @hardware.bag %>
+  <% if @hardware.bag %>
+    <h3>Dans le sac <%= link_to @hardware.bag.name, @hardware.bag %></h3>
+    <% if @hardware.bag.owners.any? %>
+      <%= render "shared/show_owners_list", item: @hardware.bag %>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= link_to 'Éditer', edit_hardware_path(@hardware) %> |
-<%= link_to 'Retour', hardwares_path %>
+  <%= link_to 'Éditer', edit_hardware_path(@hardware) %> |
+  <%= link_to 'Retour', hardwares_path %>
+<% end %>

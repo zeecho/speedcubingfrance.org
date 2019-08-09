@@ -1,26 +1,40 @@
 <% provide(:title, "Infos sur le sac " + @bag.name) %>
+<%= render "layouts/page_wrapper", title: @bag.name do %>
+  <p>
+    <strong>Nom :</strong>
+    <%= @bag.name %>
+  </p>
+  <% if @bag.hardwares.any? %>
+    <table id="hardware-index-table" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom du matériel</th>
+          <th>Type</th>
+          <th>État</th>
+          <th>Commentaire</th>
+        </tr>
+      </thead>
 
-<p>
-  <strong>Nom :</strong>
-  <%= @bag.name %>
-</p>
-<% if @bag.hardwares.any? %>
-  <ul>
-    <% @bag.hardwares.each do |h| %>
-      <li><%= link_to "#{h.name} (#{h.hardware_type_string})", h, title: 'Voir' %></li>
-      <ul>
-        <li><%= "#{h.state_string}"  %></li>
-        <% if h.comment? %>
-          <li><%= "Commentaire : #{h.comment}" %></li>
-        <% else %>
-          <li>Pas de commentaire</li>
+      <tbody>
+        <% @bag.hardwares.each do |h| %>
+          <tr>
+            <td><%= link_to h.name, h %></td>
+            <td><%= h.hardware_type_string %></td>
+            <td class="state-<%= h.state %>">
+              <div title="<%= h.state_string %>" data-toggle="tooltip">
+                <%= fa_icon('circle') %>
+                <span class="d-none"><%= h.state_string %></span>
+              </div>
+            </td>
+            <td><%= h.comment %></td>
+          </tr>
         <% end %>
-      </ul>
-    <% end %>
-  </ul>
+      </tbody>
+    </table>
+  <% end %>
+
+  <%= render "shared/show_owners_list", item: @bag %>
+
+  <%= link_to 'Éditer', edit_bag_path(@bag) %> |
+  <%= link_to 'Retour', bags_path %>
 <% end %>
-
-<%= render "shared/show_owners_list", item: @bag %>
-
-<%= link_to 'Éditer', edit_bag_path(@bag) %> |
-<%= link_to 'Retour', bags_path %>

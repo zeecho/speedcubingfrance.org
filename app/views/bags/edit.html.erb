@@ -1,8 +1,8 @@
 <% provide(:title, "Édition du sac " + @bag.name) %>
+<%= render "layouts/page_wrapper", title:"Édition du sac " + @bag.name do %>
 
-<h1>Editing Bag</h1>
+  <%= render 'form', bag: @bag %>
 
-<%= render 'form', bag: @bag %>
-
-<%= link_to 'Show', @bag %> |
-<%= link_to 'Back', bags_path %>
+  <%= link_to 'Voir', @bag %> |
+  <%= link_to 'Retour', bags_path %>
+<% end %>
