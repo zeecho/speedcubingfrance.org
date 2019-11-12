@@ -36,6 +36,7 @@ mv ~/.env.production ~/speedcubingfrance.org
 # setup crontabs
 cat << EOF > /tmp/cron.afs
 @daily /home/afs/speedcubingfrance.org/scripts/deploy.sh scheduled_jobs
+@weekly /home/afs/speedcubingfrance.org/scripts/backup_db.sh
 EOF
 crontab -r
 crontab /tmp/cron.afs
