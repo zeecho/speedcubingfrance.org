@@ -2,7 +2,7 @@
 
 <h3>Regions in db</h3>
 <ul>
-<% Region.all.each do |region| %>
-	<li><%= region.name %> (<% Department.where(region: region).each do |dep|%><%= dep.name + ',' %><% end %>)</li>
-<% end %>
+  <% Region.all.each do |region| %>
+    <li><%= region.name %> (<%= Department.where(region: region).map(&:name).join(",") %>)</li>
+  <% end %>
 </ul>
