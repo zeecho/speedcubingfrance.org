@@ -16,8 +16,9 @@ chmod 600 .pgpass
 FILENAME="${DESTINATION_DIR}/prod-$(date +%Y%m%d).dump"
 pg_dump -Fc --no-acl --no-owner -h localhost -U speedcubingfrance speedcubingfrance-prod > ${FILENAME}
 
-cp ${FILENAME} /tmp/prod.dump
-/home/afs/speedcubingfrance.org/bin/rails backup:send_backup_to_admins
-
 # no need to keep this file
 rm .pgpass
+
+cp ${FILENAME} /tmp/prod.dump
+cd /home/afs/speedcubingfrance.org
+bin/rails backup:send_backup_to_admins
