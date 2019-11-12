@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'regions/import' => 'regions#import'
   resources :clubs
   resources :external_resources, except: [:show], path: 'ressources'
   resources :calendar_events

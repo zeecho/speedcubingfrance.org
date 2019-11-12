@@ -1,4 +1,5 @@
 class ClubsController < ApplicationController
+  before_action :redirect_unless_comm!, except: [:index, :show]
   before_action :set_club, only: [:show, :edit, :update, :destroy]
 
   # GET /clubs
