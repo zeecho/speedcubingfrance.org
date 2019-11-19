@@ -17,9 +17,11 @@ class User < ApplicationRecord
 
   after_save :try_associate_subscriptions
 
+  attr_accessor :editing_user
+
   validate :cannot_demote_themselves
   def cannot_demote_themselves
-    if admin_was == true && admin == false
+    if editing_user == self && admin_was == true && admin == false
       errors.add(:admin, "impossible de vous enlever le statut d'aministrateur, demandez à un autre administrateur de le faire.")
     end
   end
