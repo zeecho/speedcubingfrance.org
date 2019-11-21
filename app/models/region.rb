@@ -1,4 +1,5 @@
 class Region < ApplicationRecord
+  include Cachable
   FRENCH_REGIONS_JSON_PATH = Rails.root.to_s + "/data/regions.json"
   FRENCH_REGIONS = JSON.parse(File.read(FRENCH_REGIONS_JSON_PATH)).freeze
   ALL_REGIONS = [

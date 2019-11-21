@@ -1,4 +1,5 @@
 class Department < ApplicationRecord
+  include Cachable
   belongs_to :region
   has_many :clubs
 

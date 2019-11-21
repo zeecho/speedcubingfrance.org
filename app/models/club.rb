@@ -1,4 +1,5 @@
 class Club < ApplicationRecord
+  include Cachable
   belongs_to :department
 
   validates_presence_of :name
