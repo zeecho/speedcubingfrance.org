@@ -6,7 +6,7 @@ Bonjour,
 
 <ul style="list-style: none;">
   <li>Compétition : <%= @competition.name %></li>
-  <li>Lieu : <%= @competition.city %></li>
+  <li>Ville : <%= @competition.city %></li>
   <li>Date : <% if @competition.start_date == @competition.end_date %><%= @competition.start_date.to_date %><% else %>du <%= @competition.start_date.to_date %> au <%= @competition.end_date.to_date %><% end %></li>
   <li><%= link_to "Lien WCA", wca_competition_url(@competition.id) %></li>
 </ul>
