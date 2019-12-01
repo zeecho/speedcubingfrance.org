@@ -1,8 +1,0 @@
-<% provide(:title, "Importation des régions et départements") %>
-
-<h3>Regions in db</h3>
-<ul>
-  <% Region.all.each do |region| %>
-    <li><%= region.name %> (<%= Department.where(region: region).map(&:name).join(",") %>)</li>
-  <% end %>
-</ul>
