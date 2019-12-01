@@ -7,7 +7,7 @@
     <%= f.input :email %>
     <%= f.input :description %>
     <%= f.input :logo %>
-    <%= f.association :department, collection: Department.order(:code), label: ("Département"), :label_method => lambda { |dep| "#{dep.code} #{dep.name} (#{dep.region.name})" } %>
+    <%= f.association :department, collection: Department.c_all_by_id.values.sort_by(&:code), label: ("Département"), :label_method => lambda { |dep| "#{dep.code} #{dep.name} (#{dep.region.name})" } %>
     <%= f.input :city, label: 'Ville' %>
   </div>
 

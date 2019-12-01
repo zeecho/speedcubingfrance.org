@@ -14,4 +14,12 @@ class Department < ApplicationRecord
       { code: dep["code"], name: dep["name"], region: Region.find_by(code: dep["region_code"]) }
     end
   ].flatten.map { |d| Department.new(d) }.freeze
+
+  def self.find_by_code(code)
+    c_all_by_id.values.select { |c| c.code == code }.first
+  end
+
+  def region
+    Region.c_find!(region_id)
+  end
 end
