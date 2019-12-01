@@ -4,6 +4,13 @@ Bonjour,
   La compétition <%= @competition.name %> a été annoncée hier. Comme d'habitude, vous trouverez toutes les informations la concernant sur <%= link_to "le site de la WCA", wca_competition_url(@competition.id) %>. Si vous avez des questions concernant cette compétition, merci de contacter directement l'équipe d'organisation de celle-ci et de NE PAS répondre à cet email.
 </p>
 
+<ul style="list-style: none;">
+  <li>Compétition : <%= @competition.name %></li>
+  <li>Ville : <%= @competition.city %></li>
+  <li>Date : <%= @competition.start_date == @competition.end_date ? l(@competition.start_date) : "du #{l(@competition.start_date)} au #{l(@competition.end_date)}" %> </li>
+  <li><%= link_to "Lien WCA", wca_competition_url(@competition.id) %></li>
+</ul>
+
 <p>
   Vous recevez cette notification car vous l'avez choisi dans votre profil (et que vous êtes adhérent), pour la désactiver rendez-vous sur <%= link_to "votre profil", profile_url %>.
 </p>
