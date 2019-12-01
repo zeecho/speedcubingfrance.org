@@ -4,7 +4,7 @@ La compétition <%= @competition.name %> a été annoncée hier. Comme d'habitud
 
 Compétition : <%= @competition.name %>
 Ville : <%= @competition.city %>
-Date : <% if @competition.start_date == @competition.end_date %><%= @competition.start_date.to_date %><% else %>du <%= @competition.start_date.to_date %> au <%= @competition.end_date.to_date %><% end %>
+Date : <%= @competition.start_date == @competition.end_date ? l(@competition.start_date) : "du #{l(@competition.start_date)} au #{l(@competition.end_date)}" %>
 <%= link_to "Lien WCA", wca_competition_url(@competition.id) %>
 
 Vous recevez cette notification car vous l'avez choisi dans votre profil (et que vous êtes adhérent), pour la désactiver rendez-vous sur <%= link_to "votre profil", profile_url %>.
