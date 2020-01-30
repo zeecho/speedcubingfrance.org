@@ -8,6 +8,7 @@ Bonjour,
   <li>Compétition : <%= @competition.name %></li>
   <li>Ville : <%= @competition.city %></li>
   <li>Date : <%= @competition.start_date == @competition.end_date ? l(@competition.start_date) : "du #{l(@competition.start_date)} au #{l(@competition.end_date)}" %> </li>
+  <li>Épreuves : <% @wcacomp["event_ids"].map do |e| %><img width="25px" alt="<%= "#{e}" %>" title="<%= "#{e}" %>" src="https://cubing.github.io/icons/svgs/event/<%= "#{e}" %>.svg"> <% end %></li>
   <li><%= link_to "Lien WCA", wca_competition_url(@competition.id) %></li>
 </ul>
 
