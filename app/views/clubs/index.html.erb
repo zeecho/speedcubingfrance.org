@@ -18,9 +18,11 @@
       <p class="text-center d-block">
         <%= club.department.region.name + ' > ' + club.department.name + ' > ' + club.city %>
       </p>
-      <p class="text-center">
-        <%= image_tag(club.logo, class: "ext-resource-logo", alt: "Logo #{club.name}") %>
-      </p>
+      <% if club.logo? %>
+        <p class="text-center">
+          <%= image_tag(club.logo, class: "ext-resource-logo", alt: "Logo #{club.name}") %>
+        </p>
+      <% end %>
       <p class="text-justify"><%= club.description %></p>
       <% if club.website? %>
         <p>
