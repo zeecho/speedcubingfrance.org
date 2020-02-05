@@ -1,0 +1,16 @@
+.nav-pills {
+  .nav-link.active, .show > .nav-link {
+      color: $bg-nav;
+      background-color: $blue;
+  }
+  .nav-link {
+    margin: 0 2px;
+  }
+}
+.nav-fill {
+  .nav-item {
+      background-color: $bg-header;
+      color: $blue;
+      font-weight: bold;
+  }
+}
