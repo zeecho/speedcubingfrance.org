@@ -56,9 +56,9 @@ fr:
         admin: "Administrateur"
         communication: "Équipe Communication"
         french_delegate: "Délégué Français"
-        notify_subscription: "Je souhaite activer les notifications (avertissement de fin d'adhésion, nouvelles compétitions annoncées en France)"
-        discussion_subscription: "Je souhaite être dans la liste de discussion adhérents (adherents-discussion@speedcubingfrance.org)"
-        newsletter_subscription: "Je souhaite recevoir les lettres d'informations"
+        notify_subscription: "Je souhaite activer les notifications (avertissement de fin d'adhésion, nouvelles compétitions annoncées en France) *"
+        discussion_subscription: "Je souhaite être dans la liste de discussion adhérents (adherents-discussion@speedcubingfrance.org) *"
+        newsletter_subscription: "Je souhaite recevoir les lettres d'informations *"
         city: "Ville de résidence (code postal)"
       tag:
         name: "Alias du tag"
