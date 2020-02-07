@@ -15,6 +15,14 @@
     Vous n'êtes pas membre de l'AFS.
   </div>
 <% end %>
+<div class="alert alert-warning">
+  Note : vous devez avoir une cotisation active pour que les champs marquées d'un * soient pris en compte. Vous serez automatiquement retiré·e des listes de diffusion si votre adhésion se termine sans être renouvelée.
+  <% if last_sub&.active? %>
+      Étant actuellement membre de l'association, l'activation de ces notifications/listes de diffusion devrait fonctionner.
+  <% else %>
+      N'étant actuellement pas membre de l'association, l'activation de ces notifications/listes de diffusion NE fonctionnera PAS.
+  <% end %>
+</div>
 <%= simple_form_for @user, wrapper: :horizontal_form, html: { class: "mb-4 user-edit-form" } do |f| %>
   <%= f.input :friendly_delegate_status, as: :display, label: false %>
 
