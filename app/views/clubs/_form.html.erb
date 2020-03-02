@@ -5,6 +5,7 @@
     <%= f.input :name, label: 'Nom' %>
     <%= f.input :website, label: 'Site internet' %>
     <%= f.input :email %>
+    <%= f.input :facebook %>
     <%= f.input :description %>
     <%= f.input :logo %>
     <%= f.association :department, collection: Department.c_all_by_id.values.sort_by(&:code), label: ("Département"), :label_method => lambda { |dep| "#{dep.code} #{dep.name} (#{dep.region.name})" } %>

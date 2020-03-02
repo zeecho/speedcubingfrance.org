@@ -29,6 +29,11 @@
           Site internet : <%= link_to club.website, club.website, target: '_blank' %></a>
         </p>
       <% end %>
+      <% if club.facebook? %>
+        <p>
+          Facebook : <%= link_to club.facebook, club.facebook, target: '_blank' %></a>
+        </p>
+      <% end %>
       <% if club.email? %>
         <p>
           Email : <%= mail_to club.email, club.email %></a>
