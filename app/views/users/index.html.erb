@@ -3,10 +3,13 @@
 
 <%= link_to "Importer un utilisateur depuis la WCA", users_import_path, class: "btn btn-success mb-3" %>
 
+<div class="alert bg-lightgreen">
+  Les adhérents apparaissent avec un fond vert
+</div>
 <%= render "shared/compact_table", headers: ["Nom complet", "ID WCA", "Pays", "Ville", "Notif", "News", "Discu", "Email"] do %>
   <% @users.each do |user| %>
     <tr>
-      <th scope="row">
+      <th scope="row" <% if user.last_subscription&.active? %> class="bg-lightgreen" <%end%>>
         <%= link_to user.name, edit_user_path(user) %>
         <%= render "icons_for_user", user: user %>
       </th>
