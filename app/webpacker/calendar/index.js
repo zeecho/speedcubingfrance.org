@@ -125,7 +125,14 @@ function getAFSEvents(start, end, timezone, callback) {
 
 function externalEventToFcEvent(eventData) {
   if (eventData.class === "competition") {
+    let cancelStart = new Date('2020-03-12');
+    let cancelEnd = new Date('2020-04-19');
+    let eventStart = new Date(eventData.start_date);
     eventData.title = eventData.name;
+    if (eventStart > cancelStart && eventStart <= cancelEnd) {
+      eventData.title += ' [ANNULÉE]';
+      eventData.color = 'red';
+    }
     eventData.start = eventData.start_date;
     eventData.allDay = true;
     let endDate = moment(eventData.end_date);
