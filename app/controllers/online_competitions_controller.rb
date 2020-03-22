@@ -64,11 +64,17 @@ class OnlineCompetitionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_online_competition
-      @online_competition = OnlineCompetition.find(params[:id])
+      @online_competition =
+        OnlineCompetition.find_by_slug(params[:id]) ||
+        OnlineCompetition.find_by_id(params[:id])
+      unless @online_competition.visible? || current_user&.can_manage_online_comps?
+        raise ActiveRecord::RecordNotFound.new("Not Found")
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def online_competition_params
-      params.require(:online_competition).permit(:name, :start_date, :end_date, :visible, :force_close)
+      params.require(:online_competition).permit(:name, :start_date, :end_date,
+                                                 :visible, :force_close, :slug)
     end
 end

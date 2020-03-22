@@ -18,4 +18,8 @@ module OnlineCompetitionsHelper
       "Terminera le"
     end
   end
+
+  def path_with_slug_or_id(comp)
+    online_competition_path(comp.slug || comp.id)
+  end
 end

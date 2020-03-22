@@ -13,11 +13,11 @@
     <div class="list-group-item flex-column align-items-start list-group-item-<%= contextual_class_for_comp(comp) %>">
       <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1">
-          <%= link_to(comp.name, comp, class: "text-#{contextual_class_for_comp(comp)} mr-2") %>
+          <%= link_to(comp.name, path_with_slug_or_id(comp), class: "text-#{contextual_class_for_comp(comp)} mr-2") %>
         </h5>
         <% if current_user&.can_manage_online_comps? %>
           <div>
-            <%= link_to(fa_icon("eye"), comp, class: "btn btn-sm btn-info") %>
+            <%= link_to(fa_icon("eye"), path_with_slug_or_id(comp), class: "btn btn-sm btn-info") %>
             <%= link_to(fa_icon("pencil"),
                         edit_online_competition_path(comp),
                         class: "btn btn-sm btn-primary") %>

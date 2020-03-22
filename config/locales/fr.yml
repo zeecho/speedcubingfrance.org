@@ -21,6 +21,7 @@ fr:
     labels:
       online_competition:
         name: "Nom"
+        slug: "Petit nom"
         start_date: "Date de début"
         end_date: "Date de fin"
         visible: "Publique"
@@ -90,6 +91,7 @@ fr:
         name: "L'alias permet d'identifier le tag et n'est pas modifiable"
       online_competition:
         force_close: "Pratique pour terminer manuellement la compétition (les dates n'ont pas d'heure associée !)"
+        slug: "Seulement des caractères alphanumériques ainsi que '-' et '_', sans espace !"
   helpers:
     submit:
       signin:

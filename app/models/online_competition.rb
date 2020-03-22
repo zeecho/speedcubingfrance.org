@@ -1,6 +1,8 @@
 class OnlineCompetition < ApplicationRecord
   validates_presence_of :name
   validates_inclusion_of :visible, in: [true, false]
+  validates :slug, presence: true, uniqueness: true,
+    allow_blank: false, format: { with: /\A\w+\z/, message: "caractères interdits présents" }
 
   scope :by_start_date, -> { order(start_date: :desc) }
   scope :visible, -> { where(visible: true) }
@@ -27,6 +29,10 @@ class OnlineCompetition < ApplicationRecord
 
   def ongoing?
     started? && !over?
+  end
+
+  def visible?
+    visible
   end
 
   def unique_competitors
