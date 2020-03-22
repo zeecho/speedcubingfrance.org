@@ -5,6 +5,8 @@ class OnlineCompetition < ApplicationRecord
   scope :by_start_date, -> { order(start_date: :desc) }
   scope :visible, -> { where(visible: true) }
 
+  has_many :results
+
   validate :dates_are_valid
   def dates_are_valid
     return errors.add(:start_date, "Pas de date de début") unless start_date.present?
@@ -25,5 +27,9 @@ class OnlineCompetition < ApplicationRecord
 
   def ongoing?
     started? && !over?
+  end
+
+  def unique_competitors
+    User.where(id: results.select("distinct user_id"))
   end
 end
