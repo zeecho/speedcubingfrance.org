@@ -69,6 +69,6 @@ class OnlineCompetitionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def online_competition_params
-      params.require(:online_competition).permit(:name, :start_date, :end_date, :visible)
+      params.require(:online_competition).permit(:name, :start_date, :end_date, :visible, :force_close)
     end
 end

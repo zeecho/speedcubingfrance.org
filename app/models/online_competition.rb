@@ -16,7 +16,7 @@ class OnlineCompetition < ApplicationRecord
   end
 
   def over?
-    end_date < Date.today
+    force_close || end_date < Date.today
   end
 
   def started?

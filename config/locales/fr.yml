@@ -24,6 +24,7 @@ fr:
         start_date: "Date de début"
         end_date: "Date de fin"
         visible: "Publique"
+        force_close: "Empêcher la soumission de résultats"
       big_champs:
         euro:
           competition_id: "ID de la compétition"
@@ -87,6 +88,8 @@ fr:
         body: "Ajoutez \"{{post_excerpt}}\" pour séparer l'introduction d'un post de son contenu principal."
       tag:
         name: "L'alias permet d'identifier le tag et n'est pas modifiable"
+      online_competition:
+        force_close: "Pratique pour terminer manuellement la compétition (les dates n'ont pas d'heure associée !)"
   helpers:
     submit:
       signin:
