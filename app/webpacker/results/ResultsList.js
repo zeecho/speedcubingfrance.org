@@ -104,12 +104,12 @@ const ResultItem = ({
             <Col xs={12} md={4} lg={2}>
               <>
                 <span className="font-weight-bold mr-3">
-                  {formatAttemptResult(result[mainField], result.event_id)}
+                  {formatAttemptResult(result[mainField], result.event_id, mainField == "average")}
                 </span>
               </>
               {computeAverage && (
                 <span>
-                  ({formatAttemptResult(result[otherField], result.event_id)})
+                  ({formatAttemptResult(result[otherField], result.event_id, otherField == "average")})
                 </span>
               )}
             </Col>
