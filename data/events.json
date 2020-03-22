@@ -26,13 +26,13 @@
   {
     "id": "666",
     "name": "6x6x6 Cube",
-    "preferred_format": "3",
+    "preferred_format": "m",
     "rank": 50
   },
   {
     "id": "777",
     "name": "7x7x7 Cube",
-    "preferred_format": "3",
+    "preferred_format": "m",
     "rank": 60
   },
   {
@@ -44,7 +44,7 @@
   {
     "id": "333fm",
     "name": "3x3x3 Fewest Moves",
-    "preferred_format": "3",
+    "preferred_format": "m",
     "rank": 80
   },
   {

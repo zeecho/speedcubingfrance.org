@@ -30,9 +30,15 @@ class ResultsController < ApplicationController
     @event = Event.c_find!(params.require(:event_id))
     rank_first = @event.format.sort_by == "single" ? "best" : "average"
     rank_second = @event.format.sort_by_second == "single" ? "best" : "average"
+    # "default" order : last
+    order_query = "2147483647"
+    # if format is m or a, avg by rank
+    order_query += ",case when (format_id in ('a','m') and average>0) then average end asc"
+    # always rank by best if present
+    order_query += ",case when best > 0 then best end asc"
     @results = Result
       .includes(:user)
-      .select("results.*, rank() over(order by #{rank_first} asc, #{rank_second} asc) pos")
+      .select("results.*, rank() over(order by #{order_query}) pos")
       .where(online_competition: @comp, event: @event)
     respond_to do |format|
       format.json do

@@ -63,6 +63,12 @@ class SolveTime
       @wca_value = @move_count
     elsif @event.multiple_blindfolded?
       missed = @attempted - @solved
+      raise if missed < 0
+      if points < 0 || (points == 0 && attempted == 2)
+        @wca_value = DNF_VALUE
+        return
+      end
+
       dd = 99 - (@solved - missed)
       ttttt = time_centiseconds / 100
 

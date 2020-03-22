@@ -30,7 +30,7 @@ const AttemptList = ({
         </Col>
       ))}
       <Col xs={6}>
-        <b>Meileur</b>: {formatAttemptResult(best(attempts), eventId)}
+        <b>Meilleur</b>: {formatAttemptResult(best(attempts), eventId)}
       </Col>
       <Col xs={6}>
         {computeAverage && (
