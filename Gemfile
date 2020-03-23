@@ -35,6 +35,9 @@ gem 'dotenv-rails'
 # To sync groups
 gem 'google-api-client'
 
+# To valid user uploads
+gem 'active_storage_validations'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'

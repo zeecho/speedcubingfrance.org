@@ -8,6 +8,25 @@ class OnlineCompetition < ApplicationRecord
   scope :visible, -> { where(visible: true) }
 
   has_many :results
+  has_one_attached :scrambles_pdf
+  MAX_FILE_SIZE = 3.megabytes.freeze
+  validates(:scrambles_pdf, content_type: {
+    in: %w(application/pdf),
+    message: "is not a pdf",
+  }, size: {
+    less_than: MAX_FILE_SIZE,
+    message: "Must be less than #{MAX_FILE_SIZE} bytes",
+  })
+
+  # Helper for the form to delete an attachment
+  attr_reader :delete_pdf
+
+  after_save :set_pdf_filename
+  def set_pdf_filename
+    if self.scrambles_pdf.attached?
+      self.scrambles_pdf.blob.update(filename: "#{self.slug || self.id}_Scrambles.pdf")
+    end
+  end
 
   validate :dates_are_valid
   def dates_are_valid

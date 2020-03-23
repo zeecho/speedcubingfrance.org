@@ -44,6 +44,9 @@ class OnlineCompetitionsController < ApplicationController
   # PATCH/PUT /online_competitions/1.json
   def update
     if @online_competition.update(online_competition_params)
+      if params.require(:online_competition)[:delete_pdf] == "1"
+        @online_competition.scrambles_pdf.purge
+      end
       redirect_to @online_competition, flash: {
         success: 'Online competition was successfully updated.'
       }
@@ -75,6 +78,7 @@ class OnlineCompetitionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def online_competition_params
       params.require(:online_competition).permit(:name, :start_date, :end_date,
-                                                 :visible, :force_close, :slug)
+                                                 :visible, :force_close, :slug,
+                                                 :scrambles_pdf)
     end
 end

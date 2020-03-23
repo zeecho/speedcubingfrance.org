@@ -15,7 +15,7 @@
   </div>
 <% end %>
 
-<div class="row mb-3">
+<div class="row mb-2">
   <div class="col-xs-12 col-md-6 text-center">
     <div class="card">
       <div class="card-body">
@@ -35,9 +35,15 @@
   </div>
 </div>
 
-<% content_for :additional_scripts do %>
-  <%= javascript_pack_tag "online_competition_results", 'data-turbolinks-track': 'reload'  %>
-<% end if @online_competition.started? %>
+<% if @online_competition.started? %>
+  <%= link_to scrambles_pdf_url(@online_competition), class: "btn btn-success mb-2 w-100" do %>
+    <%= fa_icon("download") %> Télécharger les mélanges
+  <% end %>
+  <% content_for :additional_scripts do %>
+    <%= javascript_pack_tag "online_competition_results", 'data-turbolinks-track': 'reload'  %>
+  <% end %>
+<% end %>
+
 
 <% if @online_competition.over? %>
   <div class="alert alert-info mb-3">
