@@ -1,5 +1,6 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 import {
   formatAttemptResult,
@@ -18,7 +19,7 @@ const AttemptList = ({
   const computeAverage =
     [3, 5].includes(solveCount) && eventId !== '333mbf';
   return (
-    <>
+    <Row>
       {attempts.map((attempt, index) => (
         <Col xs={12} className="mb-3" key={index}>
           <AttemptField
@@ -44,7 +45,7 @@ const AttemptList = ({
           </>
         )}
       </Col>
-    </>
+    </Row>
   );
 };
 

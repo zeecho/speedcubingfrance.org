@@ -21,7 +21,13 @@ const SubmitResult = loadableComponent(({
           {loadedState.id ? (
             <Fragment>
               <EventList activeId={activeId} onClick={setActive} />
-              <h3 className="mt-3">{wcaEvent.name}</h3>
+              <h3 className="mt-3 mb-3">
+                {wcaEvent.name} -{' '}
+                {loadedState.name}{' '}
+                {loadedState.wca_id && (
+                  <span>({loadedState.wca_id})</span>
+                )}
+              </h3>
               <LoadableResult
                 id={{
                   eventId: wcaEvent.id,
