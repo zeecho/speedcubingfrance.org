@@ -43,7 +43,7 @@ class OnlineCompetition < ApplicationRecord
   end
 
   def started?
-    start_date < Date.today
+    start_date <= Date.today
   end
 
   def ongoing?
