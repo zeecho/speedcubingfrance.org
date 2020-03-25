@@ -78,7 +78,7 @@
         }
         .nav-item > a, .nav-item > .signin-elem > a {
           @extend .mx-1;
-          &:not(.nav-user) {
+          &:not(.no-border) {
             border-bottom: 4px solid;
           }
           margin-bottom: -4px;
@@ -128,6 +128,9 @@
             overflow: hidden;
             position: relative;
           }
+        }
+        .nav-i18n {
+          padding-top: 12px;
         }
       }
     }

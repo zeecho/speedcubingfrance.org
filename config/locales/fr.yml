@@ -130,3 +130,15 @@ fr:
       previous: "&lsaquo; Préc."
       next: "Suiv. &rsaquo;"
       truncate: "&hellip;"
+  online_competitions:
+    show_results:
+      results: "Résultats du %{event_name}"
+  nav:
+    home: "Accueil"
+  #context: Key used in the context of editing a user profile
+  users:
+    #context: when updating their locale (language)
+    update_locale:
+      success: "Langue mise à jour."
+      failure: "Impossible de mettre à jour votre profil."
+      unavailable: "La langue demandée n'est pas disponible."

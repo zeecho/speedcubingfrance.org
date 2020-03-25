@@ -10,6 +10,7 @@
     "flag-icon-css": "^3.0.0",
     "font-awesome": "^4.7.0",
     "fullcalendar": "^3.9.0",
+    "i18n-js": "^3.5.1",
     "jquery": "^3.4.1",
     "jquery-ujs": "^1.2.2",
     "lodash": "^4.17.15",

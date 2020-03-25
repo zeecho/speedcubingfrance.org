@@ -56,7 +56,8 @@
             <li class="nav-item">
               <% active = section == "home" ? "active" : nil %>
               <%= link_to root_url, class: "nav-link nav-home #{active}" do %>
-                <i class="fa fa-home"></i> <span class="d-sm-none d-lg-inline">Accueil</span>
+                <i class="fa fa-home"></i>
+                <span class="d-sm-none d-lg-inline"><%= I18n.t("nav.home") %></span>
               <% end %>
             </li>
             <li class="nav-item dropdown">
@@ -94,7 +95,7 @@
             </li>
             <% if current_user %>
               <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" data-hover="dropdown">
+                <a href="#" class="nav-link no-border dropdown-toggle nav-user" data-toggle="dropdown" data-hover="dropdown">
                   <div class="avatar-thumbnail "
                        style="background-image: url(<%= current_user.avatar_thumb_url %>);"
                        ></div>
@@ -142,6 +143,20 @@
                 <% end %>
               </li>
             <% end %>
+            <li class="nav-item dropdown ml-2">
+              <a class="nav-link dropdown-toggle nav-i18n no-border" href="#" id="dropdown-i18n" role="button" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= fa_icon("language") %>
+              </a>
+              <div id="locale-selector" class="dropdown-menu" aria-labelledby="dropdown-i18n">
+                <% Locales::AVAILABLE.each do |l, data| %>
+                  <%= link_to(update_locale_path(l),
+                              class: "dropdown-item") do %>
+                    <%= fa_icon("caret-right") if l == I18n.locale %>
+                    <%= data[:name] %>
+                  <% end %>
+                <% end %>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

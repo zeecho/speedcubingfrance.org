@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  nav:
+    home: "Home"
+  users:
+    update_locale:
+      success: "Updated locale."
+      failure: "Unable to update your profile."
+      unavailable: "Requested locale is not available."

@@ -1,0 +1,30 @@
+import I18n from "i18n-js"
+
+window.afs = window.afs || {};
+
+I18n.fallbacks = true;
+I18n.translations = <%= I18n::JS.filtered_translations.to_json %>;
+I18n.defaultLocale = "<%= Rails.application.config.i18n.default_locale %>";
+I18n.locale = window.afs.currentLocale;
+
+// Setup link for locale switch
+$(function() {
+  $('#locale-selector').on('click', 'a', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // More or less copied from
+    // https://github.com/rails/jquery-ujs/blob/9e805c90c8cfc57b39967052e1e9013ccb318cf8/src/rails.js#L215.
+    var csrfToken = $('meta[name=csrf-token]').attr('content');
+    var csrfParam = $('meta[name=csrf-param]').attr('content');
+    var form = $('<form method="post" action="' + this.href + '"></form>');
+    var metadataInput = '<input name="_method" value="patch" type="hidden" />';
+    metadataInput += '<input name="' + csrfParam + '" value="' + csrfToken + '" type="hidden" />';
+    metadataInput += '<input name="current_url" value="' + window.location.toString() + '" type="hidden" />';
+
+    form.hide().append(metadataInput).appendTo('body');
+    form.submit();
+  });
+});
+
+export default I18n;

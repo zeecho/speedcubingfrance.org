@@ -50,6 +50,8 @@ class SessionsController < ApplicationController
     session[:access_token] = access_token
 
     Rails.logger.info "WCA Logged in as '#{me_data['name']}'."
+    session[:locale] = nil
+    set_locale
     redirect_to root_url, flash: { success: 'Vous êtes connecté !' }
   end
 

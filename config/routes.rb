@@ -41,6 +41,8 @@ Rails.application.routes.draw do
   get '/signin' => 'sessions#new', :as => :signin
   post '/signin_with_wca' => 'sessions#signin_with_wca', :as => :signin_with_wca
   get '/signout' => 'sessions#destroy', :as => :signout
+  patch '/update_locale/:locale' => 'application#update_locale', as: :update_locale
+
   get 'results/index/:event_id/:competition_id' => 'results#index_for_comp', :as => :results_for_comp
   get 'results/:event_id/:competition_id' => 'results#show', :as => :show_result
   patch 'results/:event_id/:competition_id' => 'results#create_or_update', :as => :submit_result

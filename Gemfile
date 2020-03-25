@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '5.2.4.2'
 gem 'rails-i18n', '~> 5.1'
 gem 'i18n-country-translations'
+gem 'i18n-js'
+gem 'http_accept_language'
 gem 'webpacker', '~> 4.x'
 # Use postgresql as the database for Active Record
 gem 'pg'
