@@ -5,17 +5,17 @@ module OnlineCompetitionsHelper
 
   def started_text(comp)
     if comp.started?
-      "A débuté le"
+      I18n.t("online_competitions.show.started")
     else
-      "Débutera le"
+      I18n.t("online_competitions.show.will_start")
     end
   end
 
   def over_text(comp)
     if comp.over?
-      "S'est terminée le"
+      I18n.t("online_competitions.show.ended")
     else
-      "Terminera le"
+      I18n.t("online_competitions.show.will_end")
     end
   end
 

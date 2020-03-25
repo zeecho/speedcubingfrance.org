@@ -20,7 +20,7 @@ const EventList = ({ onClick, activeId }) => {
             placement="top"
             overlay={
               <Tooltip>
-                {events.byId[e.id].name}
+                {events.localizedName(events.byId[e.id])}
               </Tooltip>
             }
           >

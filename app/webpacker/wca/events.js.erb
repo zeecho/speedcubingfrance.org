@@ -1,3 +1,5 @@
+import I18n from '../i18n-for-js';
+
 export default {
   official: <%= Event.official.to_json.html_safe %>,
   byId: Object.entries(<%= Event.all.index_by(&:id).to_json.html_safe %>)
@@ -5,4 +7,7 @@ export default {
                 a[id] = attrs;
                 return a;
               }, {}),
+  localizedName: (ev) => {
+    return I18n.t(`events.${ev.id}`);
+  },
 };

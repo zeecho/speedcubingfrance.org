@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import I18n from 'i18n-for-js';
 import Card from 'react-bootstrap/Card';
 
 const LongScramblesList = ({
@@ -39,7 +40,7 @@ const ScramblesDisplay = ({
   return (
     <Card className="scrambles-card">
       <Card.Header onClick={() => setExpanded(!expanded)} className="text-center">
-        Afficher les mélanges de l'épreuve (pour les importer dans une application comme cstimer)
+        {I18n.t("online_competitions.submit.scrambles")}
       </Card.Header>
       {expanded && (
         <Card.Body>

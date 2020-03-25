@@ -1,4 +1,47 @@
 fr:
+  events:
+    #original_hash: 3732390
+    '222': Cube 2x2x2
+    #original_hash: 8180137
+    '333': Cube 3x3x3
+    #original_hash: 2ee5b5a
+    '444': Cube 4x4x4
+    #original_hash: b7a99fa
+    '555': Cube 5x5x5
+    #original_hash: 4e3ea57
+    '666': Cube 6x6x6
+    #original_hash: b567fc4
+    '777': Cube 7x7x7
+    #original_hash: 29d5411
+    333bf: 3x3x3 à l'aveugle
+    #original_hash: 0a5e7bf
+    333fm: 3x3x3 résolution optimisée
+    #original_hash: 31ed23f
+    333oh: 3x3x3 à une main
+    #original_hash: be41d70
+    333ft: 3x3x3 avec les pieds
+    #original_hash: 04f6b3e
+    clock: Clock
+    #original_hash: d542376
+    minx: Megaminx
+    #original_hash: 8216a66
+    pyram: Pyraminx
+    #original_hash: 64a56a2
+    skewb: Skewb
+    #original_hash: 1551a2c
+    sq1: Square-1
+    #original_hash: 5bae501
+    444bf: Cube 4x4x4 à l'aveugle
+    #original_hash: aea5216
+    555bf: Cube 5x5x5 à l'aveugle
+    #original_hash: cedbf87
+    333mbf: 3x3x3 résolution multiple à l'aveugle
+    #original_hash: e6791be
+    magic: Magic
+    #original_hash: c962425
+    mmagic: Master Magic
+    #original_hash: 1843dc4
+    333mbo: '3x3x3 : résolution multiple à l''aveugle (à l''ancienne)'
   date:
     formats:
       short: "%d/%m/%Y"
@@ -131,10 +174,54 @@ fr:
       next: "Suiv. &rsaquo;"
       truncate: "&hellip;"
   online_competitions:
+    title: "Compétitions en ligne"
+    stayathome: "#restezchezvous"
+    index:
+      range: "Du %{start_date} au %{end_date}"
+    show:
+      started: "A débuté le"
+      will_start: "Débutera le"
+      ended: "S'est terminée le"
+      will_end: "Terminera le"
+      download_scrambles: "Télécharger les mélanges"
+      comp_over: "La compétition est terminée, il y a eu %{n} compétiteurs."
+      comp_ongoing: "La compétition est en cours, vous pouvez envoyer vos résultats."
+      comp_not_started: "Revenez plus tard, la compétition n'a pas encore démarrée !"
     show_results:
-      results: "Résultats du %{event_name}"
+      results_for: "Résultats du %{event_name}"
+      results: "Résultats"
+      loading: "Loading results"
+    submit:
+      scrambles: "Afficher les mélanges de l'épreuve (pour les importer dans une application comme cstimer)"
+      save_before_switch: "Pensez à sauvegarder avant de changer d'épreuve"
+      save: "Sauvegarder"
+      delete: "Supprimer"
+      attempt: "Essai %{n}"
+      best: "Meilleur"
+      average: "Moyenne"
   nav:
+    name: "Association Française de Speedcubing"
     home: "Accueil"
+    presentation: "Présentation"
+    association: "Association"
+    subscriptions: "Adhésions"
+    documents: "Documents"
+    logo: "Logo"
+    speedcubing:
+      title: "Speedcubing"
+      intro: "Présentation de la discipline"
+      comp_wca: "Compétitions WCA"
+      online_comp: "Compétitions en ligne"
+      regulations: "Règlement"
+      tutos: "Tutoriels"
+      local_clubs: "Clubs et associations locales"
+      extern_resources: "Ressources externes"
+    contact: "Contact"
+    user:
+      profile: "Votre profil"
+      my_comps: "Mes compétitions"
+      sign_out: "Déconnexion"
+      sign_in: "Connexion"
   #context: Key used in the context of editing a user profile
   users:
     #context: when updating their locale (language)
@@ -142,3 +229,25 @@ fr:
       success: "Langue mise à jour."
       failure: "Impossible de mettre à jour votre profil."
       unavailable: "La langue demandée n'est pas disponible."
+  homepage:
+    upcoming_comps: "Compétitions à venir"
+    france: "En France"
+    international: "Championnats Internationaux"
+    no_comp_in_france: "Aucune compétition en France à venir pour l'instant."
+    posts: "Publications"
+    no_posts: "Aucune autre publication"
+  subhelp:
+    title: "Comment entrer ses temps ?"
+    p1: >-
+      Vous pouvez envoyer, corriger, ou supprimer votre participation tant que
+      la compétition est en cours. Les temps doivent être entrés, sans point,
+      deux-points ni virgules, le logiciel fera le reste. Par exemple :
+    ex1: "2 secondes 54 centièmes : tapez « 254 »"
+    ex2: "1 minute 23 secondes 12 centièmes : tapez « 12312 »"
+    cents: "Attention : n’oubliez jamais les centièmes !"
+    penalties: "Pénalités :"
+    pen1: "En cas de +2, entrez directement le résultat final. Par exemple : Si vous avez terminé votre cube en 6 secondes 45 et avez une pénalité de +2, entrez directement 8 secondes 45 soit « 845 »."
+    pen2: "En cas de DNF, écrivez « D » dans la case -En cas de DNS, écrivez « S » dans la case."
+    multihelp: "Pour le multiblind, la première case correspond au nombre de cubes résolus, la seconde au nombre de cubes tentés, la dernière au temps au format minutes secondes centièmes."
+    multiex: "Par exemple : 5 / 7 en 47 minutes et 12 secondes : entrez 5 dans la première case, 7 dans la seconde et « 471200 » dans la dernière."
+    enjoying: "Cela vous plait ? Bonne nouvelle, c'est exactement comme ça que nous rentrons les temps lors des compétitions officielles ! N'hésitez pas à venir proposer votre aide à la saisie des temps lors de la prochaine compétition ;)"

@@ -1,8 +1,8 @@
-<% provide(:title, "Compétitions en ligne") %>
+<% provide(:title, I18n.t("online_competitions.title")) %>
 <% provide(:active_section, "speedcubing") %>
 <h1><%= yield(:title) %></h1>
 
-<p>#restezchezvous</p>
+<p><%= I18n.t("online_competitions.stayathome") %></p>
 
 <% if current_user&.can_manage_online_comps? %>
   <%= link_to fa_icon("plus-circle"), new_online_competition_path, class: "btn btn-success mb-4" %>
@@ -27,7 +27,11 @@
         <% end %>
       </div>
       <div class="d-flex w-100 justify-content-between">
-        <div>Du <%= l(comp.start_date) %> au <%= l(comp.end_date) %>.</div>
+        <div>
+          <%= I18n.t("online_competitions.index.range",
+                     start_date: l(comp.start_date),
+                     end_date: l(comp.end_date)) %>
+        </div>
       </div>
     </div>
   <% end %>

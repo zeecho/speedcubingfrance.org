@@ -22,4 +22,3 @@ Turbolinks.start();
 require("expose-loader?$!jquery");
 require('bootstrap-datepicker/dist/js/bootstrap-datepicker.js')
 require('bootstrap-datepicker/dist/locales/bootstrap-datepicker.fr.min.js')
-

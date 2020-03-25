@@ -42,6 +42,10 @@ class Event < ApplicationRecord
     self.id == "333fm"
   end
 
+  def name
+    I18n.t(id, scope: :events)
+  end
+
   def multiple_blindfolded?
     self.id == "333mbf" || self.id == "333mbo"
   end

@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import events from 'wca/events';
 import { loadableComponent } from 'requests/loadable';
 import { selfInfoUrl } from 'requests/routes';
+import I18n from 'i18n-for-js';
 
 import EventList from './EventList'
 import Loading from './Loading'
@@ -22,7 +23,7 @@ const SubmitResult = loadableComponent(({
             <Fragment>
               <EventList activeId={activeId} onClick={setActive} />
               <h3 className="mt-3 mb-3">
-                {wcaEvent.name} -{' '}
+                {events.localizedName(wcaEvent)} -{' '}
                 {loadedState.name}{' '}
                 {loadedState.wca_id && (
                   <span>({loadedState.wca_id})</span>
@@ -41,7 +42,7 @@ const SubmitResult = loadableComponent(({
           )}
         </Fragment>
       ) : (
-        <Loading msg="Loading results" />
+        <Loading msg={I18n.t("online_competitions.show_results.loading")} />
       )}
     </Fragment>
   );

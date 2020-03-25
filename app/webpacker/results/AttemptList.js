@@ -8,6 +8,7 @@ import {
 import { setAt } from 'wca/utils';
 import { best, average } from 'wca/stats';
 import AttemptField from 'wca-live/AttemptField/AttemptField';
+import I18n from 'i18n-for-js';
 
 const AttemptList = ({
   attempts,
@@ -24,19 +25,19 @@ const AttemptList = ({
         <Col xs={12} className="mb-3" key={index}>
           <AttemptField
             eventId={eventId}
-            label={`Essai ${index + 1}`}
+            label={I18n.t("online_competitions.submit.attempt", {n: index + 1})}
             initialValue={attempt}
             onValue={value => setAttempts(setAt(attempts, index, value)) }
           />
         </Col>
       ))}
       <Col xs={6}>
-        <b>Meilleur</b>: {formatAttemptResult(best(attempts), eventId)}
+        <b>{I18n.t("online_competitions.submit.best")}</b>: {formatAttemptResult(best(attempts), eventId)}
       </Col>
       <Col xs={6}>
         {computeAverage && (
           <>
-            <b>Moyenne</b>:{' '}
+            <b>{I18n.t("online_competitions.submit.average")}</b>:{' '}
             {formatAttemptResult(
               average(attempts, eventId, solveCount),
               eventId,

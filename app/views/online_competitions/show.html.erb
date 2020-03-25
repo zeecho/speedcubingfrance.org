@@ -37,7 +37,7 @@
 
 <% if @online_competition.started? %>
   <%= link_to scrambles_pdf_url(@online_competition), class: "btn btn-success mb-2 w-100" do %>
-    <%= fa_icon("download") %> Télécharger les mélanges
+    <%= fa_icon("download") %> <%= I18n.t("online_competitions.show.download_scrambles") %>
   <% end %>
   <% content_for :additional_scripts do %>
     <%= javascript_pack_tag "online_competition_results", 'data-turbolinks-track': 'reload'  %>
@@ -47,7 +47,7 @@
 
 <% if @online_competition.over? %>
   <div class="alert alert-info mb-3">
-    La compétition est terminée, il y a eu <%= @online_competition.unique_competitors.size %> compétiteurs.
+    <%= I18n.t("online_competitions.show.comp_over", n: @online_competition.unique_competitors.size) %>
   </div>
 <% end %>
 <% if @online_competition.over? || @force_show_results %>
@@ -58,7 +58,7 @@
   </script>
 <% elsif @online_competition.ongoing? %>
   <div class="alert alert-info mb-3">
-    La compétition est en cours, vous pouvez envoyer vos résultats.
+    <%= I18n.t("online_competitions.show.comp_ongoing") %>
     <br/>
     <% if current_user&.can_manage_online_comps? %>
       Étant donné que vous avez les droits pour gérer les compétitions en ligne, vous pouvez forcer l'affichage des résultats en cours
@@ -72,7 +72,7 @@
   </script>
 <% elsif !@online_competition.started? %>
   <div class="alert alert-info mb-3">
-    Revenez plus tard, la compétition n'a pas encore démarrée !
+    <%= I18n.t("online_competitions.show.comp_not_started") %>
   </div>
 <% end %>
 

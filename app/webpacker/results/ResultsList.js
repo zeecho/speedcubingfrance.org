@@ -13,6 +13,7 @@ import {
   formatAttemptResult,
 } from 'wca/attempts';
 import { trimTrailingZeros } from 'wca/utils';
+import I18n from 'i18n-for-js'
 
 import Loading from './Loading'
 import CountryFlag from 'wca/CountryFlag'
@@ -34,8 +35,12 @@ const ListHeader = ({
   format,
   computeAverage
 }) => {
-  const mainField = format.sort_by === "single" ? "Meilleur" : "Moyenne";
-  const otherField = format.sort_by === "single" ? "Moyenne" : "Meilleur";
+  const mainField = format.sort_by === "single" ?
+    I18n.t("online_competitions.submit.best")
+    : I18n.t("online_competitions.submit.average");
+  const otherField = format.sort_by === "single" ?
+    I18n.t("online_competitions.submit.average")
+    : I18n.t("online_competitions.submit.best");
   return (
     <ListGroup.Item>
       <Row>
@@ -55,7 +60,9 @@ const ListHeader = ({
               )}
             </Col>
             <Col xs={12} md={8} lg={10}>
-              <span className="text-dark">Résultats</span>
+              <span className="text-dark">
+                {I18n.t("online_competitions.show_results.results")}
+              </span>
             </Col>
           </Row>
         </Col>

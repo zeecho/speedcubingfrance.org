@@ -11,6 +11,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
 import isEqual from 'lodash/isEqual';
 
+import I18n from 'i18n-for-js';
 import AttemptList from './AttemptList';
 import ScramblesDisplay from './ScramblesDisplay';
 import SubmissionHelp from './SubmissionHelp';
@@ -133,7 +134,7 @@ const ResultForm = ({
                   <span className="sr-only">Saving...</span>
                 </Spinner>
               ) : (
-                <>Sauvegarder</>
+                <>{I18n.t("online_competitions.submit.save")}</>
               )}
             </Button>
             <Button size="lg"
@@ -146,12 +147,12 @@ const ResultForm = ({
                   <span className="sr-only">Saving...</span>
                 </Spinner>
               ) : (
-                <>Supprimer</>
+                <>{I18n.t("online_competitions.submit.delete")}</>
               )}
             </Button>
           </div>
           <p className="font-weight-bold">
-            Pensez à sauvegarder avant de changer d'épreuve
+            {I18n.t("online_competitions.submit.save_before_switch")}
           </p>
           {errors.length > 0 && (
             <div className="text-left">
