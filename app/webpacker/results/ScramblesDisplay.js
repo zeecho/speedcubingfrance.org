@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Card from 'react-bootstrap/Card';
 
-const ListForMulti = ({
+const LongScramblesList = ({
   scramblesData
 }) => (
   <pre>
@@ -43,8 +43,8 @@ const ScramblesDisplay = ({
       </Card.Header>
       {expanded && (
         <Card.Body>
-          {eventId === "333mbf" ? (
-            <ListForMulti scramblesData={scramblesData} />
+          {(eventId === "333mbf" || eventId === "minx") ? (
+            <LongScramblesList scramblesData={scramblesData} />
           ) : (
             <pre>
             {scramblesData.scrambles.join("\n")}
