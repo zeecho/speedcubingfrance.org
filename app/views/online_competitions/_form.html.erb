@@ -6,6 +6,7 @@
     <%= f.input :slug %>
     <%= f.input :scrambles_pdf, hint: hint_for_scrambles(@online_competition), label: "Uploader un fichier pdf avec les mélanges" %>
     <%= f.input :delete_pdf, as: :boolean, label: "Supprimer le pdf de mélanges" %>
+    <%= f.input :scrambles, hint: "Ils s'afficheront lors de la saisie des temps", label: "Uploader le json des mélanges", as: :file %>
     <%= f.input :start_date, as: :date_picker %>
     <%= f.input :end_date, as: :date_picker %>
     <%= f.input :visible %>

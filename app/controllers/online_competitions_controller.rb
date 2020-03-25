@@ -79,6 +79,6 @@ class OnlineCompetitionsController < ApplicationController
     def online_competition_params
       params.require(:online_competition).permit(:name, :start_date, :end_date,
                                                  :visible, :force_close, :slug,
-                                                 :scrambles_pdf)
+                                                 :scrambles_pdf, :scrambles)
     end
 end

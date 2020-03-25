@@ -2,6 +2,11 @@
   .nav-item {
     background-color: transparent;
   }
+  .scrambles-card {
+    .card-header {
+      cursor: pointer;
+    }
+  }
   .list-group-item {
     &.gold {
       background-color: #ddc583;

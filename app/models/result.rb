@@ -22,6 +22,7 @@ class Result < ApplicationRecord
       attempts: [value1, value2, value3, value4, value5],
       best: best,
       average: average,
+      scrambles_data: online_competition.scrambles.for(event_id),
       # This attribute is actually only set when ranking results!
       pos: self[:pos] || 0,
     }

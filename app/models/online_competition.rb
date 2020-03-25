@@ -18,6 +18,17 @@ class OnlineCompetition < ApplicationRecord
     message: "Must be less than #{MAX_FILE_SIZE} bytes",
   })
 
+  serialize :scrambles, OnlineScrambles
+
+  validate :associated_scrambles
+  def associated_scrambles
+    unless scrambles.valid?
+      scrambles.errors.messages.each do |k, v|
+        errors.add(k, v.join(","))
+      end
+    end
+  end
+
   # Helper for the form to delete an attachment
   attr_reader :delete_pdf
 
@@ -36,6 +47,10 @@ class OnlineCompetition < ApplicationRecord
     if end_date < start_date
       errors.add(:end_date, "La compétition finie avant d'avoir commencée...")
     end
+  end
+
+  def scrambles=(arg)
+    self[:scrambles] = OnlineScrambles.new(arg)
   end
 
   def over?
