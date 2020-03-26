@@ -1,62 +1,426 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  #context: Event name
   events:
-    "333": "3x3x3 Cube"
-    "222": "2x2x2 Cube"
-    "444": "4x4x4 Cube"
-    "555": "5x5x5 Cube"
-    "666": "6x6x6 Cube"
-    "777": "7x7x7 Cube"
-    333bf: "3x3x3 Blindfolded"
-    333fm: "3x3x3 Fewest Moves"
-    333oh: "3x3x3 One-Handed"
-    333ft: "3x3x3 With Feet"
-    clock: "Clock"
-    minx: "Megaminx"
-    pyram: "Pyraminx"
-    skewb: "Skewb"
-    sq1: "Square-1"
-    444bf: "4x4x4 Blindfolded"
-    555bf: "5x5x5 Blindfolded"
-    333mbf: "3x3x3 Multi-Blind"
-    magic: "Magic"
-    mmagic: "Master Magic"
-    333mbo: "3x3x3 Multi-Blind Old Style"
+    #original_hash: e6046af
+    '222': 2x2x2 Cube
+    #original_hash: 3646196
+    '333': 3x3x3 Cube
+    #original_hash: f851be3
+    '444': 4x4x4 Cube
+    #original_hash: 77d38fa
+    '555': 5x5x5 Cube
+    #original_hash: a31c132
+    '666': 6x6x6 Cube
+    #original_hash: 94c864d
+    '777': 7x7x7 Cube
+    #original_hash: 1ddce96
+    333bf: 3x3x3 Blindfolded
+    #original_hash: 5c72376
+    333fm: 3x3x3 Fewest Moves
+    #original_hash: 7834086
+    333oh: 3x3x3 One-Handed
+    #original_hash: ee71abe
+    333ft: 3x3x3 With Feet
+    #original_hash: 04f6b3e
+    clock: Clock
+    #original_hash: d542376
+    minx: Megaminx
+    #original_hash: 8216a66
+    pyram: Pyraminx
+    #original_hash: 64a56a2
+    skewb: Skewb
+    #original_hash: 1551a2c
+    sq1: Square-1
+    #original_hash: 9e25351
+    444bf: 4x4x4 Blindfolded
+    #original_hash: 61577f8
+    555bf: 5x5x5 Blindfolded
+    #original_hash: 08cef42
+    333mbf: 3x3x3 Multi-Blind
+    #original_hash: e6791be
+    magic: Magic
+    #original_hash: c962425
+    mmagic: Master Magic
+    #original_hash: 8f547aa
+    333mbo: 3x3x3 Multi-Blind Old Style
+  date:
+    formats:
+      #original_hash: eeb17cc
+      short: '%d/%m/%Y'
+      #original_hash: 6332cdb
+      day_month: '%e %B'
+      #original_hash: 38e9a74
+      default: '%e %B %Y'
+      #original_hash: 38e9a74
+      post_datetime: '%e %B %Y'
+  time:
+    formats:
+      #original_hash: eeb17cc
+      short: '%d/%m/%Y'
+      #original_hash: 38e9a74
+      post_datetime: '%e %B %Y'
+  countries:
+    #original_hash: d9aad0b
+    XA: Multiple countries (Asia)
+    #original_hash: 38cdd27
+    XE: Multiple countries (Europe)
+    #original_hash: 81a333b
+    XS: Multiple countries (South America)
+    #original_hash: 1cf96b2
+    XM: Multiple countries (Americas)
+    #original_hash: d887137
+    MO: Macau
+    #original_hash: 2f488ff
+    HK: Hong Kong
+    #original_hash: 60fc1f6
+    KR: Republic of Korea
+  simple_form:
+    labels:
+      online_competition:
+        #original_hash: 7ff2037
+        name: Name
+        #original_hash: a34ec69
+        slug: Small name
+        #original_hash: 706438a
+        start_date: Start date
+        #original_hash: 716a6d8
+        end_date: End date
+        #original_hash: a255047
+        visible: Public
+        #original_hash: b34cfed
+        force_close: Prevent result submission
+      big_champs:
+        euro:
+          #original_hash: 574c37c
+          competition_id: Competition ID
+          #original_hash: 86b79f6
+          name: Competition name
+          #original_hash: 6b494cc
+          alt_text: Alternative text
+        french:
+          #original_hash: 574c37c
+          competition_id: Competition ID
+          #original_hash: 86b79f6
+          name: Competition name
+          #original_hash: 6b494cc
+          alt_text: Alternative text
+        world:
+          #original_hash: 574c37c
+          competition_id: Competition ID
+          #original_hash: 86b79f6
+          name: Competition Name
+          #original_hash: 6b494cc
+          alt_text: Alternative text
+      calendar_event:
+        #original_hash: 7ff2037
+        name: Name
+        #original_hash: dc0df63
+        public: This event is visible
+        #original_hash: 0739b27
+        kind: Event type
+      post:
+        #original_hash: eb97899
+        title: Title
+        #original_hash: f3cb82a
+        body: Content
+        #original_hash: 848eed0
+        tags_string: Tags
+        #original_hash: fd5fd67
+        posted_at: Posted on
+        #original_hash: 4fe5491
+        slug: Permalink
+        #original_hash: 4b049d8
+        draft: This post is a draft
+        #original_hash: f2be489
+        feature: Highlight on the front page
+        #original_hash: 4ca340a
+        competition_page: This post is a competition page
+      import_user:
+        #original_hash: 787b549
+        query: Search
+        #original_hash: 824b4f6
+        user_id: User ID
+      signin:
+        #original_hash: a9087c3
+        can_manage: >-
+          I'm an organizer or WCA Delegate, and I authorize AFS to handle my
+          competitions.
+      user:
+        #original_hash: da1f7ef
+        wca_id: WCA ID
+        #original_hash: 8851f38
+        friendly_birthdate: Birthdate
+        #original_hash: 1d8141b
+        admin: Admin
+        #original_hash: 9094b61
+        communication: Communication Team
+        #original_hash: b907cd5
+        french_delegate: French Delegate
+        #original_hash: a06e15b
+        notify_subscription: >-
+          I want to subscribe to notifications (warning on membership ending,
+          new announced competitions in France)
+        #original_hash: fa1eb62
+        discussion_subscription: >-
+          I want to be in the members discussion group
+          (adherents-discussion@speedcubingfrance.org) (will likely be in
+          French)
+        #original_hash: 0f2da1b
+        newsletter_subscription: I want to receive newsletters
+        #original_hash: 7da36e9
+        city: City (zip code)
+      tag:
+        #original_hash: b019b38
+        name: Tag alias
+        #original_hash: 145c432
+        color: Color
+        #original_hash: 741641c
+        fullname: Full name
+      bag:
+        owners:
+          #original_hash: 0b20cd7
+          user: User
+          #original_hash: 8481498
+          start: From
+          #original_hash: 7a1732d
+          end: To
+      hardware:
+        owners:
+          #original_hash: 0b20cd7
+          user: User
+          #original_hash: 8481498
+          start: From
+          #original_hash: 7a1732d
+          end: To
+    hints:
+      post:
+        #original_hash: 3990ad3
+        tags_string: >-
+          To personalize content and color of each tag, go <a href='/tags'
+          target='_blank'>here</a>.
+        #original_hash: 51634cb
+        draft: 'If this option is chosen, post won''t be visible for the public.'
+        #original_hash: 045a916
+        competition_page: 'If this option is chosen, post won''t be on the front page.'
+        #original_hash: 75d8fb2
+        body: >-
+          Add "{{post_excerpt}}" to split the introduction of a post from the
+          body.
+      tag:
+        #original_hash: f6e25ed
+        name: Alias is for tag identification and cannot be changed.
+      online_competition:
+        #original_hash: 977a786
+        force_close: >-
+          Useful to manually close a competition (these is only an end date, not
+          an end hour)
+        #original_hash: 0b68ac1
+        slug: 'Only alphanumeric characters, ''-'', ''_''. No spaces!'
+  helpers:
+    submit:
+      signin:
+        #original_hash: 7130082
+        submit: Sign in with WCA
+      user:
+        #original_hash: 9ada143
+        update: Save
+      online_competition:
+        #original_hash: 895bffd
+        create: Create competition
+        #original_hash: 06b42b2
+        update: Update the competition
+      calendar_event:
+        #original_hash: 154dd8d
+        create: Create event
+        #original_hash: 9ada143
+        update: Save
+      post:
+        #original_hash: 77236fb
+        create: Create post
+        #original_hash: 9ada143
+        update: Save
+      import_user:
+        #original_hash: 4844932
+        submit: Submit request
+      import_form:
+        #original_hash: 8e43954
+        submit: Import CSV
+      tag:
+        #original_hash: 9ada143
+        update: Save
+      big_champs:
+        #original_hash: 9ada143
+        submit: Save
+    page_entries_info:
+      one_page:
+        #original_hash: fcc5c23
+        display_entries:
+          other: 'Showing <b>all %{count}</b> %{entry_name}'
+          one: 'Showing 1 %{entry_name}'
+          zero: 'No %{entry_name} found.'
+      more_pages:
+        #original_hash: d680b63
+        display_entries: >-
+          Showing <b>%{first}&nbsp;-&nbsp;%{last}</b> out of <b>%{total}</b>
+          %{entry_name}
+  views:
+    pagination:
+      #original_hash: 1647b81
+      first: '&laquo; First'
+      #original_hash: 7bdeaa7
+      last: Last &raquo;
+      #original_hash: 5915636
+      previous: '&lsaquo; Prev.'
+      #original_hash: 0eca9af
+      next: Next &rsaquo;
+      #original_hash: 839e4a2
+      truncate: '&hellip;'
+  online_competitions:
+    #original_hash: 92369a9
+    title: Online competitions
+    #original_hash: a04f3cc
+    stayathome: '#stayathome'
+    index:
+      #original_hash: 5e53224
+      range: 'From %{start_date} to %{end_date}'
+    show:
+      #original_hash: 396a241
+      started: Started on
+      #original_hash: 71f4988
+      will_start: Will start on
+      #original_hash: 07110d7
+      ended: Ended on
+      #original_hash: 5443bde
+      will_end: Will end on
+      #original_hash: 9e7d95f
+      download_scrambles: Download scrambles
+      #original_hash: 988afa2
+      comp_over: 'Competition is over, there were %{n} competitors.'
+      #original_hash: 603b6e6
+      comp_ongoing: 'Competition is ongoing, you can send results.'
+      #original_hash: 18039d0
+      comp_not_started: 'Come back later, the competition hasn''t started yet!'
+    show_results:
+      #original_hash: 3c3618e
+      results_for: 'Results for %{event_name}'
+      #original_hash: 0f766b4
+      results: Results
+      #original_hash: d4b8ec0
+      loading: Loading results
+    submit:
+      #original_hash: a0a0e6e
+      scrambles: 'Print scrambles (to import in a timer, for example cstimer)'
+      #original_hash: a7a4a79
+      save_before_switch: Please save before opening another event
+      #original_hash: 9ada143
+      save: Save
+      #original_hash: 1acfc1c
+      delete: Delete
+      #original_hash: 9a12194
+      attempt: 'Attempt %{n}'
+      #original_hash: c0463eb
+      best: Best
+      #original_hash: ef33304
+      average: Average
   nav:
-    home: "Home"
+    #original_hash: 0b5637a
+    name: Association Française de Speedcubing
+    #original_hash: a8ff8fd
+    home: Home
+    #original_hash: aa245f5
+    presentation: Presentation
+    #original_hash: 1948b8a
+    association: Association
+    #original_hash: 2d6a723
+    subscriptions: Subscriptions
+    #original_hash: 687c828
+    documents: Documents
+    #original_hash: 83fce83
+    logo: Logo
+    speedcubing:
+      #original_hash: 7fadbaa
+      title: Speedcubing
+      #original_hash: 55ea2f1
+      intro: Presentation
+      #original_hash: 31c62d9
+      comp_wca: WCA Competitions
+      #original_hash: 92369a9
+      online_comp: Online competitions
+      #original_hash: 3ceb6e0
+      regulations: Regulations
+      #original_hash: 83843d0
+      tutos: Tutorials
+      #original_hash: e91d268
+      local_clubs: Local clubs and associations
+      #original_hash: fc5404d
+      extern_resources: Extern resources
+    #original_hash: b37456c
+    contact: Contact
+    user:
+      #original_hash: f73bfe1
+      profile: Your profile
+      #original_hash: 592341e
+      my_comps: My competitions
+      #original_hash: 903dca1
+      sign_out: Sign out
+      #original_hash: a33c58f
+      sign_in: Sign in
   users:
     update_locale:
-      success: "Updated locale."
-      failure: "Unable to update your profile."
-      unavailable: "Requested locale is not available."
+      #original_hash: 4a867ef
+      success: Updated locale.
+      #original_hash: ce495ed
+      failure: Unable to update your profile.
+      #original_hash: e24f182
+      unavailable: Requested locale is not available.
+  homepage:
+    #original_hash: a767154
+    upcoming_comps: Upcoming competitions
+    #original_hash: c0b79e9
+    france: In France
+    #original_hash: e2dfef7
+    international: International Championship
+    #original_hash: 30d7113
+    no_comp_in_france: No upcoming competition in France yet.
+    #original_hash: 0855684
+    posts: Posts
+    #original_hash: 9b65f18
+    no_posts: No other post
+  subhelp:
+    #original_hash: 44b7253
+    title: How to submit results?
+    #original_hash: 5c798bb
+    p1: >-
+      You can send, correct, or delete your results while the competition is
+      ongoing. Times must be entered without period, colon or comma, software
+      will do the rest. For example:
+    #original_hash: 103ec05
+    ex1: '2 seconds 54 hundredths: enter "254"'
+    #original_hash: f4a8beb
+    ex2: '1 minute 23 seconds 12 hundredths: enter "12312"'
+    #original_hash: cfcd698
+    cents: 'Warning: never forget hundredths!'
+    #original_hash: 5d985db
+    penalties: 'Penalties:'
+    #original_hash: a16ce20
+    pen1: >-
+      If you get a +2, directly enter the final result. For example: if you
+      finished in 6 seconds 45, with a +2 penalty, enter directly 8 seconds 45:
+      "845".
+    #original_hash: 63c3ba7
+    pen2: >-
+      In you get a DNF, enter "D" in the field. In you get a DNS, enter "S" in
+      the field.
+    #original_hash: 12d1411
+    multihelp: >-
+      For multiblind, first field is the number of solves cubes, second one is
+      the number of attempted cubes, last one is the time (in minutes seconds
+      hundredths)
+    #original_hash: 486578b
+    multiex: >-
+      For example: 5/7 in 47 minutes 12 seconds: enter 5 in the first field, 7
+      in the second one, and "471200" in the last one.
+    #original_hash: 505e642
+    enjoying: >-
+      Are you enjoying this? Good news, this is exactly how we enter results
+      during official competitions! Feel free to come and help entering results
+      in the next competitions ;)
