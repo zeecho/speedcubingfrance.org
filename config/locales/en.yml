@@ -1,4 +1,19 @@
 en:
+  general:
+    #original_hash: 3422720
+    please_sign_in: Please sign in to access this section
+  new_session:
+    #original_hash: ae7d39a
+    title: Sign in with WCA
+    #original_hash: c8e290a
+    p1: >-
+      To sign in our association's website, you must have an account on the
+      %{wca} website.
+    #original_hash: b2f2bf6
+    p2: >-
+      By clicking "Sign in with WCA", you will be redirected to the WCA website
+      to authenticate yourself, which will then redirect you back to the AFS
+      website to get you signed in.
   events:
     #original_hash: e6046af
     '222': 2x2x2 Cube
@@ -254,9 +269,9 @@ en:
       one_page:
         #original_hash: fcc5c23
         display_entries:
-          other: 'Showing <b>all %{count}</b> %{entry_name}'
-          one: 'Showing 1 %{entry_name}'
           zero: 'No %{entry_name} found.'
+          one: 'Showing 1 %{entry_name}'
+          other: 'Showing <b>all %{count}</b> %{entry_name}'
       more_pages:
         #original_hash: d680b63
         display_entries: >-
@@ -317,6 +332,8 @@ en:
       delete: Delete
       #original_hash: 9a12194
       attempt: 'Attempt %{n}'
+      #original_hash: fc7c5ad
+      extra: 'Extra %{n}'
       #original_hash: c0463eb
       best: Best
       #original_hash: ef33304
@@ -327,7 +344,7 @@ en:
     #original_hash: a8ff8fd
     home: Home
     #original_hash: aa245f5
-    presentation: Presentation
+    presentation: Introduction
     #original_hash: 1948b8a
     association: Association
     #original_hash: 2d6a723
@@ -352,7 +369,7 @@ en:
       #original_hash: e91d268
       local_clubs: Local clubs and associations
       #original_hash: fc5404d
-      extern_resources: Extern resources
+      extern_resources: External resources
     #original_hash: b37456c
     contact: Contact
     user:
