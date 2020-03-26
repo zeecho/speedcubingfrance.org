@@ -10,7 +10,7 @@ const LongScramblesList = ({
     {scramblesData.scrambles.map((s, index) => {
       return (
         <div key={index}>
-          Essai {index + 1}<br/>
+          {I18n.t("online_competitions.submit.attempt", {n: index + 1})}<br/>
           {s}
           <hr/>
         </div>
@@ -19,7 +19,7 @@ const LongScramblesList = ({
     {scramblesData.extras.map((s, index) => {
       return (
         <div key={index}>
-          Extra {index + 1}<br/>
+          {I18n.t("online_competitions.submit.extra", {n: index + 1})}<br/>
           {s}
           <hr/>
         </div>
