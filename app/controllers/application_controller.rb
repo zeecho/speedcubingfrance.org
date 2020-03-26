@@ -35,6 +35,12 @@ class ApplicationController < ActionController::Base
     redirect_to params[:current_url] || root_path
   end
 
+  def force_no_cache
+    response.headers["Cache-Control"] = "no-cache, no-store"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
+  end
+
   def current_user
     begin
       @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -74,7 +80,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private :current_user, :authenticate_user!,
+  private :current_user, :force_no_cache, :authenticate_user!,
     :redirect_unless_admin!, :redirect_unless_authorized_delegate!,
     :redirect_unless_can_manage_online_competitions!
 end

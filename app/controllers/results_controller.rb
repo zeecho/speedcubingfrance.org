@@ -8,6 +8,7 @@ class ResultsController < ApplicationController
   before_action :check_competition_ongoing, only: USER_ACTIONS
   before_action :check_competition_over, only: :index_for_comp
 
+  before_action :force_no_cache, only: :self_wca_id
   def self_wca_id
     respond_to do |format|
       format.json do
