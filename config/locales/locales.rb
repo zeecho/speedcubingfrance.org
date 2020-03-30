@@ -5,6 +5,9 @@ module Locales
     "en": {
       "name": "English",
     },
+    "eo": {
+      "name": "Esperanto",
+    },
     "fr": {
       "name": "Français",
     },
