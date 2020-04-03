@@ -368,7 +368,7 @@ eo:
       #original_hash: 83843d0
       tutos: Lerniloj
       #original_hash: e91d268
-      local_clubs: Kluboj kaj lokaj asociaj
+      local_clubs: Kluboj kaj lokaj asocioj
       #original_hash: fc5404d
       extern_resources: Eksteraj risurcoj
     #original_hash: b37456c
@@ -381,7 +381,7 @@ eo:
       #original_hash: 903dca1
       sign_out: Elsaluti
       #original_hash: a33c58f
-      sign_in: Ensaluto
+      sign_in: Ensaluti
   users:
     update_locale:
       #original_hash: 4a867ef
