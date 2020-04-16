@@ -8,11 +8,6 @@ class ClubsController < ApplicationController
     @clubs = Club.includes(:department).all.order('departments.name', 'city')
   end
 
-  # GET /clubs/1
-  # GET /clubs/1.json
-  def show
-  end
-
   # GET /clubs/new
   def new
     @club = Club.new
