@@ -1,42 +1,42 @@
-<% provide(:title, "Sacs") %>
-<%= render "layouts/page_wrapper", title:"Sacs" do %>
+<% provide(:title, I18n.t("bags.index.title")) %>
+<%= render "layouts/page_wrapper", title: I18n.t("bags.index.title") do %>
 
-  <%= link_to "Gérer le matériel", hardwares_path, class: 'btn btn-info' %>
+  <%= link_to I18n.t("bags.index.manage_hardware"), hardwares_path, class: 'btn btn-info' %>
   <hr>
 
   <% @bags.each do |bag| %>
     <div class="bag">
       <h3><%= bag.name %></h3>
-      Il y a dedans :
+      <%= I18n.t("bags.index.in_it") %>
       <% if bag.hardwares.any? %>
         <ul>
           <% bag.hardwares.each do |h| %>
-            <li><%= link_to "#{h.name} (#{h.hardware_type_string})", h, title: 'Voir' %></li>
+            <li><%= link_to "#{h.name} (#{h.hardware_type_string})", h, title: I18n.t("button.show") %></li>
             <ul>
               <li class="state-<%= h.state %>"><%= "#{h.state_string}" %> <%= fa_icon('circle') %></li>
               <% if h.comment? %>
-                <li><%= "Commentaire : #{h.comment}" %></li>
+                <li><%= I18n.t("bags.index.comment", comment: h.comment) %></li>
               <% else %>
-                <li>Pas de commentaire</li>
+                <li><%= I18n.t("bags.index.no_comment") %></li>
               <% end %>
             </ul>
           <% end %>
         </ul>
       <% else %>
-        rien pour l'instant.
+        <%= I18n.t("bags.index.nothing") %>
       <% end %>
 
       <%= render "shared/show_owners_list", item: bag %>
       <br/>
 
-      <%= link_to fa_icon('eye'), bag, title: 'Voir', class: 'text-info', data: { toggle: 'tooltip' } %>
+      <%= link_to fa_icon('eye'), bag, title: I18n.t("button.show"), class: 'text-info', data: { toggle: 'tooltip' } %>
       |
-      <%= link_to fa_icon('pencil-square-o'), edit_bag_path(bag), title: 'Éditer', class: 'text-primary', data: { toggle: 'tooltip' } %>
+      <%= link_to fa_icon('pencil-square-o'), edit_bag_path(bag), title: I18n.t("button.edit"), class: 'text-primary', data: { toggle: 'tooltip' } %>
       |
-      <%= link_to fa_icon('trash-o'), bag, method: :delete, title: 'Détruire', class: 'text-danger', data: { toggle: 'tooltip', confirm: 'Êtes-vous sûr·e ?' } %>
+      <%= link_to fa_icon('trash-o'), bag, method: :delete, title: I18n.t("button.destroy"), class: 'text-danger', data: { toggle: 'tooltip', confirm: I18n.t("button.confirm") } %>
       <hr/>
     </div>
   <% end %>
 
-  <%= link_to 'Nouveau sac', new_bag_path, class: 'btn btn-info' %>
+  <%= link_to I18n.t("bags.new"), new_bag_path, class: 'btn btn-info' %>
 <% end %>

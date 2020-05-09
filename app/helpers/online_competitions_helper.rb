@@ -24,7 +24,7 @@ module OnlineCompetitionsHelper
   end
 
   def hint_for_scrambles(comp)
-    "Fichier actuellement stocké: #{download_link_for_scrambles(@online_competition)}".html_safe
+    I18n.t("online_competitions.form.hint_for_scrambles") + " #{download_link_for_scrambles(@online_competition)}".html_safe
   end
 
   def scrambles_pdf_url(comp)
@@ -42,7 +42,7 @@ module OnlineCompetitionsHelper
     if comp.scrambles_pdf.attached? && comp.scrambles_pdf.blob.id?
       link_to(comp.scrambles_pdf.blob.filename, scrambles_pdf_url(comp))
     else
-      "aucun"
+      I18n.t("online_competitions.form.none")
     end
   end
 end

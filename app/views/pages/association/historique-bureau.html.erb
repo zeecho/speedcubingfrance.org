@@ -1,13 +1,13 @@
-<% provide(:title, "Historique du bureau") %>
+<% provide(:title, I18n.t("association.board_history.title")) %>
 <% provide(:active_section, "association") %>
-<%= render "layouts/page_wrapper", title: "Historique du bureau", card_classes: "remove-padding" do %>
+<%= render "layouts/page_wrapper", title: I18n.t("association.board_history.title"), card_classes: "remove-padding" do %>
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Période</th>
-        <th>Président·e</th>
-        <th>Trésorier·e</th>
-        <th>Secrétaire</th>
+        <th><%= I18n.t("association.board_history.period") %></th>
+        <th><%= I18n.t("association.board_history.president") %></th>
+        <th><%= I18n.t("association.board_history.treasurer") %></th>
+        <th><%= I18n.t("association.board_history.secretary") %></th>
       </tr>
     </thead>
     <tbody>
@@ -36,7 +36,7 @@
         <td>Jules Desjardin</td>
       </tr>
       <tr>
-        <td>2019 - en cours</td>
+        <td>2019 - <%= I18n.t("association.board_history.ongoing") %></td>
         <td>Lina Tissier</td>
         <td>Jules Desjardin</td>
         <td>Antoine Piau</td>

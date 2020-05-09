@@ -1,5 +1,5 @@
-<h1>Édition de la ressource externe <%= @external_resource.name %></h1>
+<h1><%= I18n.t("external_resources.edit.title", name: @external_resource.name) %></h1>
 
 <%= render 'form', external_resource: @external_resource %>
 
-<%= link_to 'Retour', external_resources_path %>
+<%= link_to I18n.t("button.cancel"), external_resources_path, class: "btn btn-sm btn-danger" %>

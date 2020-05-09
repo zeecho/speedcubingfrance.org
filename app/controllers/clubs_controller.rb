@@ -23,7 +23,7 @@ class ClubsController < ApplicationController
     @club = Club.new(club_params)
 
     if @club.save
-      redirect_to clubs_path, flash: { success: 'Club was successfully created.' }
+      redirect_to clubs_path, flash: { success: I18n.t("clubs.notif.create") }
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ClubsController < ApplicationController
   # PATCH/PUT /clubs/1.json
   def update
     if @club.update(club_params)
-      redirect_to clubs_path, flash: { success: 'Club was successfully updated.' }
+      redirect_to clubs_path, flash: { success: I18n.t("clubs.notif.update") }
     else
       render :edit
     end
@@ -43,7 +43,7 @@ class ClubsController < ApplicationController
   # DELETE /clubs/1.json
   def destroy
     @club.destroy
-    redirect_to clubs_url, flash: { success: 'Club was successfully destroyed.' }
+    redirect_to clubs_url, flash: { success: I18n.t("clubs.notif.destroy") }
   end
 
   private

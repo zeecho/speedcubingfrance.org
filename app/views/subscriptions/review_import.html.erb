@@ -1,16 +1,12 @@
-<% provide(:title, "Changements à soumettre") %>
+<% provide(:title, I18n.t("subscriptions.review_title")) %>
 <%= render "nav", current_page: :subscriptions %>
 
-<h1>Changements à soumettre</h1>
+<h1><%= I18n.t("subscriptions.review_title") %></h1>
 
-<p>
-Les contributions ci dessous ont été détectées, merci de les relire et de ne soumettre le formulaire que si tout semble correct !
-</p>
-
-
+<p><%= I18n.t("subscriptions.detected_contributions") %></p>
 
 <div class="table-responsive">
-  <% headers = ["Prénom", "Nom", "ID WCA", "Email", "Payé le", "Lien du reçu"] %>
+  <% headers = [I18n.t("table_headers.firstname"), I18n.t("table_headers.name"), I18n.t("table_headers.wca_id"), I18n.t("table_headers.email"), I18n.t("table_headers.paid_at"), I18n.t("table_headers.receipt_url")] %>
   <% if @new_subscriptions.any? %>
     <%= simple_form_for :subscriptions, url: subscriptions_import_path do |f| %>
       <%= render "shared/compact_table", headers: headers  do %>
@@ -29,19 +25,17 @@ Les contributions ci dessous ont été détectées, merci de les relire et de ne
         <% end %>
       <% end %>
 
-      <%= f.submit "Importer ces contributions", class: "btn btn-primary" %>
+      <%= f.submit I18n.t("subscriptions.import_contributions"), class: "btn btn-primary" %>
     <% end %>
   <% else %>
     <div class="alert alert-info">
-      Pas de contributions à importer.
+      <%= I18n.t("subscriptions.nothing_to_import") %>
     </div>
   <% end %>
 
   <% if @subscriptions.any? %>
-    <p>
-    Les contributions ci dessous sont déjà présentes dans la base de données et seront ignorées.
-    </p>
-    <%= render "shared/compact_table", headers: ["Prénom", "Nom", "ID WCA", "Email", "Payé le", "", ""] do %>
+    <p><%= I18n.t("subscriptions.already_in_db") %></p>
+    <%= render "shared/compact_table", headers: [I18n.t("table_headers.firstname"), I18n.t("table_headers.name"), I18n.t("table_headers.wca_id"), I18n.t("table_headers.email"), I18n.t("table_headers.paid_at"), "", ""] do %>
       <% @subscriptions.each do |subscription| %>
         <tr class="table-info">
           <td><%= subscription.firstname %></td>

@@ -22,7 +22,7 @@
                         edit_online_competition_path(comp),
                         class: "btn btn-sm btn-primary") %>
             <%= link_to(fa_icon("trash"), comp, method: :delete,
-                        data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger") %>
+                        data: { confirm: I18n.t("online_competitions.index.confirm") }, class: "btn btn-sm btn-danger") %>
           </div>
         <% end %>
       </div>

@@ -1,12 +1,12 @@
 <p>
-  <strong>Chez :</strong>
+  <strong><%= I18n.t("show_owners.at") %></strong>
   <% owners = [] %>
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Personne</th>
-        <th>Du</th>
-        <th>Au</th>
+        <th><%= I18n.t("show_owners.person") %></th>
+        <th><%= I18n.t("show_owners.from") %></th>
+        <th><%= I18n.t("show_owners.to") %></th>
       </tr>
     </thead>
     <tbody>

@@ -33,7 +33,7 @@ class OnlineCompetitionsController < ApplicationController
 
     if @online_competition.save
       redirect_to @online_competition, flash: {
-        success: 'Online competition was successfully created.'
+        success: I18n.t("online_competitions.create.success")
       }
     else
       render :new
@@ -48,7 +48,7 @@ class OnlineCompetitionsController < ApplicationController
         @online_competition.scrambles_pdf.purge
       end
       redirect_to @online_competition, flash: {
-        success: 'Online competition was successfully updated.'
+        success: I18n.t("online_competitions.update.success")
       }
     else
       render :edit
@@ -60,7 +60,7 @@ class OnlineCompetitionsController < ApplicationController
   def destroy
     @online_competition.destroy
     redirect_to online_competitions_url, flash: {
-      success: 'Online competition was successfully destroyed.'
+      success: I18n.t("online_competitions.destroy.success")
     }
   end
 

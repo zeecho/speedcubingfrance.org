@@ -1,17 +1,17 @@
-<% provide(:title, "Infos sur le sac " + @bag.name) %>
+<% provide(:title, I18n.t("bags.show.title", bag_name: @bag.name)) %>
 <%= render "layouts/page_wrapper", title: @bag.name do %>
   <p>
-    <strong>Nom :</strong>
+    <strong><%= I18n.t("bags.show.name") %></strong>
     <%= @bag.name %>
   </p>
   <% if @bag.hardwares.any? %>
     <table id="hardware-index-table" class="table table-striped">
       <thead>
         <tr>
-          <th>Nom du matériel</th>
-          <th>Type</th>
-          <th>État</th>
-          <th>Commentaire</th>
+          <th><%= I18n.t("bags.show.hardware_name") %></th>
+          <th><%= I18n.t("hardware.index.type") %></th>
+          <th><%= I18n.t("hardware.index.state") %></th>
+          <th><%= I18n.t("hardware.index.comment") %></th>
         </tr>
       </thead>
 
@@ -35,6 +35,6 @@
 
   <%= render "shared/show_owners_list", item: @bag %>
 
-  <%= link_to 'Éditer', edit_bag_path(@bag) %> |
-  <%= link_to 'Retour', bags_path %>
+  <%= link_to I18n.t("button.edit"), edit_bag_path(@bag) %> |
+  <%= link_to I18n.t("button.cancel"), bags_path %>
 <% end %>

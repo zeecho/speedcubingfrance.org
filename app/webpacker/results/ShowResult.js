@@ -17,7 +17,7 @@ const ShowResult = loadableComponent(({
     <>
       <EventList activeId={activeId} onClick={setActive} />
       <h3 className="mt-3">
-        {I18n.t("online_competitions.show_results.results_for", {event_name: wcaEvent.name})}
+        {I18n.t("online_competitions.show_results.results_for", {event_name: I18n.t("events." + wcaEvent.id)})}
       </h3>
       <ResultsList id={{eventId: activeId, competitionId: competitionId}}
         canManageResults={loadedState && loadedState.can_manage_online_comps}

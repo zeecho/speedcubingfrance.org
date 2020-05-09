@@ -1,18 +1,20 @@
-<% provide(:title, "Logos") %>
+<% provide(:title, I18n.t("association.logos.title")) %>
 <% provide(:active_section, "association") %>
-<%= render "layouts/page_wrapper", title: "Logos" do %>
-  <p>Le logo de l'AFS est utilisable par tous les organisateurs et Délégués WCA dans les outils de communication (tels que le site internet, les affiches, les vêtements), mis en oeuvre dans le cadre d'une compétition en partenariat avec l'AFS.</p>
-  <p>Pour une utilisation dans un cadre différent, merci de contacter le <%= mail_to("bureau@speedcubingfrance.org", "bureau de l'AFS") %> pour en négocier son usage.</p>
+<%= render "layouts/page_wrapper", title: I18n.t("association.logos.title") do %>
+  <p><%= I18n.t("association.logos.p1") %></p>
+
+  <p><%= t("association.logos.p2_html", board_mail_link: mail_to("bureau@speedcubingfrance.org", "bureau de l'AFS")) %></p>
+
   <p>
-    Le logo existe dans les versions suivantes :
+    <%= I18n.t("association.logos.p3_before_ul") %>
     <ul>
-      <li><a href="/uploads/logos/logoafs.png">Logo en version matricielle (png)</a></li>
-      <li><a href="/uploads/logos/logoafs.svg">Logo en version vectorielle (svg)</a></li>
-      <li><a href="/uploads/logos/logoafs.eps">Logo au format eps</a></li>
-      <li><a href="/uploads/logos/logoafsletters.png">Logo avec texte en version matricielle (png)</a></li>
-      <li><a href="/uploads/logos/logoafsletters.svg">Logo avec texte en version vectorielle (svg)</a></li>
-      <li><a href="/uploads/logos/logoafsletters.eps">Logo avec texte au format eps</a></li>
+      <li><a href="/uploads/logos/logoafs.png"><%= I18n.t("association.logos.png") %></a></li>
+      <li><a href="/uploads/logos/logoafs.svg"><%= I18n.t("association.logos.svg") %></a></li>
+      <li><a href="/uploads/logos/logoafs.eps"><%= I18n.t("association.logos.eps") %></a></li>
+      <li><a href="/uploads/logos/logoafsletters.png"><%= I18n.t("association.logos.png_with_text") %></a></li>
+      <li><a href="/uploads/logos/logoafsletters.svg"><%= I18n.t("association.logos.svg_with_text") %></a></li>
+      <li><a href="/uploads/logos/logoafsletters.eps"><%= I18n.t("association.logos.eps_with_text") %></a></li>
     </ul>
-    Il a été créé et nous a été offert par François Grassard, merci à lui. Merci également à Delphine Tran pour la version eps.
+    <%= I18n.t("association.logos.p3_after_ul") %>
   </p>
 <% end %>

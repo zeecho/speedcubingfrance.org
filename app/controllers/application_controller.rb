@@ -58,25 +58,25 @@ class ApplicationController < ActionController::Base
 
   def redirect_unless_admin!
     unless current_user&.admin?
-      redirect_to root_url, :alert => 'Seuls les administrateurs ont accès à cette page.'
+      redirect_to root_url, :alert => I18n.t("users.no_rights.admin")
     end
   end
 
   def redirect_unless_authorized_delegate!
     unless current_user&.can_manage_delegate_matters?
-      redirect_to root_url, :alert => 'Seuls les délégués ont accès à cette page.'
+      redirect_to root_url, :alert => I18n.t("users.no_rights.delegate")
     end
   end
 
   def redirect_unless_comm!
     unless current_user&.can_manage_communication_matters?
-      redirect_to root_url, :alert => 'Seuls les responsables communication ont accès à cette page.'
+      redirect_to root_url, :alert => I18n.t("users.no_rights.communication")
     end
   end
 
   def redirect_unless_can_manage_online_competitions!
     unless current_user&.can_manage_online_comps?
-      redirect_to root_url, alert: "Vous n'êtes pas autorisé à accéder à cette page."
+      redirect_to root_url, alert: I18n.t("users.no_rights.generic")
     end
   end
 

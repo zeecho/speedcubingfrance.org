@@ -29,7 +29,7 @@ class HardwaresController < ApplicationController
     @hardware = Hardware.new(hardware_params)
 
     if @hardware.save
-      redirect_to @hardware, flash: { success: 'Hardware was successfully created.' }
+      redirect_to @hardware, flash: { success: I18n.t("hardware.notif.create") }
     else
       render :new
     end
@@ -39,7 +39,7 @@ class HardwaresController < ApplicationController
   # PATCH/PUT /hardwares/1.json
   def update
     if @hardware.update(hardware_params)
-      redirect_to @hardware, flash: { success: 'Hardware was successfully updated.' }
+      redirect_to @hardware, flash: { success: I18n.t("hardware.notif.update") }
     else
       render :edit
     end
@@ -49,7 +49,7 @@ class HardwaresController < ApplicationController
   # DELETE /hardwares/1.json
   def destroy
     @hardware.destroy
-    redirect_to hardwares_url, flash: { success: 'Hardware was successfully destroyed.' }
+    redirect_to hardwares_url, flash: { success: I18n.t("hardware.notif.destroy") }
   end
 
   private

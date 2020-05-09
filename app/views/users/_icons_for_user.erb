@@ -1,9 +1,9 @@
 <% if user.admin? %>
-  <i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="Administrateur"></i>
+  <i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="<%= I18n.t("users.icons.admin") %>"></i>
 <% end %>
 <% if user.comm? %>
-  <i class="fa fa-globe" data-toggle="tooltip" data-placement="top" title="Communication"></i>
+  <i class="fa fa-globe" data-toggle="tooltip" data-placement="top" title="<%= I18n.t("users.icons.comm") %>"></i>
 <% end %>
 <% if user.french_delegate? %>
-  <i class="fa fa-balance-scale" data-toggle="tooltip" data-placement="top" title="Délégué Français"></i>
+  <i class="fa fa-balance-scale" data-toggle="tooltip" data-placement="top" title="<%= I18n.t("users.icons.delegate") %>"></i>
 <% end %>

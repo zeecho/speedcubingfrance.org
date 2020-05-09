@@ -1,6 +1,6 @@
-<% provide(:title, "Création d'un nouveau matériel") %>
-<%= render "layouts/page_wrapper", title: "Création d'un nouveau matériel" do %>
+<% provide(:title, I18n.t("hardware.new.title")) %>
+<%= render "layouts/page_wrapper", title: I18n.t("hardware.new.title") do %>
   <%= render 'form', hardware: @hardware %>
 
-  <%= link_to 'Retour', hardwares_path %>
+  <%= link_to I18n.t("button.cancel"), hardwares_path, class: "btn btn-sm btn-danger" %>
 <% end %>
