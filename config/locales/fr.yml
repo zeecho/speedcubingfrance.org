@@ -366,7 +366,7 @@ fr:
       journal_officiel: "Journal Officiel"
       association_status: "Statuts de l'association"
       reports: "Compte-rendus"
-      ag_of: "Assemblée Générale du"
+      ag_of: "Assemblée Générale du %{date}"
       logo: "Logo"
       logo_html: "Le logo de l'association dans ses différentes versions est disponible %{ici}."
       here: "ici"
