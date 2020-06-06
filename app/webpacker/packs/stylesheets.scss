@@ -137,3 +137,19 @@ input[type=color].form-control {
     margin-bottom: 0;
   }
 }
+
+.bg-lightgreen {
+  background-color: $light-green;
+}
+
+tr:nth-child(even) {
+  th.bg-lightgreen {
+    background-color: $light-green;
+  }
+}
+
+tr:nth-child(odd) {
+  th.bg-lightgreen {
+    background-color: $light-green2;
+  }
+}
