@@ -1,12 +1,12 @@
 <%= simple_form_for(@online_competition) do |f| %>
-  <%= f.error_notification message: "Le formulaire est invalide. Merci de corriger les erreurs ci dessous." %>
+  <%= f.error_notification message: I18n.t("general.form.invalid") %>
 
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :slug %>
-    <%= f.input :scrambles_pdf, hint: hint_for_scrambles(@online_competition), label: "Uploader un fichier pdf avec les mélanges" %>
-    <%= f.input :delete_pdf, as: :boolean, label: "Supprimer le pdf de mélanges" %>
-    <%= f.input :scrambles, hint: "Ils s'afficheront lors de la saisie des temps", label: "Uploader le json des mélanges", as: :file %>
+    <%= f.input :scrambles_pdf, hint: hint_for_scrambles(@online_competition), label: I18n.t("online_competitions.form.upload_scrambles_pdf") %>
+    <%= f.input :delete_pdf, as: :boolean, label: I18n.t("online_competitions.form.delete_scrambles_pdf") %>
+    <%= f.input :scrambles, label: I18n.t("online_competitions.form.upload_scrambles_json"), as: :file %>
     <%= f.input :start_date, as: :date_picker %>
     <%= f.input :end_date, as: :date_picker %>
     <%= f.input :visible %>

@@ -2,14 +2,16 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name, label: 'Nom' %>
-    <%= f.input :website, label: 'Site internet' %>
+    <%= f.input :name %>
+    <%= f.input :website %>
     <%= f.input :email %>
     <%= f.input :facebook %>
     <%= f.input :description %>
     <%= f.input :logo %>
-    <%= f.association :department, collection: Department.c_all_by_id.values.sort_by(&:code), label: ("Département"), :label_method => lambda { |dep| "#{dep.code} #{dep.name} (#{dep.region.name})" } %>
-    <%= f.input :city, label: 'Ville' %>
+
+    <%# i18n-tasks-use t('simple_form.labels.club.department') %>
+    <%= f.association :department, collection: Department.c_all_by_id.values.sort_by(&:code), :label_method => lambda { |dep| "#{dep.code} #{dep.name} (#{dep.region.name})" } %>
+    <%= f.input :city %>
   </div>
 
   <div class="form-actions">

@@ -22,7 +22,7 @@ class ExternalResourcesController < ApplicationController
   def create
     @external_resource = ExternalResource.new(external_resource_params)
       if @external_resource.save
-        redirect_to external_resources_path, flash: { success: 'External resource was successfully created.' }
+        redirect_to external_resources_path, flash: { success: I18n.t("external_resources.notif.create") }
       else
         render :new
       end
@@ -32,7 +32,7 @@ class ExternalResourcesController < ApplicationController
   # PATCH/PUT /external_resources/1.json
   def update
       if @external_resource.update(external_resource_params)
-        redirect_to external_resources_path, flash: { success: 'External resource was successfully updated.' }
+        redirect_to external_resources_path, flash: { success: I18n.t("external_resources.notif.update") }
       else
         render :edit
       end
@@ -42,7 +42,7 @@ class ExternalResourcesController < ApplicationController
   # DELETE /external_resources/1.json
   def destroy
     @external_resource.destroy
-    redirect_to external_resources_url, flash: { success: 'External resource was successfully destroyed.' }
+    redirect_to external_resources_url, flash: { success: I18n.t("external_resources.notif.destroy") }
   end
 
   private

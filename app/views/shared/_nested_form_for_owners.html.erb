@@ -2,8 +2,8 @@
   <%= javascript_pack_tag "cocoon", 'data-turbolinks-track': 'reload'  %>
 <% end %>
 <p class="form-text text-muted">
-  Vous ne trouvez pas l'utilisateur dans la liste ?
-  Rendez-vous <%= link_to "ici", users_import_path, target: "_blank" %> pour importer un utilisateur (n'oubliez pas de recharger cette page après).
+  <%= t("nested_form.do_not_find") %>
+  <%= t("nested_form.go_here_html", here: link_to(t("nested_form.here"), users_import_path, target: "_blank")) %>
 </p>
 <div class="owners">
   <%= f.simple_fields_for :owners do |f2| %>
@@ -11,7 +11,7 @@
   <% end %>
 </div>
 <%= link_to_add_association(
-  button_tag(raw("#{fa_icon("plus")} Ajouter une possession"), type: "button", class: "btn btn-success mb-3"),
+  button_tag(raw("#{fa_icon("plus")} #{I18n.t("nested_form.add_possession")}"), type: "button", class: "btn btn-success mb-3"),
   f,
   :owners,
   data: {

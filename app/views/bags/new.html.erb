@@ -1,7 +1,7 @@
-<% provide(:title, "Nouveau sac") %>
-<%= render "layouts/page_wrapper", title:"Nouveau sac" do %>
+<% provide(:title, I18n.t("bags.new")) %>
+<%= render "layouts/page_wrapper", title: I18n.t("bags.new") do %>
 
   <%= render 'form', bag: @bag %>
 
-  <%= link_to 'Retour', bags_path %>
+  <%= link_to I18n.t("button.cancel"), bags_path %>
 <% end %>

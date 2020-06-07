@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   def signin_with_wca
     scopes = %w(public email dob)
-    can_manage = params.require(:signin).require(:can_manage)
+    can_manage = params.require(:session).require(:can_manage)
     if can_manage == "1"
       scopes << "manage_competitions"
     end
@@ -43,7 +43,7 @@ class SessionsController < ApplicationController
 
     status, user = User.create_or_update(me_data)
     unless status
-      return fail_and_redirect("Impossible de créer l'utilisateur! (C'est une erreur sérieuse :( !)")
+      return fail_and_redirect(I18n.t("sessions.cannot_import"))
     end
     session[:user_id] = user.id
     #FIXME: improve the use of access token, set an expiration
@@ -52,24 +52,24 @@ class SessionsController < ApplicationController
     Rails.logger.info "WCA Logged in as '#{me_data['name']}'."
     session[:locale] = nil
     set_locale
-    redirect_to root_url, flash: { success: 'Vous êtes connecté !' }
+    redirect_to root_url, flash: { success: I18n.t("sessions.logged_in") }
   end
 
   def destroy
     reset_session
-    redirect_to root_url, flash: { success: 'Vous avez été déconnecté !' }
+    redirect_to root_url, flash: { success: I18n.t("sessions.logged_out") }
   end
 
   private
   def fail_and_redirect(message)
       reset_session
       Rails.logger.info "WCA Login failed."
-      redirect_to(root_url, alert: "Impossible de se connecter ! Erreur : #{message}")
+      redirect_to(root_url, alert: I18n.t("sessions.cannot_login", message: message))
   end
 
   def redirect_if_connected!
     if current_user
-      flash[:warning] = "Vous êtes déjà connecté."
+      flash[:warning] = I18n.t("sessions.already_logged_in")
       redirect_to root_url
     end
   end

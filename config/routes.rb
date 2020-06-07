@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :online_competitions
   get 'online_competitions/:id/admin' => 'online_competitions#admin', :as => :admin_results
-  resources :clubs
+  resources :clubs, except: [:show]
   resources :external_resources, except: [:show], path: 'ressources'
   resources :calendar_events
   resources :bags

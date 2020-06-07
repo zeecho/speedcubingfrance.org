@@ -75,7 +75,7 @@ class ResultsController < ApplicationController
     comp_id = @result.online_competition_id
     @result.destroy
     redirect_to admin_results_path(comp_id), flash: {
-      success: 'Result was successfully destroyed.'
+      success: I18n.t("results.successfully_destroyed")
     }
   end
 

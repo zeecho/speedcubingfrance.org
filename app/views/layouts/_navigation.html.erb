@@ -27,22 +27,22 @@
             <% end %>
           </div>
           <div class="brand-social">
-            <a href="https://www.facebook.com/AFspeedcubing/" target="_blank" title="Facebook">
+            <a href="https://www.facebook.com/AFspeedcubing/" target="_blank" title="<%= I18n.t('social_medias.facebook') %>">
               <i class="fa fa-facebook-official"></i>
             </a>
-            <a href="https://www.twitch.tv/afspeedcubing" target="_blank" title="Twitch">
+            <a href="https://www.twitch.tv/afspeedcubing" target="_blank" title="<%= I18n.t('social_medias.twitch') %>">
               <i class="fa fa-twitch"></i>
             </a>
-            <a href="https://github.com/speedcubingfrance/speedcubingfrance.org" target="_blank" title="Github">
+            <a href="https://github.com/speedcubingfrance/speedcubingfrance.org" target="_blank" title="<%= I18n.t('social_medias.github') %>">
               <i class="fa fa-github"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCMF--vJOazE3p26jcRnFHkg" target="_blank" title="Youtube">
+            <a href="https://www.youtube.com/channel/UCMF--vJOazE3p26jcRnFHkg" target="_blank" title="<%= I18n.t('social_medias.youtube') %>">
               <i class="fa fa-youtube"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCycidVUvhFBlq_s47LjTFOQ" target="_blank" title="Youtube (reuploads twitch & cie)">
+            <a href="https://www.youtube.com/channel/UCycidVUvhFBlq_s47LjTFOQ" target="_blank" title="<%= I18n.t('social_medias.youtube_reup') %>">
               <i class="fa fa-youtube"></i>
             </a>
-            <a href="https://www.instagram.com/afspeedcubing/" target="_blank" title="Instagram">
+            <a href="https://www.instagram.com/afspeedcubing/" target="_blank" title="<%= I18n.t('social_medias.instagram') %>">
               <i class="fa fa-instagram"></i>
             </a>
           </div>
@@ -128,20 +128,20 @@
                       Administration
                     </h6>
                     <% if current_user.can_manage_communication_matters? %>
-                      <%= link_to "Adhésions", subscriptions_path, class: "dropdown-item" %>
+                      <%= link_to I18n.t("nav.subscriptions"), subscriptions_path, class: "dropdown-item" %>
                     <% end %>
                     <% if current_user.admin? %>
-                      <%= link_to "Utilisateurs", users_path, class: "dropdown-item" %>
+                      <%= link_to I18n.t("nav.admin.users"), users_path, class: "dropdown-item" %>
                     <% end %>
-                    <%= link_to "Posts", news_index_path, class: "dropdown-item" %>
-                    <%= link_to "Compétitions", upcoming_champs_path, class: "dropdown-item" %>
+                    <%= link_to I18n.t("nav.admin.posts"), news_index_path, class: "dropdown-item" %>
+                    <%= link_to I18n.t("nav.admin.competitions"), upcoming_champs_path, class: "dropdown-item" %>
                   <% end %>
                   <% if current_user.admin? || current_user.french_delegate? %>
                     <div class="dropdown-divider"></div>
                     <h6 role="presentation" class="dropdown-header">
                       Délégués
                     </h6>
-                    <%= link_to "Matériel", hardwares_path, class: "dropdown-item" %>
+                    <%= link_to I18n.t("nav.delegate.hardware"), hardwares_path, class: "dropdown-item" %>
                   <% end %>
 
                   <div class="dropdown-divider"></div>

@@ -1,21 +1,26 @@
-<% provide(:title, "Documents") %>
+<% provide(:title, I18n.t("association.documents.title")) %>
 <% provide(:active_section, "association") %>
-<%= render "layouts/page_wrapper", title: "Documents" do %>
+<%= render "layouts/page_wrapper", title: I18n.t("association.documents.title") do %>
 
-  <h3 id="compte-rendus">Compte-rendus</h3>
-
+  <h3><%= I18n.t("association.documents.status") %></h3>
   <ul>
-    <li><a href="/uploads/AG_13-12-18.pdf">Assemblée Générale du 13 décembre 2018</a></li>
-    <li><a href="/uploads/AG_16-12-17.pdf">Assemblée Générale du 16 décembre 2017</a></li>
-    <li><a href="/uploads/AG_08-04-17.pdf">Assemblée Générale du 8 avril 2017</a></li>
-    <li><a href="/uploads/AG_30-04-16.pdf">Assemblée Générale du 30 avril 2016</a></li>
-    <li><a href="/uploads/AG_17-04-15.pdf">Assemblée Générale du 17 avril 2015</a></li>
-    <li><a href="/uploads/AG_27-12-14.pdf">Assemblée Générale du 27 décembre 2014</a></li>
-    <li><a href="/uploads/AG_27-04-13.pdf">Assemblée Générale du 27 avril 2013</a></li>
-    <li><a href="/uploads/AG_20-04-12.pdf">Assemblée Générale du 20 avril 2012</a></li>
-    <li><a href="/uploads/AG_22-04-11.pdf">Assemblée Générale du 22 avril 2011</a></li>
-    <li><a href="/uploads/StatutsAFS.pdf">Statuts de l'association</a></li>
+    <li><a href="/uploads/StatutsAFS.pdf"><%= I18n.t("association.documents.association_status") %></a></li>
+    <li><a href="https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_b/20100029/653"><%= I18n.t("association.documents.journal_officiel") %></a></li>
   </ul>
 
-  Le logo de l'association dans ses différentes versions est disponible <%= link_to "ici", page_path("association/logo") %>.
+  <h3 id="compte-rendus"><%= I18n.t("association.documents.reports") %></h3>
+  <ul>
+    <li><a href="/uploads/AG_13-12-18.pdf"><%= I18n.t("association.documents.ag_of", date: l(Date.parse('2018-12-13'))) %></a></li>
+    <li><a href="/uploads/AG_16-12-17.pdf"><%= I18n.t("association.documents.ag_of", date: l(Date.parse('2017-04-16'))) %></a></li>
+    <li><a href="/uploads/AG_08-04-17.pdf"><%= I18n.t("association.documents.ag_of", date: l(Date.parse('2017-04-08'))) %></a></li>
+    <li><a href="/uploads/AG_30-04-16.pdf"><%= I18n.t("association.documents.ag_of", date: l(Date.parse('2016-04-30'))) %></a></li>
+    <li><a href="/uploads/AG_17-04-15.pdf"><%= I18n.t("association.documents.ag_of", date: l(Date.parse('2015-04-17'))) %></a></li>
+    <li><a href="/uploads/AG_27-12-14.pdf"><%= I18n.t("association.documents.ag_of", date: l(Date.parse('2014-12-27'))) %></a></li>
+    <li><a href="/uploads/AG_27-04-13.pdf"><%= I18n.t("association.documents.ag_of", date: l(Date.parse('2013-04-27'))) %></a></li>
+    <li><a href="/uploads/AG_20-04-12.pdf"><%= I18n.t("association.documents.ag_of", date: l(Date.parse('2012-04-20'))) %></a></li>
+    <li><a href="/uploads/AG_22-04-11.pdf"><%= I18n.t("association.documents.ag_of", date: l(Date.parse('2011-04-22'))) %></a></li>
+  </ul>
+
+  <h3><%= I18n.t("association.documents.logo") %></h3>
+  <p><%= t("association.documents.logo_html", ici: link_to(I18n.t("association.documents.here"), page_path("association/logo"))) %></h3>
 <% end %>

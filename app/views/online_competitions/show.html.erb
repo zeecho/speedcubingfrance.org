@@ -11,7 +11,7 @@
 
 <% unless @online_competition.visible %>
   <div class="alert alert-warning">
-    Cette compétition n'est pas visible
+    <%= I18n.t("online_competitions.show.comp_not_public") %>
   </div>
 <% end %>
 
@@ -61,7 +61,7 @@
     <%= I18n.t("online_competitions.show.comp_ongoing") %>
     <br/>
     <% if current_user&.can_manage_online_comps? %>
-      Étant donné que vous avez les droits pour gérer les compétitions en ligne, vous pouvez forcer l'affichage des résultats en cours
+      <%= I18n.t("online_competitions.show.you_have_rights_for_ongoing_results") %>
       <%= link_to("ici", admin_results_path(@online_competition)) %>.
     <% end %>
   </div>

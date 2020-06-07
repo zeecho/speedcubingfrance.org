@@ -1,13 +1,13 @@
 <div class="nested-fields">
   <div class="row">
     <div class="col-3">
-      <%= f.association :user, collection: User.order(:name) %>
+      <%= f.association :user, collection: User.order(:name), label: t('simple_form.labels.item.owners.user') %>
     </div>
     <div class="col-4">
-      <%= f.input :start %>
+      <%= f.input :start, label: t('simple_form.labels.item.owners.start') %>
     </div>
     <div class="col-4">
-      <%= f.input :end %>
+      <%= f.input :end, label: t('simple_form.labels.item.owners.end') %>
     </div>
     <div class="col-1">
       <%= link_to_remove_association(button_tag(fa_icon("times"), type: "button", class: "btn btn-danger"), f) %>

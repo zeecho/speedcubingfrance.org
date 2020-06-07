@@ -1,11 +1,14 @@
 fr:
   general:
     please_sign_in: "Merci de vous connecter pour accéder à cette partie"
+    form:
+      invalid: "Le formulaire est invalide. Merci de corriger les erreurs ci dessous."
+    are_you_sure: "Êtes-vous sûr·e ?"
   new_session:
     title: "Connexion avec un compte WCA"
     p1: "Pour vous connecter au site de notre association, vous devez avoir un compte sur le site de la %{wca}."
     p2: >-
-      En cliquant sur "Se connecter avec la WCA", vous serez rediriger vers le
+      En cliquant sur "Se connecter avec la WCA", vous serez redirigé·e vers le
       site de la WCA pour vous identifier, qui vous redirigera ensuite vers le
       site de l'AFS où vous serez alors connecté.
   events:
@@ -101,13 +104,12 @@ fr:
         tags_string: 'Tags'
         posted_at: 'Date de publication'
         slug: 'Permalien'
-        draft: 'Ce post est un brouillon'
+        draft: 'Cette publication est un brouillon'
         feature: "Mettre en valeur sur la page d'accueil"
-        competition_page: "Ce post est une page de compétition"
+        competition_page: "Ce publication est une page de compétition"
       import_user:
         query: "Recherche"
-        user_id: "ID d'utilisateur"
-      signin:
+      session:
         can_manage: "Je suis un organisateur ou Délégué WCA, et j'autorise l'AFS à gérer mes compétitions."
       user:
         wca_id: "ID WCA"
@@ -123,30 +125,104 @@ fr:
         name: "Alias du tag"
         color: "Couleur"
         fullname: "Texte affiché"
+      item:
+        owners:
+          user: "Utilisateur"
+          start: "Du"
+          end: "Au"
       bag:
-        owners:
-          user: "Utilisateur"
-          start: "Du"
-          end: "Au"
+        name: "Nom"
       hardware:
-        owners:
-          user: "Utilisateur"
-          start: "Du"
-          end: "Au"
+        name: "Nom"
+        hardware_type: "Type"
+        state: "État"
+        bag: "Sac"
+        comment: "Commentaire"
+      club:
+        name: "Nom"
+        website: "Site internet"
+        email: "Email"
+        facebook: "Facebook"
+        description: "Description"
+        logo: "Logo"
+        department: "Département"
+        city: "Ville"
+      external_resource:
+        name: "Nom"
+        link: "Lien"
+        description: "Description"
+        img: "Image"
+        rank: "Placer la ressource"
     hints:
+      bag:
+        name: ""
+      calendar_event:
+        kind: ""
+        name: ""
+        public: ""
+      club:
+        city: ""
+        description: ""
+        email: ""
+        facebook: ""
+        logo: ""
+        name: ""
+        website: ""
+      external_resource:
+        description: ""
+        img: ""
+        link: ""
+        name: ""
+        rank: ""
+      hardware:
+        comment: ""
+        hardware_type: ""
+        name: ""
+        state: ""
       post:
+        feature: ""
+        posted_at: ""
+        slug: ""
         tags_string: "Pour personnaliser le texte affiché et la couleur de chaque tag, allez <a href='/tags' target='_blank'>là</a>."
-        draft: "Si cette case est cochée, le post ne sera pas visible par le public"
-        competition_page: "Si cette case est cochée, le post ne sera pas affiché sur la page d'accueil."
-        body: "Ajoutez \"{{post_excerpt}}\" pour séparer l'introduction d'un post de son contenu principal."
+        title: ""
+        draft: "Si cette case est cochée, la publication ne sera pas visible par le public"
+        competition_page: "Si cette case est cochée, la publication ne sera pas affiché sur la page d'accueil."
+        body: "Ajoutez \"{{post_excerpt}}\" pour séparer l'introduction d'une publication de son contenu principal."
+      session:
+        can_manage: ""
+      shared:
+        end: ""
+        start: ""
+      subscription:
+        csvfile: ""
       tag:
         name: "L'alias permet d'identifier le tag et n'est pas modifiable"
+        color: ""
+        fullname: ""
+      user:
+        admin: ""
+        city: ""
+        communication: ""
+        discussion_subscription: ""
+        french_delegate: ""
+        friendly_birthdate: ""
+        friendly_delegate_status: ""
+        newsletter_subscription: ""
+        notify_subscription: ""
+        query: ""
+        wca_id: ""
       online_competition:
+        delete_pdf: ""
+        end_date: ""
+        start_date: ""
+        visible: ""
+        name: ""
         force_close: "Pratique pour terminer manuellement la compétition (les dates n'ont pas d'heure associée !)"
         slug: "Seulement des caractères alphanumériques ainsi que '-' et '_', sans espace !"
+        scrambles: "Ils s'afficheront lors de la saisie des temps"
   helpers:
     submit:
-      signin:
+      session:
         submit: "Se connecter avec la WCA"
       user:
         update: 'Sauvegarder'
@@ -157,7 +233,7 @@ fr:
         create: "Créer l'évènement"
         update: 'Sauvegarder'
       post:
-        create: 'Créer le post'
+        create: 'Créer la publication'
         update: 'Sauvegarder'
       import_user:
         submit: "Envoyer la requête"
@@ -167,14 +243,18 @@ fr:
         update: "Sauvegarder"
       big_champs:
         submit: "Sauvegarder"
-    page_entries_info:
-      one_page:
-        display_entries:
-          zero: "Pas de %{entry_name} trouvé."
-          one: "Affichage d'un %{entry_name}"
-          other: "Affichage de <b>tous les %{count}</b> %{entry_name}"
-      more_pages:
-        display_entries: "Affichage des %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> sur <b>%{total}</b> au total"
+      club:
+        create: "Créer le club/l'association"
+        update: "Mettre à jour le club/l'association"
+      external_resource:
+        create: "Créer la ressource"
+        update: "Mettre à jour la ressource"
+      hardware:
+        create: "Créer un matériel"
+        update: "Mettre à jour le matériel"
+      bag:
+        create: "Créer un sac"
+        update: "Mettre à jour le sac"
   views:
     pagination:
       first: "&laquo; Première"
@@ -185,8 +265,24 @@ fr:
   online_competitions:
     title: "Compétitions en ligne"
     stayathome: "#restezchezvous"
+    create:
+      title: "Créer une compétition en ligne"
+      success: "Online competition was successfully created."
+    update:
+      success: "Online competition was successfully updated."
+    destroy:
+      success: "Online competition was successfully destroyed."
+    edit:
+      title: "Éditer la compétition en ligne"
+    form:
+      upload_scrambles_pdf: "Uploader un fichier pdf avec les mélanges"
+      delete_scrambles_pdf: "Supprimer le pdf de mélanges"
+      upload_scrambles_json: "Uploader le json des mélanges"
+      hint_for_scrambles: "Fichier actuellement stocké :"
+      none: "aucun"
     index:
       range: "Du %{start_date} au %{end_date}"
+      confirm: "Êtes-vous sûr·e ?"
     show:
       started: "A débuté le"
       will_start: "Débutera le"
@@ -196,6 +292,8 @@ fr:
       comp_over: "La compétition est terminée, il y a eu %{n} compétiteurs."
       comp_ongoing: "La compétition est en cours, vous pouvez envoyer vos résultats."
       comp_not_started: "Revenez plus tard, la compétition n'a pas encore démarrée !"
+      comp_not_public: "Cette compétition n'est pas visible"
+      you_have_rights_for_ongoing_results: "Étant donné que vous avez les droits pour gérer les compétitions en ligne, vous pouvez forcer l'affichage des résultats en cours"
     show_results:
       results_for: "Résultats du %{event_name}"
       results: "Résultats"
@@ -232,13 +330,17 @@ fr:
       my_comps: "Mes compétitions"
       sign_out: "Déconnexion"
       sign_in: "Connexion"
-  #context: Key used in the context of editing a user profile
-  users:
-    #context: when updating their locale (language)
-    update_locale:
-      success: "Langue mise à jour."
-      failure: "Impossible de mettre à jour votre profil."
-      unavailable: "La langue demandée n'est pas disponible."
+    admin:
+      users: "Utilisateurs"
+      posts: "Publications"
+      competitions: "Compétitions"
+    delegate:
+      hardware: "Matériel"
+  button:
+    show: "Voir"
+    edit: "Éditer"
+    cancel: "Annuler"
+    destroy: "Détruire"
   homepage:
     upcoming_comps: "Compétitions à venir"
     france: "En France"
@@ -261,3 +363,332 @@ fr:
     multihelp: "Pour le multiblind, la première case correspond au nombre de cubes résolus, la seconde au nombre de cubes tentés, la dernière au temps au format minutes secondes centièmes."
     multiex: "Par exemple : 5 / 7 en 47 minutes et 12 secondes : entrez 5 dans la première case, 7 dans la seconde et « 471200 » dans la dernière."
     enjoying: "Cela vous plait ? Bonne nouvelle, c'est exactement comme ça que nous rentrons les temps lors des compétitions officielles ! N'hésitez pas à venir proposer votre aide à la saisie des temps lors de la prochaine compétition ;)"
+  association:
+    introduction:
+      title: "Présentation de l'association"
+      introduction: "Présentation"
+      p1: "L’Association Française de Speedcubing a été créée dans le but de promouvoir le développement de la pratique du cube au niveau national. Une partie de son activité est consacrée à supporter l’organisation de compétitions officielles sur le sol français. Cela peut inclure le prêt de materiel, la participation aux frais de location de salle, etc."
+      board:
+        title: "Bureau"
+        desc_html: "Le %{link} est actuellement constitué de :"
+        name: "bureau"
+        president: "Lina Tissier, présidente"
+        treasurer: "Jules Desjardin, trésorier"
+        secretary: "Antoine Piau, secrétaire"
+      teams:
+        title: "Équipes"
+        desc: "Plusieurs équipes sont responsables de tâches précises au sein de l'association :"
+        website: "Site internet : Antoine Piau, Philippe Virouleau (responsable)"
+        communication: "Communication : Pauline Bonnaudet, Jules Desjardin, Mario Laurent, Antoine Piau, Élise Pointurier"
+        streaming: "Streaming : Vincent Colin, Jules Desjardin, Mario Laurent (responsable), Hippolyte Moreau, Rui Reis"
+    subscriptions:
+      title: "Adhésions"
+      p1: "Une partie des moyens financiers dont dispose l'association proviennent des adhésions. Toute personne de nationalité française ou étrangère peut adhérer à l'association en s'acquittant d'une cotisation de 10 euros, ce qui rend l'adhésion effective pour une durée d'un an."
+      p2_html: "L'adhésion s'effectue sur internet : l'AFS utilise HelloAsso pour récolter ses dons et adhésion, vous pouvez donc vous rendre sur la %{link_ha}, et cliquer sur le lien “Adhérer”."
+      afs_page: "page de l'AFS"
+      p3: "Les avantages dont disposent les adhérents sont :"
+      free_dues: "la gratuité des WCA Dues pour les compétitions auxquelles l'association prend part"
+      hardware: "la possibilité d'emprunter du matériel de l'association"
+      notifs_html: "la possibilité d'activer les notifications des annonces de compétitions françaises dans %{link_profile}"
+      profile: "son profil"
+      events: "de potentiels avantages ou invitations pour les événements liés à l'association (Coupe de l'AFS et Coupe de France dans le passé)"
+    documents:
+      title: "Documents"
+      status: "Statuts"
+      journal_officiel: "Journal Officiel"
+      association_status: "Statuts de l'association"
+      reports: "Compte-rendus"
+      ag_of: "Assemblée Générale du %{date}"
+      logo: "Logo"
+      logo_html: "Le logo de l'association dans ses différentes versions est disponible %{ici}."
+      here: "ici"
+    board_history:
+      title: "Historique du bureau"
+      period: "Période"
+      president: "Président·e"
+      treasurer: "Trésorier·e"
+      secretary: "Secrétaire"
+      ongoing: "en cours"
+    logos:
+      title: "Logos"
+      p1: "Le logo de l'AFS est utilisable par tous les organisateurs et Délégués WCA dans les outils de communication (tels que le site internet, les affiches, les vêtements), mis en oeuvre dans le cadre d'une compétition en partenariat avec l'AFS."
+      p2_html: "Pour une utilisation dans un cadre différent, merci de contacter le %{board_mail_link} pour en négocier son usage."
+      p3_before_ul: "Le logo existe dans les versions suivantes :"
+      p3_after_ul: "Il a été créé et nous a été offert par François Grassard, merci à lui. Merci également à Delphine Tran pour la version eps."
+      png: "Logo en version matricielle (png)"
+      svg: "Logo en version vectorielle (svg)"
+      eps: "Logo au format eps"
+      png_with_text: "Logo avec texte en version matricielle (png)"
+      svg_with_text: "Logo avec texte en version vectorielle (svg)"
+      eps_with_text: "Logo avec texte au format eps"
+    coupedefrance:
+      title: "Coupe de France"
+  calendar_events:
+    create: "Créer un événement"
+    edit: "Mettre à jour %{event}"
+    close: "Fermer"
+    cannot_manage: "Vous ne pouvez pas gérer le calendrier."
+  clubs:
+    edit:
+      title: "Édition d'une association ou d'un club"
+    index:
+      title: "Clubs et associations locales"
+      disclaimer: "Actuellement, les associations locales et les clubs de speedcubing ne sont pas affiliés à l'AFS. Cependant, nous vous listons ici ceux dont nous connaissons l'existence en France."
+      add_element: "Ajouter un élément"
+      confirm: "Êtes-vous sûr·e de vouloir supprimer %{club} ?"
+    new:
+      title: "Nouvelle association ou nouveau club"
+    notif:
+      create: "Le club a été créé avec succès."
+      update: "Le club a été mis à jour."
+      destroy: "Le club a été détruit avec succès."
+  competitions:
+    index:
+      title: "Calendrier des compétitions"
+      legend_title: "Le calendrier ci-dessous regroupe les éléments suivants :"
+      official_comps: "Les compétitions officielles de la WCA en France"
+      projects: "Les compétitions en projet"
+      afs_events: "Les événements AFS hors compétitions"
+      ical: "Vous pouvez également utiliser la version iCal pour ajouter ce calendrier comme un calendrier externe à votre agenda (note : seules les compétitions WCA à venir sont incluses dans le calendrier iCal)."
+      ical_url_html: "L'url à utiliser est <code>%{url}</code>"
+      old_comps_pages:
+        title: "Anciennes pages de compétitions"
+        p_html: "Avant que le site de la World Cube Association ne propose d'héberger les pages de compétitions, l'AFS hébergeait certaines pages de compétitions françaises : elles sont disponibles %{ici}."
+        here: "ici"
+    manage_big_comps:
+      title: "Compétitions majeures à venir"
+      p: " Ce formulaire contrôle les informations affichées sur la page d'accueil concernant les compétitions majeures à venir. Si un ID de compétition est présent, alors les informations à propos de la compétition seront récupérées sur le site de la WCA et affichées, sinon le nom et le texte alternatif seront utilisés."
+      comp_index_link_html: "Pour gérer les compétitions et évènements en préparation, direction le %{calendrier} !"
+      calendar: "calendrier"
+      french: "Championnats de France"
+      euro: "Championnats d'Europe"
+      world: "Championnats du Monde"
+    mine:
+      title: "Mes compétitions"
+      intro: "Cette page est là pour faciliter la vérification des inscriptions des compétiteurs aux compétitions AFS. Sélectionnez une compétition pour afficher quelles inscriptions sont valides et quelles sont celles nécessitant un paiement avant de pouvoir être acceptées."
+      error: "Une erreur est survenue : %{error}"
+      not_announced: "Cette compétition n'est pas encore annoncée."
+      none: "Vous n'avez aucune compétition à venir en tant que Délégué ou organisateur."
+    old_comps_pages:
+      title: "Compétitions"
+      intro: "Historiquement l'AFS a proposé aux organisateurs de compétitions d'héberger leurs pages de compétitions sur le site de l'AFS. Le site de la WCA propose depuis maintenant quelques années un service similaire avec plus de fonctionnalités, qui rend donc obsolète les pages sur le site de l'AFS. La liste ci dessous regroupe l'ensemble des compétitions qui ont eu une page sur le site de l'AFS."
+    registrations:
+      title: "Inscriptions pour %{competition}"
+      error: "Une erreur est survenue : %{error}"
+      pending: "En attente"
+      accepted: "Acceptée"
+      deleted: "Supprimée"
+      check_all: "Vérifier tous les potentiels nouveaux compétiteurs"
+      stop_check: "Arrêter la vérification"
+      full_name: "Nom complet"
+      id_wca: "ID WCA"
+      status: "Statut"
+      warning: "Vous n'avez pas autorisé l'AFS à gérer vos compétitions."
+      none: "Aucune inscription %{status}."
+  external_resources:
+    edit:
+      title: "Édition de la ressource externe %{name}"
+    new:
+      title: "Nouvelle ressource externe"
+    index:
+      title: "Ressources externes"
+      add_element: "Ajouter un élément"
+      logo_alt: "Logo %{resource_name}"
+      link_html: "Lien : %{lien}"
+      confirm: "Êtes-vous sûr·e de vouloir supprimer %{resource_name} ?"
+    notif:
+      create: "La ressource externe a été créée avec succès."
+      update: "La ressource externe a été mise à jour."
+      destroy: "La ressource externe a été détruite avec succès."
+  hardware:
+    title_list_owners: "Liste des personnes en possession du matériel"
+    new:
+      title: "Création d'un nouveau matériel"
+    edit:
+      page_title: "Édition de %{hardware_name}"
+      title: "Édition de %{hardware_name} (%{type})"
+    index:
+      title: "Matériel"
+      manage_bags: "Gérer les sacs"
+      name: "Nom"
+      type: "Type"
+      state: "État"
+      comment: "Commentaire"
+      where: "Chez qui"
+      bag: "Sac"
+      actions: "Actions"
+      add: "Ajouter du nouveau matériel"
+    show:
+      title: "Infos sur %{hardware_name}"
+      name: "Nom :"
+      comment: "Commentaire :"
+      in_bag_html: "Dans le sac %{bag_link}"
+    notif:
+      create: "Le matériel a été créé avec succès."
+      update: "Le matériel a été mis à jour."
+      destroy: "Le matériel a été détruit avec succès."
+  bags:
+    owner_title: "Liste des personnes en possession du sac"
+    edit_title: "Édition du sac %{bag_name}"
+    new: "Nouveau sac"
+    index:
+      title: "Sacs"
+      manage_hardware: "Gérer le matériel"
+      in_it: "Il y a dedans :"
+      comment: "Commentaire : %{comment}"
+      no_comment: "Pas de commentaire"
+      nothing: "rien pour l'instant."
+    show:
+      title: "Infos sur le sac %{bag_name}"
+      name: "Nom :"
+      hardware_name: "Nom du matériel"
+    notif:
+      create: "Le sac a été créé avec succès."
+      update: "Le sac a été mis à jour."
+      destroy: "Le sac a été détruit avec succès."
+  social_medias:
+    facebook: "Facebook"
+    twitch: "Twitch"
+    github: "GitHub"
+    youtube: "YouTube"
+    youtube_reup: "YouTube (reuploads Twitch & cie)"
+    instagram: "Instagram"
+  posts:
+    dates: "Du %{start} au %{end}."
+    visit_website: "Visiter le site"
+    read_more: "Lire la suite..."
+    edit:
+      title: "Éditer la publication"
+      list: "Liste des publications"
+    index:
+      title: "Liste des publications et pages de compétition"
+      edit_tags: "Modifier les étiquettes"
+      on_date_by_person: "Le %{date} par %{person}"
+    new:
+      title: "Nouvelle publication"
+      back: "Retour à la liste des publications"
+    show:
+      draft: "Ce post est un brouillon."
+      published_on_html: "Publié le %{date} par %{person}."
+      permalink: "Permalien"
+    tag_index:
+      title_html: "Publications pour le tag %{tag_name}"
+      none: "Aucune publication correspondante à ce tag."
+    notif:
+      create: "La publication a été créée avec succès."
+      update: "La publication a été mise à jour."
+      destroy: "La publication a été détruite avec succès."
+  table_headers:
+    firstname: "Prénom"
+    name: "Nom"
+    wca_id: "ID WCA"
+    email: "Email"
+    paid_at: "Payé le"
+    receipt_url: "Lien du reçu"
+    full_name: "Nom complet"
+    city: "Ville"
+    end_of_subscription: "Fin d'adhésion"
+    country: "Pays"
+    notifications: "Notif."
+    discussions: "Discuss"
+    news: "Infos"
+  nav_competitions:
+    calendar: "Calendrier des compétitions"
+    cdf: "Championnats de France"
+  nav_tutos:
+    tutorials: "Tutoriels"
+    competitors: "Compétiteurs"
+    judges: "Juges"
+    solving: "Résolution"
+    organising: "Organisation"
+  nested_form:
+    do_not_find: "Vous ne trouvez pas l'utilisateur dans la liste ?"
+    go_here_html: "Rendez-vous %{here} pour importer un utilisateur (n'oubliez pas de recharger cette page après)."
+    here: "ici"
+    add_possession: "Ajouter une possession"
+  show_owners:
+    at: "Chez :"
+    person: "Personne"
+    from: "Du"
+    to: "Au"
+  subscriptions:
+    deleted: "Cotisation supprimée"
+    members: "Adhérents"
+    subscriptions: "Adhésions"
+    members_nb: "%{nb} adhérents au %{date}"
+    none: "Pas d'adhérents, essayez d'importer des adhésions depuis HelloAsso."
+    import_html: "Importer un CSV de %{helloasso}."
+    select_file: "Sélectionner un fichier"
+    receipt: "Reçu"
+    review_title: "Changements à soumettre"
+    detected_contributions: "Les contributions ci dessous ont été détectées, merci de les relire et de ne soumettre le formulaire que si tout semble correct !"
+    import_contributions: "Importer ces contributions"
+    nothing_to_import: "Pas de contributions à importer."
+    already_in_db: "Les contributions ci dessous sont déjà présentes dans la base de données et seront ignorées."
+  tags:
+    successful_update: "Étiquette mise à jour."
+    edit:
+      title: "Modifier l'étiquette %{tag}"
+      back: "Revenir à la liste des étiquettes"
+    index:
+      title: "Étiquettes"
+      post_list: "Liste des posts"
+      click_on_tag: "Cliquez sur une étiquette pour modifier le texte affiché et sa couleur."
+  #context: Key used in the context of editing a user profile
+  users:
+    #context: when updating their locale (language)
+    update_locale:
+      success: "Langue mise à jour."
+      failure: "Impossible de mettre à jour votre profil."
+      unavailable: "La langue demandée n'est pas disponible."
+    no_rights:
+      admin: "Seuls les administrateurs ont accès à cette page."
+      delegate: "Seuls les délégués ont accès à cette page."
+      communication: "Seuls les responsables communication ont accès à cette page."
+      generic: "Vous n'êtes pas autorisé à accéder à cette page."
+    no_results: "Aucun résultat pour la requête"
+    successful_import: "Utilisateur %{user} importé avec succès"
+    request_error: "Erreur lors de la requête au site de la WCA"
+    successful_update: "Utilisateur mis à jour avec succès"
+    cannot_edit: "Vous ne pouvez pas éditer cet utilisateur"
+    icons:
+      admin: "Administrateur"
+      comm: "Communication"
+      delegate: "Délégué·e Français·e"
+    edit:
+      my_profile: "Mon profil"
+      you_are_a_member: "Vous êtes membre de l'AFS jusqu'au %{date}."
+      you_are_no_more_a_member: "Vous n'êtes plus membre de l'AFS depuis le %{date}."
+      you_are_not_a_member: "Vous n'êtes pas membre de l'AFS."
+      disclaimer: "Note : vous devez avoir une cotisation active pour que les champs marquées d'un * soient pris en compte. Vous serez automatiquement retiré·e des listes de diffusion si votre adhésion se termine sans être renouvelée."
+      notif_should_work: "Étant actuellement membre de l'association, l'activation de ces notifications/listes de diffusion devrait fonctionner."
+      notif_should_not_work: "N'étant actuellement pas membre de l'association, l'activation de ces notifications/listes de diffusion NE fonctionnera PAS."
+      subscriptions_are_manually_imported: "Les cotisations sont importées manuellement et périodiquement par les membres du bureau."
+      contact_html: "Si vous pensez que les informations ci-dessous sont erronées, merci de contacter l'ensemble du bureau via l'adresse %{email}."
+      no_subscription_html: "Vous n'avez aucune cotisation enregistrée. Rendez vous sur %{helloasso} pour adhérer !."
+      active_subscription: "Payée le %{date}, cette cotisation est toujours active."
+      ended_subscription: "Payée le %{date}, cette cotisation n'est plus active."
+    index:
+      title: "Liste des utilisateurs"
+      import_user: "Importer un utilisateur depuis la WCA"
+      info: "Les adhérents apparaissent avec un fond vert clair ou vert foncé."
+    import:
+      title: "Importer un utilisateur"
+      use_search: "Utilisez le champ \"Recherche\" pour importer un utilisateur depuis le site de la WCA."
+      scenarios: "Si un seul résultat correspond, l'utilisateur sera importé, si plusieurs utilisateurs correspondent à la requête ils seront affichés."
+      you_can_click: "Vous pouvez cliquer sur un des utilisateurs de la recherche pour l'importer."
+  contact:
+    title: "Contact"
+    competition_questions: "Si vous avez une question concernant une compétition, merci d’envoyer directement un mail à l'équipe d'organisation de celle-ci. Leur contact se trouve sur la page WCA de la compétition en question."
+    afs_questions_html: "Pour toute question, remarque, ou suggestion concernant l’AFS : merci d’envoyer un mail à %{email}."
+    website_questions_html: "Si vous constatez un problème avec le site internet, vous pouvez directement ouvrir un bug (\"Issue\") sur %{github}, ou contacter les administrateurs à %{email}."
+    github: "GitHub"
+    streaming_questions_html: "Si vous êtes organisateur·ice d'une compétition et que vous souhaitez mettre en place un streaming, merci de contacter l'équipe streaming le plus tôt possible à l'adresse %{email}."
+  sessions:
+    cannot_import: "Impossible de créer l'utilisateur! (C'est une erreur sérieuse :( !)"
+    logged_in: "Vous êtes connecté !"
+    logged_out: "Vous avez été déconnecté !"
+    cannot_login: "Impossible de se connecter ! Erreur : %{message}"
+    already_logged_in: "Vous êtes déjà connecté."
+  results:
+    successfully_destroyed: "Résultats supprimés avec succès"

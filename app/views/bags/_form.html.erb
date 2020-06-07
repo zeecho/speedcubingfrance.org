@@ -3,7 +3,7 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <h3>Liste des personnes en possession du sac</h3>
+    <h3><%= I18n.t("bags.owner_title") %></h3>
     <%= render "shared/nested_form_for_owners", f: f %>
   </div>
 

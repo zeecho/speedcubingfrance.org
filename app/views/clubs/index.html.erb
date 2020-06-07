@@ -1,13 +1,13 @@
-<% provide(:title, "Clubs et associations locales") %>
+<% provide(:title, I18n.t("clubs.index.title")) %>
 <% provide(:active_section, "speedcubing") %>
-<%= render "layouts/page_wrapper", title:"Clubs et associations locales" do %>
+<%= render "layouts/page_wrapper", title: I18n.t("clubs.index.title") do %>
   <div class="d-flex flex-column">
     <p class="text-center font-italic">
-      Actuellement, les associations locales et les clubs de speedcubing ne sont pas affiliés à l'AFS. Cependant, nous vous listons ici ceux dont nous connaissons l'existence en France.
+      <%= I18n.t("clubs.index.disclaimer") %>
     </p>
     <% if current_user&.can_manage_communication_matters? %>
       <div class="text-right">
-        <%= link_to 'Ajouter un élément', new_club_path, class: "btn btn-sm btn-success" %>
+        <%= link_to I18n.t("clubs.index.add_element"), new_club_path, class: "btn btn-sm btn-success" %>
       </div>
     <% end %>
 
@@ -26,23 +26,23 @@
       <p class="text-justify"><%= club.description %></p>
       <% if club.website? %>
         <p>
-          Site internet : <%= link_to club.website, club.website, target: '_blank' %></a>
+          <%= I18n.t("simple_form.labels.club.website") %> : <%= link_to club.website, club.website, target: '_blank' %>
         </p>
       <% end %>
       <% if club.facebook? %>
         <p>
-          Facebook : <%= link_to club.facebook, club.facebook, target: '_blank' %></a>
+        <%= I18n.t("simple_form.labels.club.facebook") %> : <%= link_to club.facebook, club.facebook, target: '_blank' %>
         </p>
       <% end %>
       <% if club.email? %>
         <p>
-          Email : <%= mail_to club.email, club.email %></a>
+          <%= I18n.t("simple_form.labels.club.email") %> : <%= mail_to club.email, club.email %>
         </p>
       <% end %>
       <% if current_user&.can_manage_communication_matters? %>
         <div class="text-right">
           <%= link_to(fa_icon("pencil"), edit_club_path(club), class: "btn btn-sm btn-primary") %>
-          <%= link_to(fa_icon("trash"), club, class: "btn btn-sm btn-danger", method: :delete, data: { confirm: "Êtes-vous sûr·e de vouloir supprimer #{club.name} ?" }) %>
+          <%= link_to(fa_icon("trash"), club, class: "btn btn-sm btn-danger", method: :delete, data: { confirm: I18n.t("clubs.index.confirm", club: club.name) }) %>
         </div>
       <% end %>
       <hr>

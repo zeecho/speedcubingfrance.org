@@ -98,7 +98,8 @@ class CompetitionsController < ApplicationController
 
   def redirect_unless_has_manage_competition_scope!
     unless has_manage_competitions_scope
-      redirect_to root_url, flash: { warning: "Vous n'avez pas autorisé l'AFS à gérer vos compétitions." }
+      redirect_to root_url, flash: { warning: I18n.t("competitions.registrations.warning") }
+
     end
   end
 

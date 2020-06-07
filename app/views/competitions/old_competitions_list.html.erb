@@ -1,10 +1,8 @@
 <% provide(:active_section, "speedcubing") %>
 
-<%= render "shared/nav_competitions", current_page: :calendrier, title: "Compétitions" do %>
+<%= render "shared/nav_competitions", current_page: :calendrier, title: I18n.t("competitions.old_comps_pages.title") do %>
   <p>
-    Historiquement l'AFS a proposé aux organisateurs de compétitions d'héberger leurs pages de compétitions sur le site de l'AFS.
-    Le site de la WCA propose depuis maintenant quelques années un service similaire avec plus de fonctionnalités, qui rend donc obsolète les pages sur le site de l'AFS.
-    La liste ci dessous regroupe l'ensemble des compétitions qui ont eu une page sur le site de l'AFS.
+    <%= I18n.t("competitions.old_comps_pages.intro") %>
   </p>
   <% if @competition_pages.any? %>
     <div class="list-group">

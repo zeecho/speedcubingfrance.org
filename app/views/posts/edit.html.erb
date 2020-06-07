@@ -1,6 +1,6 @@
-<% provide(:title, "Éditer le post") %>
-<h1>Éditer le post</h1>
+<% provide(:title, I18n.t("posts.edit.title")) %>
+<h1><%= I18n.t("posts.edit.title") %></h1>
 
-<%= link_to 'Liste des posts', news_index_path %>
+<%= link_to I18n.t("posts.edit.list"), news_index_path %>
 
 <%= render 'form', post: @post %>

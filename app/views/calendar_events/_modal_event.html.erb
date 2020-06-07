@@ -1,9 +1,9 @@
 <% event ||= CalendarEvent.new %>
 <%
   title = if event.new_record?
-            "Créer un événement"
+            I18n.t("calendar_events.create")
           else
-            "Mettre à jour #{event.name}"
+            I18n.t("calendar_events.edit", event: event.name)
           end
 %>
 <div class="modal" id="modal_event" tabindex="-1" role="dialog">
@@ -21,6 +21,8 @@
             <%= f.input :name %>
             <%= f.input :start_time, as: :hidden %>
             <%= f.input :end_time, as: :hidden %>
+            <%# i18n-tasks-use t('date.formats.short') %>
+            <%# i18n-tasks-use t('time.formats.short') %>
             Du <%= l(event.start_time, format: :short) %> au <%= l(event.last_day, format: :short) %>.
             <%= f.input :kind, collection: CalendarEvent::KINDS, label_method: :second, value_method: :first %>
             <%= f.input :public %>
@@ -32,12 +34,12 @@
                   @calendar_event,
                   method: :delete,
                   class: 'btn btn-danger mr-auto',
-                  data: { confirm: 'Êtes-vous sûr ?' },
+                  data: { confirm: I18n.t("general.are_you_sure") },
                   remote: true,
                   format: "js" %>
             <% end %>
             <%= f.button :submit %>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= I18n.t("calendar_events.close") %></button>
           </div>
         <% end %>
       </div>

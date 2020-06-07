@@ -152,9 +152,7 @@ en:
       import_user:
         #original_hash: 787b549
         query: Search
-        #original_hash: 824b4f6
-        user_id: User ID
-      signin:
+      session:
         #original_hash: a9087c3
         can_manage: >-
           I'm an organizer or WCA Delegate, and I authorize AFS to handle my
@@ -190,15 +188,7 @@ en:
         color: Color
         #original_hash: 741641c
         fullname: Full name
-      bag:
-        owners:
-          #original_hash: 0b20cd7
-          user: User
-          #original_hash: 8481498
-          start: From
-          #original_hash: 7a1732d
-          end: To
-      hardware:
+      item:
         owners:
           #original_hash: 0b20cd7
           user: User
@@ -232,7 +222,7 @@ en:
         slug: 'Only alphanumeric characters, ''-'', ''_''. No spaces!'
   helpers:
     submit:
-      signin:
+      session:
         #original_hash: 7130082
         submit: Sign in with WCA
       user:
@@ -265,18 +255,6 @@ en:
       big_champs:
         #original_hash: 9ada143
         submit: Save
-    page_entries_info:
-      one_page:
-        #original_hash: fcc5c23
-        display_entries:
-          zero: 'No %{entry_name} found.'
-          one: 'Showing 1 %{entry_name}'
-          other: 'Showing <b>all %{count}</b> %{entry_name}'
-      more_pages:
-        #original_hash: d680b63
-        display_entries: >-
-          Showing <b>%{first}&nbsp;-&nbsp;%{last}</b> out of <b>%{total}</b>
-          %{entry_name}
   views:
     pagination:
       #original_hash: 1647b81

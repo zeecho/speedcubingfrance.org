@@ -18,7 +18,7 @@ class SubscriptionsController < ApplicationController
   def destroy
     @subscription = Subscription.find(params[:id])
     @subscription.destroy
-    flash[:success] = "Cotisation supprimée"
+    flash[:success] = I18n.t("subscriptions.deleted")
     redirect_to subscriptions_list_url
   end
 

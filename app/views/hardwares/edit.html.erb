@@ -1,8 +1,8 @@
-<% provide(:title, "Édition de " + @hardware.name) %>
-<%= render "layouts/page_wrapper", title: "Édition de " + @hardware.name + " (" + @hardware.hardware_type_string + ")" do %>
+<% provide(:title, I18n.t("hardware.edit.page_title", hardware_name: @hardware.name)) %>
+<%= render "layouts/page_wrapper", title: I18n.t("hardware.edit.title", hardware_name: @hardware.name, type: @hardware.hardware_type_string) do %>
 
   <%= render 'form', hardware: @hardware %>
 
-  <%= link_to 'Voir', @hardware %> |
-  <%= link_to 'Retour', hardwares_path %>
+  <%= link_to I18n.t("button.show"), @hardware %> |
+  <%= link_to I18n.t("button.cancel"), hardwares_path %>
 <% end %>

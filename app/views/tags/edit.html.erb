@@ -1,7 +1,7 @@
-<% provide(:title, "Modifier le tag " + @tag.name) %>
-<h1>Modifier le tag</h1>
+<% provide(:title, I18n.t("tags.edit.title", tag: @tag.name)) %>
+<h1><%= I18n.t("tags.edit.title", tag: '') %></h1>
 
-<%= link_to 'Revenir à la liste des tags', tags_path %>
+<%= link_to I18n.t("tags.edit.back"), tags_path %>
 
 <%= render 'form', tag: @tag %>
 

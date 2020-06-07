@@ -1,7 +1,7 @@
-<% provide(:title, "Infos sur " + @hardware.name) %>
+<% provide(:title, I18n.t("hardware.show.title", hardware_name: @hardware.name)) %>
 <%= render "layouts/page_wrapper", title: @hardware.name + " (" + @hardware.hardware_type_string + ")" do %>
   <p>
-    <strong>Nom :</strong>
+    <strong><%= I18n.t("hardware.show.name") %></strong>
     <%= @hardware.name %> (<%= @hardware.hardware_type_string %>)
   </p>
 
@@ -10,19 +10,19 @@
   </p>
 
   <p>
-    <strong>Commentaire :</strong>
+    <strong><%= I18n.t("hardware.show.comment") %></strong>
     <%= @hardware.comment %>
   </p>
 
   <%= render "shared/show_owners_list", item: @hardware %>
 
   <% if @hardware.bag %>
-    <h3>Dans le sac <%= link_to @hardware.bag.name, @hardware.bag %></h3>
+    <h3><%= t("hardware.show.in_bag_html", bag_link: link_to(@hardware.bag.name, @hardware.bag)) %></h3>
     <% if @hardware.bag.owners.any? %>
       <%= render "shared/show_owners_list", item: @hardware.bag %>
     <% end %>
   <% end %>
 
-  <%= link_to 'Éditer', edit_hardware_path(@hardware) %> |
-  <%= link_to 'Retour', hardwares_path %>
+  <%= link_to I18n.t("button.edit"), edit_hardware_path(@hardware) %> |
+  <%= link_to I18n.t("button.cancel"), hardwares_path %>
 <% end %>

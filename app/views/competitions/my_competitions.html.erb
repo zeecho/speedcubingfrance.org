@@ -1,14 +1,13 @@
-<% provide(:title, "Mes compétitions") %>
+<% provide(:title, I18n.t("competitions.mine.title")) %>
 
-<h1>Mes compétitions</h1>
+<h1><%= I18n.t("competitions.mine.title") %></h1>
 <div class="alert alert-info">
-  Cette page est là pour faciliter la vérification des inscriptions des compétiteurs aux compétitions AFS.
-  Sélectionnez une compétition pour afficher quelles inscriptions sont valides et quelles sont celles nécessitant un paiement avant de pouvoir être acceptées.
+  <%= I18n.t("competitions.mine.intro") %>
 </div>
 
 <% if @error %>
   <div class="alert alert-danger">
-    Une erreur est survenue : <%= @error %>
+    <%= I18n.t("competitions.mine.error", error: @error) %>
   </div>
 <% elsif @my_competitions.any? %>
   <div class="list-group">
@@ -21,10 +20,10 @@
         <p class="mb-1">
           <%= "Du #{l(Date.parse(comp["start_date"]))} au #{l(Date.parse(comp["end_date"]))} à #{comp["city"]} (#{Country.find_by_iso2(comp["country_iso2"]).name})" %>
         </p>
-        <small><%= comp["announced_at"] ? "Compétition annoncée le #{l(Time.parse(comp["announced_at"]))}" : "Cette compétition n'est pas encore annoncée." %></small>
+        <small><%= comp["announced_at"] ? "Compétition annoncée le #{l(Time.parse(comp["announced_at"]))}" : I18n.t("competitions.mine.not_announced") %></small>
       </a>
     <% end %>
   </div>
 <% else %>
-  Vous n'avez aucune compétition à venir en tant que Délégué ou organisateur.
+  <%= I18n.t("competitions.mine.none") %>
 <% end %>

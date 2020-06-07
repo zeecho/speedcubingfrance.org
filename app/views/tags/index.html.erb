@@ -1,11 +1,9 @@
-<% provide(:title, "Tags") %>
-<h1>Tags</h1>
+<% provide(:title, I18n.t("tags.index.title")) %>
+<h1><%= I18n.t("tags.index.title") %></h1>
 
-<%= link_to 'Liste des posts', news_index_path %>
+<%= link_to I18n.t("tags.index.post_list"), news_index_path %>
 
-<p>
-  Cliquez sur un tag pour modifier le texte affiché et sa couleur.
-</p>
+<p><%= I18n.t("tags.index.click_on_tag") %></p>
 
 <div class="tag-index">
   <% @tags.each do |tag| %>

@@ -1,12 +1,13 @@
-<% provide(:title, "Liste des utilisateurs") %>
-<h1>Liste des utilisateurs</h1>
+<% provide(:title, I18n.t("users.index.title")) %>
+<h1><%= I18n.t("users.index.title") %></h1>
 
-<%= link_to "Importer un utilisateur depuis la WCA", users_import_path, class: "btn btn-success mb-3" %>
+<%= link_to I18n.t("users.index.import_user"), users_import_path, class: "btn btn-success mb-3" %>
 
 <div class="alert bg-lightgreen">
-  Les adhérents apparaissent avec un fond vert clair ou vert foncé.
+  <%= I18n.t("users.index.info") %> 
 </div>
-<%= render "shared/compact_table", headers: ["Nom complet", "ID WCA", "Pays", "Ville", "Notif", "News", "Discu", "Email"] do %>
+
+<%= render "shared/compact_table", headers: [I18n.t("table_headers.full_name"), I18n.t("table_headers.wca_id"), I18n.t("table_headers.country"), I18n.t("table_headers.city"), I18n.t("table_headers.notifications"), I18n.t("table_headers.news"), I18n.t("table_headers.discussions"), I18n.t("table_headers.email")] do %>
   <% @users.each do |user| %>
     <tr>
       <th scope="row" class="<%="bg-lightgreen" if user.last_subscription&.active? %>">
