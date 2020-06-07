@@ -3,6 +3,7 @@ fr:
     please_sign_in: "Merci de vous connecter pour accéder à cette partie"
     form:
       invalid: "Le formulaire est invalide. Merci de corriger les erreurs ci dessous."
+    are_you_sure: "Êtes-vous sûr·e ?"
   new_session:
     title: "Connexion avec un compte WCA"
     p1: "Pour vous connecter au site de notre association, vous devez avoir un compte sur le site de la %{wca}."
@@ -108,8 +109,7 @@ fr:
         competition_page: "Ce publication est une page de compétition"
       import_user:
         query: "Recherche"
-        user_id: "ID d'utilisateur"
-      signin:
+      session:
         can_manage: "Je suis un organisateur ou Délégué WCA, et j'autorise l'AFS à gérer mes compétitions."
       user:
         wca_id: "ID WCA"
@@ -125,16 +125,14 @@ fr:
         name: "Alias du tag"
         color: "Couleur"
         fullname: "Texte affiché"
+      item:
+        owners:
+          user: "Utilisateur"
+          start: "Du"
+          end: "Au"
       bag:
-        owners:
-          user: "Utilisateur"
-          start: "Du"
-          end: "Au"
+        name: "Nom"
       hardware:
-        owners:
-          user: "Utilisateur"
-          start: "Du"
-          end: "Au"
         name: "Nom"
         hardware_type: "Type"
         state: "État"
@@ -156,20 +154,75 @@ fr:
         img: "Image"
         rank: "Placer la ressource"
     hints:
+      bag:
+        name: ""
+      calendar_event:
+        kind: ""
+        name: ""
+        public: ""
+      club:
+        city: ""
+        description: ""
+        email: ""
+        facebook: ""
+        logo: ""
+        name: ""
+        website: ""
+      external_resource:
+        description: ""
+        img: ""
+        link: ""
+        name: ""
+        rank: ""
+      hardware:
+        comment: ""
+        hardware_type: ""
+        name: ""
+        state: ""
       post:
+        feature: ""
+        posted_at: ""
+        slug: ""
         tags_string: "Pour personnaliser le texte affiché et la couleur de chaque tag, allez <a href='/tags' target='_blank'>là</a>."
+        title: ""
         draft: "Si cette case est cochée, la publication ne sera pas visible par le public"
         competition_page: "Si cette case est cochée, la publication ne sera pas affiché sur la page d'accueil."
         body: "Ajoutez \"{{post_excerpt}}\" pour séparer l'introduction d'une publication de son contenu principal."
+      session:
+        can_manage: ""
+      shared:
+        end: ""
+        start: ""
+      subscription:
+        csvfile: ""
       tag:
         name: "L'alias permet d'identifier le tag et n'est pas modifiable"
+        color: ""
+        fullname: ""
+      user:
+        admin: ""
+        city: ""
+        communication: ""
+        discussion_subscription: ""
+        french_delegate: ""
+        friendly_birthdate: ""
+        friendly_delegate_status: ""
+        newsletter_subscription: ""
+        notify_subscription: ""
+        query: ""
+        wca_id: ""
       online_competition:
+        delete_pdf: ""
+        end_date: ""
+        start_date: ""
+        visible: ""
+        name: ""
         force_close: "Pratique pour terminer manuellement la compétition (les dates n'ont pas d'heure associée !)"
         slug: "Seulement des caractères alphanumériques ainsi que '-' et '_', sans espace !"
         scrambles: "Ils s'afficheront lors de la saisie des temps"
   helpers:
     submit:
-      signin:
+      session:
         submit: "Se connecter avec la WCA"
       user:
         update: 'Sauvegarder'
@@ -202,14 +255,6 @@ fr:
       bag:
         create: "Créer un sac"
         update: "Mettre à jour le sac"
-    page_entries_info:
-      one_page:
-        display_entries:
-          zero: "Pas de %{entry_name} trouvé."
-          one: "Affichage d'un %{entry_name}"
-          other: "Affichage de <b>tous les %{count}</b> %{entry_name}"
-      more_pages:
-        display_entries: "Affichage des %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> sur <b>%{total}</b> au total"
   views:
     pagination:
       first: "&laquo; Première"
@@ -291,24 +336,11 @@ fr:
       competitions: "Compétitions"
     delegate:
       hardware: "Matériel"
-  #context: Key used in the context of editing a user profile
-  users:
-    #context: when updating their locale (language)
-    update_locale:
-      success: "Langue mise à jour."
-      failure: "Impossible de mettre à jour votre profil."
-      unavailable: "La langue demandée n'est pas disponible."
-    no_rights:
-      admin: "Seuls les administrateurs ont accès à cette page."
-      delegate: "Seuls les délégués ont accès à cette page."
-      communication: "Seuls les responsables communication ont accès à cette page."
-      generic: "Vous n'êtes pas autorisé à accéder à cette page."
   button:
     show: "Voir"
     edit: "Éditer"
     cancel: "Annuler"
     destroy: "Détruire"
-    confirm: "Êtes-vous sûr·e ?"
   homepage:
     upcoming_comps: "Compétitions à venir"
     france: "En France"
@@ -381,7 +413,6 @@ fr:
       title: "Logos"
       p1: "Le logo de l'AFS est utilisable par tous les organisateurs et Délégués WCA dans les outils de communication (tels que le site internet, les affiches, les vêtements), mis en oeuvre dans le cadre d'une compétition en partenariat avec l'AFS."
       p2_html: "Pour une utilisation dans un cadre différent, merci de contacter le %{board_mail_link} pour en négocier son usage."
-      afs_board: "bureau de l'AFS"
       p3_before_ul: "Le logo existe dans les versions suivantes :"
       p3_after_ul: "Il a été créé et nous a été offert par François Grassard, merci à lui. Merci également à Delphine Tran pour la version eps."
       png: "Logo en version matricielle (png)"
@@ -392,10 +423,9 @@ fr:
       eps_with_text: "Logo avec texte au format eps"
     coupedefrance:
       title: "Coupe de France"
-  calendar_events:    
+  calendar_events:
     create: "Créer un événement"
     edit: "Mettre à jour %{event}"
-    confirm: "Êtes-vous sûr·e ?"
     close: "Fermer"
     cannot_manage: "Vous ne pouvez pas gérer le calendrier."
   clubs:
@@ -487,7 +517,6 @@ fr:
       where: "Chez qui"
       bag: "Sac"
       actions: "Actions"
-      confirm: "Êtes-vous sûr·e ?"
       add: "Ajouter du nouveau matériel"
     show:
       title: "Infos sur %{hardware_name}"
@@ -509,7 +538,6 @@ fr:
       comment: "Commentaire : %{comment}"
       no_comment: "Pas de commentaire"
       nothing: "rien pour l'instant."
-      confirm: "Êtes-vous sûr·e ?"
     show:
       title: "Infos sur le sac %{bag_name}"
       name: "Nom :"
@@ -529,7 +557,6 @@ fr:
     dates: "Du %{start} au %{end}."
     visit_website: "Visiter le site"
     read_more: "Lire la suite..."
-    confirm: "Êtes-vous sûr·e ?"
     edit:
       title: "Éditer la publication"
       list: "Liste des publications"
@@ -607,7 +634,18 @@ fr:
       title: "Étiquettes"
       post_list: "Liste des posts"
       click_on_tag: "Cliquez sur une étiquette pour modifier le texte affiché et sa couleur."
+  #context: Key used in the context of editing a user profile
   users:
+    #context: when updating their locale (language)
+    update_locale:
+      success: "Langue mise à jour."
+      failure: "Impossible de mettre à jour votre profil."
+      unavailable: "La langue demandée n'est pas disponible."
+    no_rights:
+      admin: "Seuls les administrateurs ont accès à cette page."
+      delegate: "Seuls les délégués ont accès à cette page."
+      communication: "Seuls les responsables communication ont accès à cette page."
+      generic: "Vous n'êtes pas autorisé à accéder à cette page."
     no_results: "Aucun résultat pour la requête"
     successful_import: "Utilisateur %{user} importé avec succès"
     request_error: "Erreur lors de la requête au site de la WCA"

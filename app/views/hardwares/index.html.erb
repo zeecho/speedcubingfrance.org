@@ -31,7 +31,7 @@
           <td><%= link_to_if hardware.bag, hardware.bag&.name, hardware.bag %></td>
           <td><%= link_to fa_icon('eye'), hardware, title: I18n.t("button.show"), class: 'text-info', data: { toggle: 'tooltip' } %></td>
           <td><%= link_to fa_icon('pencil-square-o'), edit_hardware_path(hardware), title: I18n.t("button.edit"), class: 'text-primary', data: { toggle: 'tooltip' } %></td>
-          <td><%= link_to fa_icon('trash-o'), hardware, method: :delete, title: I18n.t("button.destroy"), class: 'text-danger', data: { toggle: 'tooltip', confirm: I18n.t("hardware.index.confirm") } %></td>
+          <td><%= link_to fa_icon('trash-o'), hardware, method: :delete, title: I18n.t("button.destroy"), class: 'text-danger', data: { toggle: 'tooltip', confirm: I18n.t("general.are_you_sure") } %></td>
         </tr>
       <% end %>
     </tbody>

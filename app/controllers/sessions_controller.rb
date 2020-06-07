@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   def signin_with_wca
     scopes = %w(public email dob)
-    can_manage = params.require(:signin).require(:can_manage)
+    can_manage = params.require(:session).require(:can_manage)
     if can_manage == "1"
       scopes << "manage_competitions"
     end

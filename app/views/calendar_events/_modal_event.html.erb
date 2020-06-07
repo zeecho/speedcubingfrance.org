@@ -21,6 +21,8 @@
             <%= f.input :name %>
             <%= f.input :start_time, as: :hidden %>
             <%= f.input :end_time, as: :hidden %>
+            <%# i18n-tasks-use t('date.formats.short') %>
+            <%# i18n-tasks-use t('time.formats.short') %>
             Du <%= l(event.start_time, format: :short) %> au <%= l(event.last_day, format: :short) %>.
             <%= f.input :kind, collection: CalendarEvent::KINDS, label_method: :second, value_method: :first %>
             <%= f.input :public %>
@@ -32,7 +34,7 @@
                   @calendar_event,
                   method: :delete,
                   class: 'btn btn-danger mr-auto',
-                  data: { confirm: I18n.t("calendar_events.confirm") },
+                  data: { confirm: I18n.t("general.are_you_sure") },
                   remote: true,
                   format: "js" %>
             <% end %>

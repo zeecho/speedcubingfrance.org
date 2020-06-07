@@ -2,8 +2,8 @@
   <%= javascript_pack_tag "cocoon", 'data-turbolinks-track': 'reload'  %>
 <% end %>
 <p class="form-text text-muted">
-  <%= I18n.t("nested_form.do_not_find") %>
-  <%= t("nested_form.go_here_html", here: link_to(I18n.t("nested_form.here"), users_import_path, target: "_blank")) %>
+  <%= t("nested_form.do_not_find") %>
+  <%= t("nested_form.go_here_html", here: link_to(t("nested_form.here"), users_import_path, target: "_blank")) %>
 </p>
 <div class="owners">
   <%= f.simple_fields_for :owners do |f2| %>

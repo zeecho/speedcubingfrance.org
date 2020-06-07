@@ -8,6 +8,8 @@
     <%= f.input :facebook %>
     <%= f.input :description %>
     <%= f.input :logo %>
+
+    <%# i18n-tasks-use t('simple_form.labels.club.department') %>
     <%= f.association :department, collection: Department.c_all_by_id.values.sort_by(&:code), :label_method => lambda { |dep| "#{dep.code} #{dep.name} (#{dep.region.name})" } %>
     <%= f.input :city %>
   </div>

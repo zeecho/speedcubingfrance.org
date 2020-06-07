@@ -5,6 +5,8 @@
     <%= f.input :name %>
     <%= f.input :hardware_type, collection: Hardware::TYPES, label_method: :second, value_method: :first %>
     <%= f.input :state, collection: Hardware::STATES, label_method: :second, value_method: :first %>
+
+    <%# i18n-tasks-use t('simple_form.labels.hardware.bag') %>
     <%= f.association :bag, collection: Bag.order(:name) %>
     <%= f.input :comment %>
     <h3><%= I18n.t("hardware.title_list_owners") %></h3>

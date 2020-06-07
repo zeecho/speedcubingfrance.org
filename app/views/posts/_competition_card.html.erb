@@ -7,6 +7,7 @@
     <% if competition.respond_to?(:alt_text) %>
       <%= competition.alt_text %>
     <% else %>
+      <%# i18n-tasks-use t('date.formats.day_month') %>
       <%= I18n.t("posts.dates", start: l(competition.start_date, format: :day_month), end: l(competition.end_date)) %>
     <% end %>
   </p>

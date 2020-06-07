@@ -33,7 +33,7 @@
       |
       <%= link_to fa_icon('pencil-square-o'), edit_bag_path(bag), title: I18n.t("button.edit"), class: 'text-primary', data: { toggle: 'tooltip' } %>
       |
-      <%= link_to fa_icon('trash-o'), bag, method: :delete, title: I18n.t("button.destroy"), class: 'text-danger', data: { toggle: 'tooltip', confirm: I18n.t("button.confirm") } %>
+      <%= link_to fa_icon('trash-o'), bag, method: :delete, title: I18n.t("button.destroy"), class: 'text-danger', data: { toggle: 'tooltip', confirm: I18n.t("general.are_you_sure") } %>
       <hr/>
     </div>
   <% end %>

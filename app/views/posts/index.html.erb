@@ -22,7 +22,7 @@
         <div>
           <%= link_to(fa_icon("eye"), view_post_path(post), class: "btn btn-sm btn-info") %>
           <%= link_to(fa_icon("pencil"), edit_news_path(post), class: "btn btn-sm btn-primary") %>
-          <%= link_to(fa_icon("trash"), news_path(post), method: :delete, data: { confirm: I18n.t("posts.confirm") }, class: "btn btn-sm btn-danger") %>
+          <%= link_to(fa_icon("trash"), news_path(post), method: :delete, data: { confirm: I18n.t("general.are_you_sure") }, class: "btn btn-sm btn-danger") %>
         </div>
       </div>
     </div>

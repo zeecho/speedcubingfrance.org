@@ -1,16 +1,16 @@
-<% provide(:title, I18n.t("users.import.title")) %>
-<h2><%= I18n.t("users.import.title") %></h2>
+<% provide(:title, t("users.import.title")) %>
+<h2><%= t("users.import.title") %></h2>
 
 <div class="alert alert-info">
-  <%= I18n.t("users.import.use_search") %>
+  <%= t("users.import.use_search") %>
   <br/>
-  <%= I18n.t("users.import.scenarios") %>
+  <%= t("users.import.scenarios") %>
   <br/>
-  <%= I18n.t("users.import.you_can_click") %>
+  <%= t("users.import.you_can_click") %>
 </div>
 
 <%= simple_form_for :import_user, url: users_import_path do |f| %>
-  <%= f.input :query %>
+  <%= f.input :query, label: t('simple_form.labels.import_user.query') %>
   <%= f.button :submit %>
 <% end %>
 
