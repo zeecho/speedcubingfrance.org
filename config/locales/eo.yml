@@ -2,18 +2,23 @@ eo:
   general:
     #original_hash: 3422720
     please_sign_in: Bonvolu ensaluti por aliri tiun sekcion
+    form:
+      #original_hash: 9020b58
+      invalid: La formularo ne estas valida. Bonvolu korekti la erarojn sube.
+    #original_hash: c95a78a
+    are_you_sure: Ĉu vi certas?
   new_session:
     #original_hash: ae7d39a
-    title: Ensaluto kun WCA-konto
+    title: Ensaluti per WCA-konto
     #original_hash: c8e290a
     p1: >-
-      Por ensaluti en la retejo de nia asocia, vi devas havi konton en la retejo
+      Por ensaluti en la retejo de nia asocio, vi devas havi konton en la retejo
       de la %{wca}.
-    #original_hash: b2f2bf6
+    #original_hash: fd96bc3
     p2: >-
-      Alklante "Ensaluti kun la WCA", vi estos alidirektata en la retejo de la
-      WCA por ensaluti, kiu poste denove alidirektos vin en la retejo de la AFS
-      kie vi estos ensalutata.
+      Alklante "Ensaluti per WCA-konto", vi estos alidirektata en la retejo de
+      WCA por ensaluti, kiu poste denove alidirektos vin en la retejo de AFS kie
+      vi estos ensalutata.
   events:
     #original_hash: e6046af
     '222': Kubo 2x2x2
@@ -54,7 +59,7 @@ eo:
     #original_hash: e6791be
     magic: Maĝiko
     #original_hash: c962425
-    mmagic: Mastro Maĝiko
+    mmagic: Mastra Maĝiko
     #original_hash: 8f547aa
     333mbo: '3x3x3: pluraj kuboj blinde (malnova stilo)'
   date:
@@ -96,9 +101,9 @@ eo:
         #original_hash: a34ec69
         slug: Mallonga nomo
         #original_hash: 706438a
-        start_date: Komenco-dato
+        start_date: Komencdato
         #original_hash: 716a6d8
-        end_date: Fino-dato
+        end_date: Findato
         #original_hash: a255047
         visible: Publika
         #original_hash: b34cfed
@@ -117,7 +122,7 @@ eo:
           #original_hash: 86b79f6
           name: Nomo de la konkurso
           #original_hash: 6b494cc
-          alt_text: Alternative teksto
+          alt_text: Alternativa teksto
         world:
           #original_hash: 574c37c
           competition_id: Konkurso-ID
@@ -129,7 +134,7 @@ eo:
         #original_hash: 7ff2037
         name: Nomo
         #original_hash: dc0df63
-        public: tiu evento estas videbla
+        public: tiu evento videblas
         #original_hash: 0739b27
         kind: Tipo de evento
       post:
@@ -142,12 +147,12 @@ eo:
         #original_hash: fd5fd67
         posted_at: Dato de publikaĵo
         #original_hash: 4fe5491
-        slug: Daŭraligilo
-        #original_hash: 4b049d8
+        slug: Fiksligilo
+        #original_hash: a1b04b2
         draft: Tiu afiŝo estas malneto
         #original_hash: f2be489
         feature: Emfazi en la hejmpaĝo
-        #original_hash: 4ca340a
+        #original_hash: 0bbf74d
         competition_page: Tiu afiŝo estas paĝo de konkurso
       import_user:
         #original_hash: 787b549
@@ -155,8 +160,8 @@ eo:
       session:
         #original_hash: a9087c3
         can_manage: >-
-          Mi estas organizanto aŭ WCA-Delegisto kaj mi permesas la AFS
-          administri miajn konkursojn.
+          Mi estas organizanto aŭ WCA-Delegito kaj mi permesas al AFS administri
+          miajn konkursojn.
       user:
         #original_hash: da1f7ef
         wca_id: WCA-ID
@@ -165,9 +170,9 @@ eo:
         #original_hash: 1d8141b
         admin: Administranto
         #original_hash: 9094b61
-        communication: Komunikadoteamo
+        communication: Komunikada Teamo
         #original_hash: b907cd5
-        french_delegate: Franca Delegisto
+        french_delegate: Franca Delegito
         #original_hash: a06e15b
         notify_subscription: >-
           Mi volas ŝalti sciigojn (averto pri fino de membriĝo, novaj konkursoj
@@ -177,7 +182,7 @@ eo:
           Mi volas esti en la diskutgrupo de la membroj
           (adherents-discussion@speedcubingfrance.org) *
         #original_hash: 0f2da1b
-        newsletter_subscription: Mi volas ricevi novaĵoleterojn *
+        newsletter_subscription: Mi volas ricevi novaĵleterojn *
         #original_hash: 7da36e9
         city: Loĝurbo (poŝtkodo)
       tag:
@@ -195,38 +200,183 @@ eo:
           start: Ekde
           #original_hash: 7a1732d
           end: Ĝis
+      bag:
+        #original_hash: 7ff2037
+        name: Nomo
+      hardware:
+        #original_hash: 7ff2037
+        name: Nomo
+        #original_hash: 3deb745
+        hardware_type: Tipo
+        #original_hash: d3b28a2
+        state: Stato
+        #original_hash: 188c028
+        bag: Sako
+        #original_hash: bcb916a
+        comment: Komento
+      club:
+        #original_hash: 7ff2037
+        name: Nomo
+        #original_hash: bcabc83
+        website: Retejo
+        #original_hash: 84add5b
+        email: Retpoŝtadreso
+        #original_hash: 82da67b
+        facebook: Fejsbuko
+        #original_hash: 55f8ebc
+        description: Priskribo
+        #original_hash: 83fce83
+        logo: Logotipo
+        #original_hash: 3d7c87c
+        department: Departemento
+        #original_hash: 9721761
+        city: Urbo
+      external_resource:
+        #original_hash: 7ff2037
+        name: Nomo
+        #original_hash: e2639e1
+        link: Ligilo
+        #original_hash: 55f8ebc
+        description: Priskribo
+        #original_hash: 50e19fd
+        img: Bildo
+        #original_hash: b1e7db7
+        rank: Meti la risurcon
     hints:
+      bag:
+        #original_hash: da39a3e
+        name: ''
+      calendar_event:
+        #original_hash: da39a3e
+        kind: ''
+        #original_hash: da39a3e
+        name: ''
+        #original_hash: da39a3e
+        public: ''
+      club:
+        #original_hash: da39a3e
+        city: ''
+        #original_hash: da39a3e
+        description: ''
+        #original_hash: da39a3e
+        email: ''
+        #original_hash: da39a3e
+        facebook: ''
+        #original_hash: da39a3e
+        logo: ''
+        #original_hash: da39a3e
+        name: ''
+        #original_hash: da39a3e
+        website: ''
+      external_resource:
+        #original_hash: da39a3e
+        description: ''
+        #original_hash: da39a3e
+        img: ''
+        #original_hash: da39a3e
+        link: ''
+        #original_hash: da39a3e
+        name: ''
+        #original_hash: da39a3e
+        rank: ''
+      hardware:
+        #original_hash: da39a3e
+        comment: ''
+        #original_hash: da39a3e
+        hardware_type: ''
+        #original_hash: da39a3e
+        name: ''
+        #original_hash: da39a3e
+        state: ''
       post:
+        #original_hash: da39a3e
+        feature: ''
+        #original_hash: da39a3e
+        posted_at: ''
+        #original_hash: da39a3e
+        slug: ''
         #original_hash: 3990ad3
         tags_string: >-
-          Por tajlori la montrita teksto kaj la koloro de ĉiu etikedo, iru <a
+          Por tajlori la montritan tekston kaj la koloron de ĉiu etikedo, iru <a
           href='/tags' target='_blank'>tie</a>.
-        #original_hash: 51634cb
-        draft: 'Se tiu opcio estas elektita, la afiŝo ne estos publike videbla'
-        #original_hash: 045a916
-        competition_page: 'Se tiu opcio estas elektita, la afiŝo ne estos videbla en la hejmpaĝo.'
-        #original_hash: 75d8fb2
+        #original_hash: da39a3e
+        title: ''
+        #original_hash: 6ce9e47
+        draft: 'Se tiu opcio estas elektita, la afiŝo ne publike videblos'
+        #original_hash: 9835c71
+        competition_page: 'Se tiu opcio estas elektita, la afiŝo ne videblos en la hejmpaĝo.'
+        #original_hash: fb47627
         body: >-
-          Aldonu "{{post_excerpt}}" por apartigi la antaŭparolo de sia ĉefa
-          enhavo.
+          Aldonu "{{post_excerpt}}" por apartigi la antaŭparolon de la ĉefa
+          enhavo de la afiŝo.
+      session:
+        #original_hash: da39a3e
+        can_manage: ''
+      shared:
+        #original_hash: da39a3e
+        end: ''
+        #original_hash: da39a3e
+        start: ''
+      subscription:
+        #original_hash: da39a3e
+        csvfile: ''
       tag:
         #original_hash: f6e25ed
-        name: Alinomo estas por identigi la etikedo kaj ne estas ŝanĝebla.
+        name: Alinomo estas por identigi la etikedon kaj ĝi ne ŝanĝeblas.
+        #original_hash: da39a3e
+        color: ''
+        #original_hash: da39a3e
+        fullname: ''
+      user:
+        #original_hash: da39a3e
+        admin: ''
+        #original_hash: da39a3e
+        city: ''
+        #original_hash: da39a3e
+        communication: ''
+        #original_hash: da39a3e
+        discussion_subscription: ''
+        #original_hash: da39a3e
+        french_delegate: ''
+        #original_hash: da39a3e
+        friendly_birthdate: ''
+        #original_hash: da39a3e
+        friendly_delegate_status: ''
+        #original_hash: da39a3e
+        newsletter_subscription: ''
+        #original_hash: da39a3e
+        notify_subscription: ''
+        #original_hash: da39a3e
+        query: ''
+        #original_hash: da39a3e
+        wca_id: ''
       online_competition:
+        #original_hash: da39a3e
+        delete_pdf: ''
+        #original_hash: da39a3e
+        end_date: ''
+        #original_hash: da39a3e
+        start_date: ''
+        #original_hash: da39a3e
+        visible: ''
+        #original_hash: da39a3e
+        name: ''
         #original_hash: 977a786
         force_close: >-
-          Utila por fermi la konkurso "permane" (estas nur datoj kaj neniu horoj
-          !)
+          Ĝi utilas por fermi la konkurson "permane" (estas nur datoj kaj neniu
+          horoj!)
         #original_hash: 0b68ac1
         slug: 'Nur alfanumeraj signoj, ''-'' kaj ''_'', sen spaceto !'
+        #original_hash: bad0932
+        scrambles: Ili montriĝos dum la entajpado de tempoj
   helpers:
     submit:
       session:
         #original_hash: 7130082
-        submit: Ensaluti kun la WCA
+        submit: Ensaluti per WCA-konto
       user:
         #original_hash: 9ada143
-        update: Savi
+        update: Konservi
       online_competition:
         #original_hash: 895bffd
         create: Krei la konkurson
@@ -234,26 +384,46 @@ eo:
         update: Ĝisdatigi la konkurson
       calendar_event:
         #original_hash: 154dd8d
-        create: Krei eventon
+        create: Krei la eventon
         #original_hash: 9ada143
-        update: Savi
+        update: Konservi
       post:
-        #original_hash: 77236fb
-        create: Krei afiŝon
+        #original_hash: f37940d
+        create: Krei la afiŝon
         #original_hash: 9ada143
-        update: Savi
+        update: Konservi
       import_user:
         #original_hash: 4844932
-        submit: Sendi peton
+        submit: Sendi la peton
       import_form:
         #original_hash: 8e43954
-        submit: Importi la CSV
+        submit: Importi la diskoman dosieron (CSV)
       tag:
         #original_hash: 9ada143
-        update: Savi
+        update: Konservi
       big_champs:
         #original_hash: 9ada143
-        submit: Savi
+        submit: Konservi
+      club:
+        #original_hash: 0c67981
+        create: Krei la klubon/asocion
+        #original_hash: 567d3f9
+        update: Ĝisdatigi la klubon/asocion
+      external_resource:
+        #original_hash: d3c9924
+        create: Krei la risurco
+        #original_hash: 9db5eab
+        update: Ĝisdatigi la risurcon
+      hardware:
+        #original_hash: 70b9f96
+        create: Krei materialon
+        #original_hash: 0084ac2
+        update: Ĝisdatigi materialon
+      bag:
+        #original_hash: a97cbd5
+        create: Krei sakon
+        #original_hash: 25135b2
+        update: Ĝisdatigi la sakon
   views:
     pagination:
       #original_hash: 1647b81
@@ -271,26 +441,59 @@ eo:
     title: Enretaj konkursoj
     #original_hash: a04f3cc
     stayathome: '#restuhejme'
+    create:
+      #original_hash: dab4f04
+      title: Krei enretan konkurson
+      #original_hash: 6c34ee4
+      success: La enreta konkurso estis sukcese kreita.
+    update:
+      #original_hash: 045866d
+      success: La enreta konkurso estis sukcese ĝisdatigita.
+    destroy:
+      #original_hash: dac7bcf
+      success: La enreta konkurso estis sukcese forigita.
+    edit:
+      #original_hash: 72e3042
+      title: Redakti tiun enretan konkurson
+    form:
+      #original_hash: 2e9683d
+      upload_scrambles_pdf: Alŝuti PDF-dosieron kun miksoj
+      #original_hash: 4027f06
+      delete_scrambles_pdf: Forigi la PDF-dosieron kun miksoj
+      #original_hash: e6c9a77
+      upload_scrambles_json: Alŝuti la JSON-dosieron kun miksoj
+      #original_hash: c0afa5a
+      hint_for_scrambles: 'Dosiero konservita nuntempe:'
+      #original_hash: 6bcf7ee
+      none: neniu
     index:
       #original_hash: 5e53224
       range: 'Ekde %{start_date} ĝis %{end_date}'
+      #original_hash: c95a78a
+      confirm: Ĉu vi certas?
     show:
       #original_hash: 396a241
-      started: Komencis je
+      started: Komenciĝis je
       #original_hash: 71f4988
-      will_start: Komencos je
+      will_start: Komenciĝos je
       #original_hash: 07110d7
       ended: Finiĝis je
       #original_hash: 5443bde
-      will_end: Finos je
+      will_end: Finiĝos je
       #original_hash: 9e7d95f
-      download_scrambles: Elŝuti miksoj
+      download_scrambles: Elŝuti miksojn
       #original_hash: 988afa2
       comp_over: 'La konkurso finiĝis, %{n} personoj partoprenis.'
       #original_hash: 603b6e6
       comp_ongoing: 'La konkurso estas okazanta, vi povas sendi viajn rezultojn.'
       #original_hash: 18039d0
       comp_not_started: 'Revenu poste, la konkurso ankoraŭ ne komenciĝis!'
+      #original_hash: d82aeca
+      comp_not_public: Tiu konkurso ne videblas
+      #original_hash: abc5681
+      you_have_rights_for_ongoing_results: >-
+        Pro tio ke vi povas administri enretajn konkursojn, vi povas afiŝi la
+        nuntempajn rezultojn
     show_results:
       #original_hash: 3c3618e
       results_for: 'Rezultoj de %{event_name}'
@@ -301,25 +504,25 @@ eo:
     submit:
       #original_hash: a0a0e6e
       scrambles: >-
-        Montri la miksoj de la konkursero (por importi ilin en aplikaĵo kiel
+        Montri la miksojn de la konkursero (por importi ilin en aplikaĵo kiel
         cstimer)
       #original_hash: a7a4a79
-      save_before_switch: Ne forgesu savi antaŭ ol ŝanĝi konkurseron
+      save_before_switch: Ne forgesu konservi viajn ŝanĝojn antaŭ ol ŝanĝi konkurseron
       #original_hash: 9ada143
-      save: Savi
+      save: Konservi
       #original_hash: 1acfc1c
       delete: Forigi
       #original_hash: 9a12194
       attempt: 'Provo %{n}'
       #original_hash: fc7c5ad
-      extra: 'Ekstra %{n}'
+      extra: 'Ekstra solvo %{n}'
       #original_hash: c0463eb
       best: Plej bona
       #original_hash: ef33304
-      average: Mezo
+      average: Averaĝo
   nav:
     #original_hash: 0b5637a
-    name: Franca Asocio de Rapidkubado
+    name: Franca Asocio de Rapidkubumado
     #original_hash: a8ff8fd
     home: Hejmpaĝo
     #original_hash: aa245f5
@@ -331,14 +534,14 @@ eo:
     #original_hash: 687c828
     documents: Dokumentoj
     #original_hash: 83fce83
-    logo: Emblemo
+    logo: Logotipo
     speedcubing:
       #original_hash: 7fadbaa
-      title: Rapidkubado
+      title: Rapidkubumado
       #original_hash: 55ea2f1
       intro: Prezentado de la disciplino
       #original_hash: 31c62d9
-      comp_wca: WCA konkursoj
+      comp_wca: WCA-konkursoj
       #original_hash: 92369a9
       online_comp: Enretaj konkursoj
       #original_hash: 3ceb6e0
@@ -360,14 +563,25 @@ eo:
       sign_out: Elsaluti
       #original_hash: a33c58f
       sign_in: Ensaluti
-  users:
-    update_locale:
-      #original_hash: 4a867ef
-      success: Lingvo ĝisdatigita.
-      #original_hash: ce495ed
-      failure: Neeblas ĝisdatigi vian profilon.
-      #original_hash: e24f182
-      unavailable: La petita lingvo ne estas disponebla.
+    admin:
+      #original_hash: c661b3b
+      users: Uzantoj
+      #original_hash: 0855684
+      posts: Afiŝoj
+      #original_hash: 6cf9b8c
+      competitions: Konkursoj
+    delegate:
+      #original_hash: c39e887
+      hardware: Materialo
+  button:
+    #original_hash: 8a754f1
+    show: Vidi
+    #original_hash: 429cb14
+    edit: Redakti
+    #original_hash: 49ba329
+    cancel: Nuligi
+    #original_hash: beba760
+    destroy: Detrui
   homepage:
     #original_hash: a767154
     upcoming_comps: Venontaj konkursoj
@@ -387,7 +601,7 @@ eo:
     #original_hash: 5c798bb
     p1: >-
       Vi povas sendi, korekti aŭ forigi vian partoprenon kiam la konkurso estas
-      okazanta. La rezultoj devas esti enigitaj sen punkto, dupukto aŭ komo, la
+      okazanta. La rezultoj devas esti enigitaj sen punkto, dupunkto aŭ komo, la
       programaro aŭtomate faros tion kion estas necesa. Ekzemple:
     #original_hash: 103ec05
     ex1: '2 sekundoj 54 centonoj: tajpu "254"'
@@ -400,15 +614,16 @@ eo:
     #original_hash: a16ce20
     pen1: >-
       Kaze de +2, enigu rekte la fina rezulto. Ekzemple: Se vi solvis vian kubon
-      en 6 sekundoj 45 kaj havas punon de +2, enigu rekte 8 sekundoj 45 do
+      en 6 sekundoj 45 kaj havas punon de +2, enigu rekte 8 sekundojn 45 do
       "845".
     #original_hash: 63c3ba7
-    pen2: 'Kaze de DNF, tajpu "D". Kaze de DNS, tajpu "S".'
+    pen2: 'Kaze de DNF, tajpu "D" en la ĉelo. Kaze de DNS, tajpu "S" en la ĉelo.'
     #original_hash: 12d1411
     multihelp: >-
-      Por multiblind (3x3x3 pluraj kuboj blinde), la unua kampo estas por la
-      nombro de solvitaj kuboj, la dua estas por la nombro de provitaj kuboj kaj
-      la lasta estas por la tempo (kiel minutoj sekundoj centonoj).
+      Por la konkursero "3x3x3 pluraj kuboj blinde" ("multiblind"), la unua
+      kampo estas por la nombro de solvitaj kuboj, la dua estas por la nombro de
+      provitaj kuboj kaj la lasta estas por la tempo (kiel minutoj sekundoj
+      centonoj).
     #original_hash: 486578b
     multiex: >-
       Ekzemple: 5/7 en 47 minutoj kaj 12 sekundoj: tajpu 5 en la unua kampo, 7
@@ -418,3 +633,660 @@ eo:
       Ĉu tio plaĉas al vi? Bona novaĵo, tio estas ekzakte kiel ni enigas la
       rezultojn dum oficialaj konkursoj! Ne hezitu proponi vian helpon por enigi
       rezultojn dum via sekva konkurso ;)
+  association:
+    introduction:
+      #original_hash: 06494ee
+      title: Prezentado de la asocio
+      #original_hash: aa245f5
+      introduction: Prezentado
+      #original_hash: ff3f5c9
+      p1: >-
+        La Franca Asocio de Rapidkubumado estis kreita kun la celo promocii la
+        disvolvon de la praktiko de kubumado je la nacia nivelo. Parto de ĝia
+        agado konsistas el subtenado de organizo de oficialaj konkursoj sur la
+        franca teritorio. Tiu povas esti per pruntedono de materialo, partopreno
+        en pago de la konkursejo, ktp.
+      board:
+        #original_hash: 70d4735
+        title: Estraro
+        #original_hash: 274e83b
+        desc_html: 'La aktuala %{link} estas:'
+        #original_hash: fe22b52
+        name: estraro
+        #original_hash: 33488e2
+        president: 'Lina Tissier, prezidanto'
+        #original_hash: cc7ab97
+        treasurer: 'Jules Desjardin, kasisto'
+        #original_hash: d7caf31
+        secretary: 'Antoine Piau, sekretario'
+      teams:
+        #original_hash: 39ba91a
+        title: Teamoj
+        #original_hash: 90f2a41
+        desc: 'Pluraj teamoj respondecas pri specifaj taskoj ene de la asocio:'
+        #original_hash: 0e4d990
+        website: 'Retejo: Antoine Piau, Philippe Virouleau (responsulo)'
+        #original_hash: 0fbce36
+        communication: >-
+          Komunikado: Pauline Bonnaudet, Jules Desjardin, Mario Laurent, Maxime
+          Lefebvre, Hippolyte Moreau, Antoine Piau
+        #original_hash: 560b6a8
+        streaming: >-
+          Elsendfluo: Vincent Colin, Jules Desjardin, Mario Laurent
+          (responsulo), Hippolyte Moreau, Rui Reis
+    #original_hash: 2d6a723
+    subscriptions:
+      #original_hash: 2d6a723
+      title: Membriĝoj
+      #original_hash: a6f7301
+      p1: >-
+        Parto de la financaj rimedoj kiujn havas la asocio venas de la
+        membriĝoj. Ĉiu persono kun franca aŭ eksterlanda nacieco povas membriĝi
+        per pago de kotizo de 10 eŭroj kiu iĝas la membriĝo valida por 1 jaro.
+      #original_hash: 1dbba73
+      p2_html: >-
+        Membriĝo okazas rete: AFS akiras siajn donacojn kaj membriĝojn per
+        HelloAsso, vi povas iri ĉe %{link_ha} kaj alklaki la ligilon "Adhérer".
+      #original_hash: f44d2b4
+      afs_page: paĝo de AFS
+      #original_hash: 6c44c78
+      p3: 'Avantaĝoj kiujn havas la membroj estas:'
+      #original_hash: b093e7c
+      free_dues: senpageco de WCA-kotizoj por la konkursoj subtenaj de la asocio
+      #original_hash: 6999a60
+      hardware: eblo pruntepreni materialon de la asocio
+      #original_hash: 6183231
+      notifs_html: >-
+        eblo ŝalti sciigojn de la anoncoj de francaj konkursoj en
+        %{link_profile}
+      #original_hash: 1b63799
+      profile: sia profilo
+      #original_hash: 1e5d670
+      events: >-
+        eblaj avantaĝoj aŭ invitoj por eventoj ligataj al la asocio (pasintece
+        AFS-Pokalo kaj Pokalo de Francio)
+    documents:
+      #original_hash: 687c828
+      title: Dokumentoj
+      #original_hash: 2dcaabb
+      status: Statuto
+      #original_hash: ba56e20
+      journal_officiel: Oficiala Ĵurnalo
+      #original_hash: a8cba5e
+      association_status: Statuto de la asocio
+      #original_hash: fee09cd
+      reports: Protokoloj
+      #original_hash: 8e4e1fc
+      ag_of: 'Jara Kunsido je la %{date}'
+      #original_hash: 83fce83
+      logo: Logotipo
+      #original_hash: 6e58a3f
+      logo_html: 'Malsamaj versioj de la logotipo de la asocio disponeblas %{ici}.'
+      #original_hash: 084c402
+      here: tie
+    board_history:
+      #original_hash: 793ef07
+      title: Historio de la estraro
+      #original_hash: de2110b
+      period: Periodo
+      #original_hash: 51c2712
+      president: Prezidanto
+      #original_hash: 929c5dd
+      treasurer: Kasisto
+      #original_hash: 295da4a
+      secretary: Sekretario
+      #original_hash: db22a78
+      ongoing: nuna
+    logos:
+      #original_hash: 3089591
+      title: Logotipoj
+      #original_hash: 07f61b4
+      p1: >-
+        La logotipo de AFS uzeblas de ĉiuj organizantoj kaj WCA-Delegitoj en
+        komunikiloj (kiel retejoj, afiŝoj, vestaĵoj) kadre de konkurso subtenata
+        de la asocio.
+      #original_hash: 994ea81
+      p2_html: 'Por uzi ĝin alimaniere, bonvolu kontakti la %{board_mail_link}.'
+      #original_hash: 553b59e
+      p3_before_ul: 'La logotipo ekzistas en la sekvaj versioj:'
+      #original_hash: 58f36af
+      p3_after_ul: >-
+        Ĝi estis kreita kaj ofertita de François Grassard, dankon al li. Dankon
+        ankaŭ al Delphine Tran por la eps-versio.
+      #original_hash: 1aea1f5
+      png: Logotipo en matrica versio (png)
+      #original_hash: f43e407
+      svg: Logotipo en vektora versio (svg)
+      #original_hash: 0cddf73
+      eps: Logotipo kiel eps-dosiero
+      #original_hash: 98b3bda
+      png_with_text: Logotipo kun teksto en matrica versio (png)
+      #original_hash: 2c97df6
+      svg_with_text: Logotipo kun teksto en vektora versio (svg)
+      #original_hash: 03682e1
+      eps_with_text: Logotipo kun teksto kiel eps-dosiero
+    coupedefrance:
+      #original_hash: 5e1af86
+      title: Franca Pokalo
+  calendar_events:
+    #original_hash: 0c5a479
+    create: Krei eventon
+    #original_hash: 7a0e6b9
+    edit: 'Ĝisdatigi %{event}'
+    #original_hash: 5ab4ec6
+    close: Fermi
+    #original_hash: 8bf112d
+    cannot_manage: Vi ne povas administri la kalendaron.
+  clubs:
+    edit:
+      #original_hash: d02bd91
+      title: Redakti asocion aŭ klubon
+    index:
+      #original_hash: e91d268
+      title: Lokaj kluboj kaj asocioj
+      #original_hash: 361ed26
+      disclaimer: >-
+        Nuntempe, la lokaj rapidkubumadaj asocioj kaj kluboj ne estas ligitaj al
+        AFS. Tamen, ni listigas tie tiujn kiuj ni konas en Francio.
+      #original_hash: 8fecbfa
+      add_element: Aldoni elementon
+      #original_hash: 2fc392a
+      confirm: 'Ĉu vi certas ke vi volas forigi la asocion %{club}?'
+    new:
+      #original_hash: 8e19ee0
+      title: Nova asocio aŭ nova klubo
+    notif:
+      #original_hash: a57e6ad
+      create: La klubo estis sukcese kreita.
+      #original_hash: 93de9ed
+      update: La klubo estis ĝisdatigita.
+      #original_hash: ded8138
+      destroy: La klubo estis sukcese forigita.
+  competitions:
+    index:
+      #original_hash: d56c202
+      title: Kalendaro de konkursoj
+      #original_hash: 510e9e2
+      legend_title: 'La kalendaro ĉi-sube montras tiujn eventojn:'
+      #original_hash: 97073ca
+      official_comps: La oficialaj WCA-konkursoj en Francio
+      #original_hash: c2f99b9
+      projects: La projektoj de konkursoj
+      #original_hash: feb1dee
+      afs_events: La nekonkursaj eventoj de AFS
+      #original_hash: 758121a
+      ical: >-
+        Vi ankaŭ povas uzi la iCal-version por aldoni tiun kalendaron kiel
+        eksteran kalendaron al via agendo (notu: nur la venontaj WCA-konkursoj
+        estas en la iCal-kalendaro).
+      #original_hash: 96bb64c
+      ical_url_html: 'La ligilo estas <code>%{url}</code>'
+      old_comps_pages:
+        #original_hash: 949d635
+        title: Malnovaj konkursaj paĝoj
+        #original_hash: 7a19e96
+        p_html: >-
+          Antaŭ ol havi la eblon gastigi konkursajn paĝojn ĉe World Cube
+          Association, AFS gastigis kelkajn paĝojn de francaj konkursoj: ili
+          disponeblas %{ici}.
+        #original_hash: 084c402
+        here: tie
+    manage_big_comps:
+      #original_hash: 42ee4d7
+      title: Plej gravaj venontaj konkursoj
+      #original_hash: e394abf
+      p: >-
+        Tiu formularo kontrolas la informojn montritajn ĉe la hejmpaĝo pri la
+        plej gravaj venontaj konkursoj. Se ID de konkurso estas enmetita ni
+        importos la informojn pri la konkurso el WCA-retejo kaj montros ilin,
+        alie ni uzos la nomon kaj la alternan tekston.
+      #original_hash: 1556349
+      comp_index_link_html: 'Iru al la %{calendrier} por administri la konkursojn kaj la projektojn!'
+      #original_hash: 8b57b39
+      calendar: kalendaro
+      #original_hash: d133641
+      french: Francaj Ĉampionadoj
+      #original_hash: 2e85afc
+      euro: Eŭropaj Ĉampionadoj
+      #original_hash: 3987206
+      world: Mondaj Ĉampionadoj
+    mine:
+      #original_hash: 592341e
+      title: Miaj konkursoj
+      #original_hash: 6920f64
+      intro: >-
+        Tiu paĝo ekzistas por plifaciligi kontrolon de registriĝoj en
+        AFS-konkursoj. Alklaku konkurson por vidi kiuj registriĝoj estas validaj
+        kaj kiuj necesas pago antaŭ ol esti akceptata.
+      #original_hash: 419d8cc
+      error: 'Eraro okazis: %{error}'
+      #original_hash: fa23b6a
+      not_announced: Tiu konkurso ne estas jam anoncita
+      #original_hash: fcce909
+      none: Vi havas neniun venontan konkurson kiel Delegito aŭ organizanto.
+    old_comps_pages:
+      #original_hash: 6cf9b8c
+      title: Konkursoj
+      #original_hash: c383422
+      intro: >-
+        Pasintece AFS proponis al la organizantoj de konkursoj gastigado de
+        iliaj konkursaj paĝoj ĉe nia retejo. Ekde kelkaj jaroj la retejo de WCA
+        proponas similan servon kun pli da trajtoj, iĝanta la paĝoj ĉe nia
+        retejo kadukaj. La listo ĉi-sube montras ĉiujn konkursojn kiuj havis
+        paĝon ĉe nia retejo.
+    registrations:
+      #original_hash: 7f029fd
+      title: 'Registriĝoj por %{competition}'
+      #original_hash: 419d8cc
+      error: 'Eraro okazis: %{error}'
+      #original_hash: 5231158
+      pending: Pritraktota
+      #original_hash: 8f379d6
+      accepted: Akceptata
+      #original_hash: 4f8de1f
+      deleted: Forigita
+      #original_hash: 107538a
+      check_all: Kontroli ĉiujn verŝajnajn novajn konkursantojn
+      #original_hash: e7f5b1b
+      stop_check: Halti kontrolon
+      #original_hash: e58e9ba
+      full_name: Tuta nomo
+      #original_hash: da1f7ef
+      id_wca: WCA-ID
+      #original_hash: 659499f
+      status: Stato
+      #original_hash: 5185958
+      warning: Vi ne permesis al AFS administri viajn konkursojn.
+      #original_hash: 871ad60
+      none: 'Neniu registriĝo kun la stato %{status}.'
+  external_resources:
+    edit:
+      #original_hash: 1f45530
+      title: 'Redakto de la ekstera risurco %{name}'
+    new:
+      #original_hash: 18fa7cf
+      title: Nova ekstera risurco
+    index:
+      #original_hash: fc5404d
+      title: Eksteraj risurcoj
+      #original_hash: 8fecbfa
+      add_element: Aldoni elementon
+      #original_hash: c83d20d
+      logo_alt: 'Logotipo %{resource_name}'
+      #original_hash: c9b2d0d
+      link_html: 'Ligilo: %{lien}'
+      #original_hash: aa468ae
+      confirm: 'Ĉu vi certas ke vi volas forigi %{resource_name}?'
+    notif:
+      #original_hash: 5e2b085
+      create: La ekstera risurco estis sukcese kreita.
+      #original_hash: e3f96e6
+      update: La ekstera risurco estis sukcese ĝisdatigita.
+      #original_hash: 4d73533
+      destroy: La ekstera risurco estis sukcese forigita.
+  hardware:
+    #original_hash: 8c255be
+    title_list_owners: Listo de la personoj kiuj havas materialon
+    new:
+      #original_hash: 21daf10
+      title: Kreado de nova materialo
+    edit:
+      #original_hash: 7ab709b
+      page_title: 'Redakto de %{hardware_name}'
+      #original_hash: 65602f9
+      title: 'Redakto de %{hardware_name} (%{type})'
+    index:
+      #original_hash: c39e887
+      title: Materialo
+      #original_hash: c02d9f1
+      manage_bags: Administri la sakojn
+      #original_hash: 7ff2037
+      name: Nomo
+      #original_hash: 3deb745
+      type: Tipo
+      #original_hash: d3b28a2
+      state: Stato
+      #original_hash: bcb916a
+      comment: Komento
+      #original_hash: dc40588
+      where: Ĉe
+      #original_hash: 188c028
+      bag: Sako
+      #original_hash: c3cd636
+      actions: Agoj
+      #original_hash: f55f8a2
+      add: Aldoni novan materialon
+    show:
+      #original_hash: 51b39e6
+      title: 'Informoj pri %{hardware_name}'
+      #original_hash: 9c0bd8d
+      name: 'Nomo:'
+      #original_hash: cfc42f2
+      comment: 'Komento:'
+      #original_hash: 311b627
+      in_bag_html: 'En la sako %{bag_link}'
+    notif:
+      #original_hash: 6de8d76
+      create: La materialo estis sukcese kreita.
+      #original_hash: b43e974
+      update: La materialo estis sukcese ĝisdatigita.
+      #original_hash: b2efea5
+      destroy: La materialo estis sukcese forigita.
+  bags:
+    #original_hash: 17e55c0
+    owner_title: Listo de la personoj kiuj havas la sakon
+    #original_hash: d6c0f42
+    edit_title: 'Redakto de la sako %{bag_name}'
+    #original_hash: 9e6c03a
+    new: Nova sako
+    index:
+      #original_hash: e64bf50
+      title: Sakoj
+      #original_hash: 6d2f60c
+      manage_hardware: Administri materialon
+      #original_hash: 692de2e
+      in_it: 'Ene estas:'
+      #original_hash: 1c32835
+      comment: 'Komento: %{comment}'
+      #original_hash: cc2f1ac
+      no_comment: Neniu komento
+      #original_hash: 2e60722
+      nothing: nenio nuntempe.
+    show:
+      #original_hash: 13cac6c
+      title: 'Informoj pri la sako %{bag_name}'
+      #original_hash: 9c0bd8d
+      name: 'Nomo:'
+      #original_hash: 17f280f
+      hardware_name: Nomo de la materialo
+    notif:
+      #original_hash: 0235722
+      create: La sako estis sukcese kreita.
+      #original_hash: c4f12f6
+      update: La sako estis sukcese ĝisdatigita.
+      #original_hash: e126f12
+      destroy: La sako estis sukcese forigita.
+  social_medias:
+    #original_hash: 82da67b
+    facebook: Fejsbuko
+    #original_hash: e8ea5fe
+    twitch: Twitch
+    #original_hash: 5442e2b
+    github: GitHub
+    #original_hash: 558865a
+    youtube: Jutubo
+    #original_hash: f45c58a
+    youtube_reup: Jutubo (Twitch-aj kaj aliaj reelŝutadoj)
+    #original_hash: 5721bbe
+    instagram: Instagramo
+  posts:
+    #original_hash: aeb1be5
+    dates: 'De %{start} ĝis %{end}.'
+    #original_hash: d217175
+    visit_website: Iri al la retejo
+    #original_hash: a833b79
+    read_more: Legi ĉion...
+    edit:
+      #original_hash: 2c647cc
+      title: Redakti la afiŝon
+      #original_hash: 8326df9
+      list: Listo de la afiŝoj
+    index:
+      #original_hash: a89a4a0
+      title: Listo de la afiŝoj kaj paĝoj de konkursoj
+      #original_hash: 610c541
+      edit_tags: Redakti la etikedojn
+      #original_hash: c26f874
+      on_date_by_person: 'Je %{date} de %{person}'
+    new:
+      #original_hash: a073059
+      title: Nova afiŝo
+      #original_hash: 32a054c
+      back: Reiri al la listo de la afiŝoj
+    show:
+      #original_hash: 4249d01
+      draft: Tiu afiŝo estas malneto.
+      #original_hash: 42e2d05
+      published_on_html: 'Publikigita je %{date} de %{person}.'
+      #original_hash: 4fe5491
+      permalink: Konstanta ligilo
+    tag_index:
+      #original_hash: b108c7c
+      title_html: 'Afiŝoj kun la etikedo %{tag_name}'
+      #original_hash: b091bed
+      none: Neniu afiŝo havas tiun etikedon.
+    notif:
+      #original_hash: e3f5db8
+      create: La afiŝo estis sukcese kreita.
+      #original_hash: 4c1d5d8
+      update: La afiŝo estis sukcese ĝisdatigita.
+      #original_hash: 646fa09
+      destroy: La afiŝo estis sukcese forigita.
+  table_headers:
+    #original_hash: e4387ad
+    firstname: Persona nomo
+    #original_hash: 7ff2037
+    name: Familinomo
+    #original_hash: da1f7ef
+    wca_id: WCA-ID
+    #original_hash: 84add5b
+    email: Retpoŝtadreso
+    #original_hash: 5c0c0b4
+    paid_at: Pagita je
+    #original_hash: 15cc734
+    receipt_url: Ligilo de la pagatesto
+    #original_hash: e58e9ba
+    full_name: Tuta nomo
+    #original_hash: 9721761
+    city: Urbo
+    #original_hash: 99d0157
+    end_of_subscription: Fino de membriĝo
+    #original_hash: 2a78f0e
+    country: Lando
+    #original_hash: 334f58a
+    notifications: Sciigoj
+    #original_hash: 85016ac
+    discussions: Diskutado
+    #original_hash: df9161f
+    news: Informoj
+  nav_competitions:
+    #original_hash: d56c202
+    calendar: Kalendaro de la konkursoj
+    #original_hash: d133641
+    cdf: Franca Ĉampionado
+  nav_tutos:
+    #original_hash: 83843d0
+    tutorials: Lerniloj
+    #original_hash: 0c3ecde
+    competitors: Konkursantoj
+    #original_hash: 4aa19c1
+    judges: Juĝantoj
+    #original_hash: cd26e97
+    solving: Solvado
+    #original_hash: 6e99c1d
+    organising: Organizado
+  nested_form:
+    #original_hash: 87ab378
+    do_not_find: Ĉu vi ne trovas la uzanton en la listo?
+    #original_hash: c7900ff
+    go_here_html: 'Iru %{here} por importi uzanton (ne forgesu reŝargi tiun paĝon poste).'
+    #original_hash: 084c402
+    here: tie
+    #original_hash: e6901f9
+    add_possession: Aldoni posedon
+  show_owners:
+    #original_hash: 9130d70
+    at: 'Ĉe:'
+    #original_hash: 6691d67
+    person: Persono
+    #original_hash: 8481498
+    from: De
+    #original_hash: 7a1732d
+    to: Ĝis
+  subscriptions:
+    #original_hash: 50cbb06
+    deleted: Kotizo forigita
+    #original_hash: b7c4546
+    members: Membroj
+    subscriptions: Membriĝoj
+    #original_hash: b571927
+    members_nb: '%{nb} membroj je %{date}'
+    #original_hash: e821a1a
+    none: 'Neniu membro, provu importi membriĝojn el HelloAsso.'
+    #original_hash: 0953ab2
+    import_html: 'Importi CSV-dosieron el %{helloasso}.'
+    #original_hash: bbd4838
+    select_file: Elekti dosieron
+    #original_hash: fdbf39f
+    receipt: Pagatesto
+    #original_hash: 07e2188
+    review_title: Submetontaj ŝanĝoj
+    #original_hash: adad64b
+    detected_contributions: >-
+      La ĉi-subaj kontribuoj estis detektitaj, bonvolu kontroli ilin kaj submetu
+      la formularon nur se ĉio aspektas bone!
+    #original_hash: 4c130d9
+    import_contributions: Importi tiujn kontribuojn
+    #original_hash: 631a788
+    nothing_to_import: Neniu importonta kontribuo
+    #original_hash: 14de0f2
+    already_in_db: La ĉi-subaj kontribuoj jam estas en la datumbazo kaj estos ignorataj.
+  tags:
+    #original_hash: f287ae9
+    successful_update: Etikedo ĝisdatigita.
+    edit:
+      #original_hash: d0ec9a2
+      title: 'Redakti la etikedon %{tag}'
+      #original_hash: ee690ff
+      back: Reiri al la listo de etikedoj
+    index:
+      #original_hash: e26c690
+      title: Etikedoj
+      #original_hash: 8b48e56
+      post_list: Listo de la afiŝoj
+      #original_hash: f333a85
+      click_on_tag: Alklaku etikedon por ŝanĝi la montritan tekston kaj ĝian koloron.
+  users:
+    update_locale:
+      #original_hash: 4a867ef
+      success: Lingvo ĝisdatigita.
+      #original_hash: ce495ed
+      failure: Neeblas ĝisdatigi vian profilon.
+      #original_hash: e24f182
+      unavailable: La petita lingvo ne disponeblas.
+    no_rights:
+      #original_hash: 4b92909
+      admin: Nur la administrantoj povas aliri tiun paĝon.
+      #original_hash: 72c9b8e
+      delegate: Nur la Delegitoj povas aliri tiun paĝon.
+      #original_hash: ba25025
+      communication: Nur membroj de la Komunikada Teamo povas aliri tiun paĝon.
+      #original_hash: 43336fd
+      generic: Vi ne rajtas aliri tiun paĝon.
+    #original_hash: 1e94e8f
+    no_results: Neniu rezulto por tiu peto
+    #original_hash: 90ffee4
+    successful_import: 'Uzanto %{user} estis sukcese importita'
+    #original_hash: 4855673
+    request_error: Eraro okazis dum la peto al la WCA-retejo
+    #original_hash: e6af7da
+    successful_update: Uzanto estis sukcese ĝisdatigita
+    #original_hash: f9c4b3b
+    cannot_edit: Vi ne povas redakti tiun uzanton
+    icons:
+      #original_hash: 1d8141b
+      admin: Administranto
+      #original_hash: ade0d50
+      comm: Komunikado
+      #original_hash: 9875e34
+      delegate: Franca Delegito
+    edit:
+      #original_hash: faa6d32
+      my_profile: Mia profilo
+      #original_hash: 62ac306
+      you_are_a_member: 'Vi estos membro de AFS ĝis %{date}.'
+      #original_hash: 4ddd81e
+      you_are_no_more_a_member: 'Vi ne plu estas membro de AFS ekde %{date}.'
+      #original_hash: fb679a7
+      you_are_not_a_member: Vi ne estas membro de AFS.
+      #original_hash: f212be1
+      disclaimer: >-
+        Noto: vi devas havi aktivan kotizon por ke la kampoj kun * estu
+        konsiderataj. Vi estos aŭtomate forigita el la dissendolistoj se via
+        membriĝo finiĝas sen esti repagita.
+      #original_hash: cdc7dfd
+      notif_should_work: >-
+        Kiel nuna membro de la asocio, aktivado de tiuj sciigoj/dissendolistoj
+        devus funkcii.
+      #original_hash: bff07a0
+      notif_should_not_work: >-
+        Kiel ne-membro de la asocio, aktivado de tiuj sciigoj/dissendolistoj NE
+        funkcios.
+      #original_hash: bbcab17
+      subscriptions_are_manually_imported: La kotizoj estas mane kaj regule importataj de la estraraj membroj.
+      #original_hash: 6301531
+      contact_html: >-
+        Se vi pensas ke malveras la informoj ĉi-sube, bonvolu kontakti la
+        estraron je la retpoŝtadreso %{email}.
+      #original_hash: b11363e
+      no_subscription_html: 'Vi havas neniun registritan kotizon. Iru ĉe %{helloasso} por membriĝi!'
+      #original_hash: f7f8d86
+      active_subscription: 'Pagita je %{date}, tiu kotizo ankoraŭ aktivas.'
+      #original_hash: 3ac1a0c
+      ended_subscription: 'Pagita je %{date}, tiu kotizo ne plu aktivas.'
+    index:
+      #original_hash: 712bacd
+      title: Listo de la uzantoj
+      #original_hash: afbc914
+      import_user: Importi uzanton el la WCA-retejo
+      #original_hash: 9ec1834
+      info: La membroj montriĝas kun malhelverda aŭ helverda fono.
+    import:
+      #original_hash: 0a32145
+      title: Importi uzanton
+      #original_hash: 0f3b03d
+      use_search: Uzu la kampon "Serĉi" por importi uzanto el la WCA-retejo.
+      #original_hash: 3a54c1d
+      scenarios: >-
+        Se nur unu rezulto kongruas, la uzanto estos importita. Se pluraj
+        uzantoj kongruas al la peto, ili estos montritaj.
+      #original_hash: 3dc654a
+      you_can_click: Vi povas alklaki unu el la uzantoj de la peto por importi ĝin.
+  contact:
+    #original_hash: b37456c
+    title: Kontakto
+    #original_hash: 408cb59
+    competition_questions: >-
+      Se vi havas demandon pri specifa konkurso, bonvolu rekte sendi retpoŝton
+      al la organizanta teamo de tiu ĉi. Ĝia kontaktinformo troviĝas ĉe la
+      WCA-paĝo de tiu konkurso.
+    #original_hash: e5f169d
+    afs_questions_html: >-
+      Por ĉiuj demandoj, rimarkoj aŭ sugestojn pri AFS: bonvolu sendi retmesaĝon
+      al %{email}.
+    #original_hash: ceec99a
+    website_questions_html: >-
+      Se vi malkovras problemon en la retejo, vi povas rekte malfermi
+      problemspuradon ("Issue") ĉe %{github} aŭ kontakti la administrantoj je
+      %{email}.
+    #original_hash: 5442e2b
+    github: GitHub
+    #original_hash: eb6f3c5
+    streaming_questions_html: >-
+      Se vi estas organizanto de konkurso kaj deziras prepari elsendfluon,
+      bonvolu kontakti la elsendflua teamo kiel eble plej baldaŭ je %{email}.
+  sessions:
+    #original_hash: 968192f
+    cannot_import: 'Ne eblas krei la uzanton! (Kio estas grava eraro :( !)'
+    #original_hash: ef735de
+    logged_in: Vi estas ensalutata!
+    #original_hash: 9228550
+    logged_out: Vi estis elsalutita!
+    #original_hash: 78e7641
+    cannot_login: 'Ne eblas ensaluti! Eraro: %{message}'
+    #original_hash: 62b3600
+    already_logged_in: Vi jam estas ensalutata.
+  results:
+    #original_hash: dc78e29
+    successfully_destroyed: Rezultoj sukcese forigitaj
+
