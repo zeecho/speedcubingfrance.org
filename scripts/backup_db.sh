@@ -5,7 +5,12 @@ DESTINATION_DIR="/home/afs/backups"
 # create directory if it doesn't exist
 mkdir -p ${DESTINATION_DIR}
 
-# get the database password
+# get the env for rails
+if [ -z ${RAILS_ENV+x} ]; then
+	source ~/.bashrc
+fi
+
+# get the database password for pg
 source /home/afs/speedcubingfrance.org/.env.production
 
 # create a file which pg_dump will read (because there is no option to give it to the command line)
