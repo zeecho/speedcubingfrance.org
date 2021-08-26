@@ -34,8 +34,9 @@ restart_app() {
     pid=$(<"/tmp/puma.pid")
     kill -SIGUSR2 $pid
   else
-    # We could not find a unicorn master process running, lets start one up!
-    bundle exec puma &
+    # We could not find a puma master process running, lets start one up
+		# in "daemonize" mode!
+    bundle exec puma -d
   fi
 }
 
