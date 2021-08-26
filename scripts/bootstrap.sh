@@ -1,5 +1,6 @@
 apt-get update
-apt-get install -y curl git vim htop apt-transport-https
+# shared-mime-info is required for some of our gem dependency
+apt-get install -y curl git vim htop apt-transport-https shared-mime-info
 
 # Create afs user if does not exist.
 if ! id -u afs &>/dev/null; then
