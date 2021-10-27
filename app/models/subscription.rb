@@ -41,7 +41,7 @@ class Subscription < ApplicationRecord
         return
       end
     end
-    matchs = User.where("lower(name) = ?", "#{firstname.downcase} #{name.downcase}")
+    matchs = User.where("id > 0 and lower(name) = ?", "#{firstname.downcase} #{name.downcase}")
     if matchs.size == 1
       self.user_id = matchs.first.id
       self.save
