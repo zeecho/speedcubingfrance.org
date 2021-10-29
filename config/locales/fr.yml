@@ -269,11 +269,11 @@ fr:
     stayathome: "#restezchezvous"
     create:
       title: "Créer une compétition en ligne"
-      success: "Online competition was successfully created."
+      success: "La compétition en ligne a été crée avec succès."
     update:
-      success: "Online competition was successfully updated."
+      success: "La compétition en ligne a été mise à jour avec succès."
     destroy:
-      success: "Online competition was successfully destroyed."
+      success: "La compétition en ligne a été détruite avec succès."
     edit:
       title: "Éditer la compétition en ligne"
     form:
