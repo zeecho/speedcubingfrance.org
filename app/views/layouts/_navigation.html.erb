@@ -133,6 +133,9 @@
                     <% if current_user.can_manage_communication_matters? %>
                       <%= link_to I18n.t("nav.subscriptions"), subscriptions_path, class: "dropdown-item" %>
                     <% end %>
+                    <% if current_user.can_manage_vote_matters? %>
+                      <%= link_to I18n.t("nav.votes"), votes_path, class: "dropdown-item" %>
+                    <% end %>
                     <% if current_user.admin? %>
                       <%= link_to I18n.t("nav.admin.users"), users_path, class: "dropdown-item" %>
                     <% end %>

@@ -232,6 +232,11 @@ fr:
       calendar_event:
         create: "Créer l'évènement"
         update: 'Sauvegarder'
+      vote:
+        create: "Créer le vote"
+        update: "Mettre à jour le vote"
+      vote_answer:
+        update: "Sauvegarder votre vote"
       post:
         create: 'Créer la publication'
         update: 'Sauvegarder'
@@ -315,6 +320,7 @@ fr:
     presentation: "Présentation"
     association: "Association"
     subscriptions: "Adhésions"
+    votes: "Votes"
     documents: "Documents"
     logo: "Logo"
     speedcubing:
@@ -564,6 +570,17 @@ fr:
     youtube_reup: "YouTube (reuploads Twitch & cie)"
     instagram: "Instagram"
     discord: "Discord"
+  votes:
+    show:
+      vote_title: "Vote : %{name}"
+      vote_not_visible: "Ce vote n'est pas visible par le public."
+      vote_below: "Vous pouvez voter ci-dessous :"
+      vote_results: "Résultats du vote :"
+      sign_in: "Connectez-vous pour pouvoir voter"
+    notif:
+      answer_saved: "Votre vote a été pris en compte."
+      too_many_answers: "Trop de réponses fournies."
+      no_valid_answers: "Merci de choisir au moins une réponse."
   posts:
     dates: "Du %{start} au %{end}."
     visit_website: "Visiter le site"
@@ -658,6 +675,7 @@ fr:
       admin: "Seuls les administrateurs ont accès à cette page."
       delegate: "Seuls les délégués ont accès à cette page."
       communication: "Seuls les responsables communication ont accès à cette page."
+      votes: "Seuls les administrateurs des votes ont accès à cette page."
       generic: "Vous n'êtes pas autorisé à accéder à cette page."
     no_results: "Aucun résultat pour la requête"
     successful_import: "Utilisateur %{user} importé avec succès"

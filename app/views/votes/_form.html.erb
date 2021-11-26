@@ -1,0 +1,47 @@
+<% content_for :additional_scripts do %>
+  <%= javascript_pack_tag "cocoon", 'data-turbolinks-track': 'reload'  %>
+<% end %>
+<%= simple_form_for(@vote) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :visible %>
+    <%= f.input :over %>
+    <% has_any_vote = @vote.vote_answers.any? %>
+    <% if has_any_vote %>
+      <div class="alert alert-warning">
+        There are votes already, you can't change the following attributes!
+      </div>
+    <% end %>
+    <%= f.input :multiple_choices, disabled: has_any_vote %>
+    <label>
+      Vote options:
+    </label>
+    <% if has_any_vote %>
+      <div class="list-group mb-2">
+        <% @vote.vote_options.each do |o| %>
+          <div class="list-group-item"><%= o.name %></div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="vote_options">
+        <%= f.simple_fields_for :vote_options do |f2| %>
+          <%= render "vote_option_form", f: f2 %>
+        <% end %>
+      </div>
+      <%= link_to_add_association(
+        button_tag(raw("#{fa_icon("plus")} #{"Add an option"}"), type: "button", class: "btn btn-success mb-3"),
+        f,
+        :vote_options,
+        data: {
+          association_insertion_node: '.vote_options',
+          association_insertion_method: 'append'
+        },
+        partial: "vote_option_form"
+      ) %>
+    <% end %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

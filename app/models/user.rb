@@ -38,6 +38,8 @@ class User < ApplicationRecord
     admin? || comm?
   end
 
+  alias_method :can_manage_vote_matters?, :can_manage_communication_matters?
+
   def can_manage_calendar?
     can_manage_delegate_matters? || can_manage_communication_matters?
   end

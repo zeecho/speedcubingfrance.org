@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_25_221842) do
+ActiveRecord::Schema.define(version: 2021_11_25_152828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -243,6 +243,28 @@ ActiveRecord::Schema.define(version: 2020_03_25_221842) do
     t.boolean "discussion_subscription"
     t.boolean "newsletter_subscription"
     t.string "preferred_locale"
+  end
+
+  create_table "vote_answers", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "vote_option_id"
+    t.index ["user_id"], name: "index_vote_answers_on_user_id"
+    t.index ["vote_option_id"], name: "index_vote_answers_on_vote_option_id"
+  end
+
+  create_table "vote_options", force: :cascade do |t|
+    t.string "name"
+    t.bigint "vote_id"
+    t.index ["vote_id"], name: "index_vote_options_on_vote_id"
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.string "name"
+    t.boolean "visible"
+    t.boolean "over"
+    t.boolean "multiple_choices"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

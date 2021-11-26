@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :votes do
+    post 'answer' => 'votes#answer'
+    delete 'answers' => 'votes#clear_answers'
+  end
   resources :online_competitions
   get 'online_competitions/:id/admin' => 'online_competitions#admin', :as => :admin_results
   resources :clubs, except: [:show]

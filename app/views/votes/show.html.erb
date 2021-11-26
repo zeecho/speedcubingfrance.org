@@ -1,0 +1,49 @@
+<h1>
+  <%= t("votes.show.vote_title", name: @vote.name) %>
+  <% if current_user&.can_manage_vote_matters? %>
+    <%= link_to(fa_icon("pencil"), edit_vote_path(@vote), class: "btn btn-sm btn-primary") %>
+  <% end %>
+</h1>
+
+<% unless @vote.visible %>
+  <div class="alert alert-warning">
+    <%= t("votes.show.vote_not_visible") %>
+  </div>
+<% end %>
+<% unless current_user %>
+  <div class="alert alert-info">
+    <%= t("votes.show.sign_in") %>
+  </div>
+<% end %>
+
+<% unless @vote.over %>
+  <%= t("votes.show.vote_below") %>
+  <% tag_method = @vote.multiple_choices ? method(:check_box_tag) : method(:radio_button_tag) %>
+  <%= simple_form_for :vote_answer, url: vote_answer_path(@vote), wrapper: :horizontal_form do |f| %>
+    <div class="form-inputs">
+      <% @vote.vote_options.each do |o| %>
+        <div class="form-group">
+          <div class="custom-control custom-checkbox w-100 row">
+            <%= tag_method.call "vote_answer[vote_options][]", o.id, o.answer_for_user(current_user), class: "custom-control-input", id: "vote_options_#{o.id}", disabled: @vote.over %>
+            <label class="custom-control-label" for="vote_options_<%= o.id %>">
+              <%= o.name %>
+            </label>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, t("helpers.submit.vote_answer.update") %>
+    </div>
+  <% end %>
+<% end %>
+
+<% if @vote.over || current_user&.can_manage_vote_matters? %>
+  <h2><%= t("votes.show.vote_results") %></h2>
+
+  <div class="list-group">
+    <% @vote.vote_options.each do |o| %>
+      <div class="list-group-item"><%= o.name %> : <%= o.vote_answers.size %></div>
+    <% end %>
+  </div>
+<% end %>
