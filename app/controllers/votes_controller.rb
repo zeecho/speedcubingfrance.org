@@ -2,6 +2,7 @@ class VotesController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :redirect_unless_vote_manager!, except: [:show, :answer]
   before_action :set_vote, only: [:show, :edit, :update, :destroy, :answer, :clear_answers]
+  before_action :redirect_unless_can_vote!, only: [:answer]
 
   # GET /votes
   def index
@@ -98,6 +99,12 @@ class VotesController < ApplicationController
     def redirect_unless_vote_manager!
       unless current_user&.can_manage_vote_matters?
         redirect_to root_url, :alert => I18n.t("users.no_rights.votes")
+      end
+    end
+
+    def redirect_unless_can_vote!
+      unless @vote.user_can_vote?(current_user)
+        redirect_to root_url, :alert => I18n.t("users.no_rights.sub_votes")
       end
     end
 end

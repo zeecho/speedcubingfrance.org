@@ -52,6 +52,10 @@ class User < ApplicationRecord
     subscriptions.last
   end
 
+  def has_active_subscription?
+    last_subscription&.active?
+  end
+
   def admin?
     admin
   end

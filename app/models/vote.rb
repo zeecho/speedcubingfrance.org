@@ -10,4 +10,8 @@ class Vote < ApplicationRecord
   def user_can_view?(user)
     visible || user&.can_manage_vote_matters?
   end
+
+  def user_can_vote?(user)
+    user&.has_active_subscription?
+  end
 end

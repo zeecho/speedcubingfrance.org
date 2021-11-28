@@ -4,13 +4,13 @@
 <%= link_to I18n.t("users.index.import_user"), users_import_path, class: "btn btn-success mb-3" %>
 
 <div class="alert bg-lightgreen">
-  <%= I18n.t("users.index.info") %> 
+  <%= I18n.t("users.index.info") %>
 </div>
 
 <%= render "shared/compact_table", headers: [I18n.t("table_headers.full_name"), I18n.t("table_headers.wca_id"), I18n.t("table_headers.country"), I18n.t("table_headers.city"), I18n.t("table_headers.notifications"), I18n.t("table_headers.news"), I18n.t("table_headers.discussions"), I18n.t("table_headers.email")] do %>
   <% @users.each do |user| %>
     <tr>
-      <th scope="row" class="<%="bg-lightgreen" if user.last_subscription&.active? %>">
+      <th scope="row" class="<%="bg-lightgreen" if user.has_active_subscription? %>">
         <%= link_to user.name, edit_user_path(user) %>
         <%= render "icons_for_user", user: user %>
       </th>

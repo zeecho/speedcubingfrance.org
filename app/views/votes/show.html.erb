@@ -10,9 +10,14 @@
     <%= t("votes.show.vote_not_visible") %>
   </div>
 <% end %>
-<% unless current_user %>
+<% user_can_vote = @vote.user_can_vote?(current_user) %>
+<% if !current_user %>
   <div class="alert alert-info">
     <%= t("votes.show.sign_in") %>
+  </div>
+<% elsif !user_can_vote %>
+  <div class="alert alert-warning">
+    <%= t("votes.show.cant_vote_subscribe") %>
   </div>
 <% end %>
 
@@ -24,7 +29,7 @@
       <% @vote.vote_options.each do |o| %>
         <div class="form-group">
           <div class="custom-control custom-checkbox w-100 row">
-            <%= tag_method.call "vote_answer[vote_options][]", o.id, o.answer_for_user(current_user), class: "custom-control-input", id: "vote_options_#{o.id}", disabled: @vote.over %>
+            <%= tag_method.call "vote_answer[vote_options][]", o.id, o.answer_for_user(current_user), class: "custom-control-input", id: "vote_options_#{o.id}", disabled: !user_can_vote %>
             <label class="custom-control-label" for="vote_options_<%= o.id %>">
               <%= o.name %>
             </label>
@@ -33,17 +38,19 @@
       <% end %>
     </div>
     <div class="form-actions">
-      <%= f.button :submit, t("helpers.submit.vote_answer.update") %>
+      <%= f.button :submit, t("helpers.submit.vote_answer.update"), disabled: !user_can_vote %>
     </div>
   <% end %>
 <% end %>
 
 <% if @vote.over || current_user&.can_manage_vote_matters? %>
   <h2><%= t("votes.show.vote_results") %></h2>
-
+  <p><%= t("votes.show.highlight") %></p>
   <div class="list-group">
     <% @vote.vote_options.each do |o| %>
-      <div class="list-group-item"><%= o.name %> : <%= o.vote_answers.size %></div>
+      <div class="list-group-item <%= "list-group-item-info" if o.answer_for_user(current_user) %>">
+        <%= o.name %> : <%= o.vote_answers.size %>
+      </div>
     <% end %>
   </div>
 <% end %>

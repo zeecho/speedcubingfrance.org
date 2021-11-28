@@ -574,9 +574,11 @@ fr:
     show:
       vote_title: "Vote : %{name}"
       vote_not_visible: "Ce vote n'est pas visible par le public."
-      vote_below: "Vous pouvez voter ci-dessous :"
+      vote_below: "Envoyez votre vote ci-dessous :"
       vote_results: "Résultats du vote :"
       sign_in: "Connectez-vous pour pouvoir voter"
+      cant_vote_subscribe: "Seul·e les adhérent·es peuvent participer à ce vote."
+      highlight: "Si vous avez voté, votre vote est indiqué sur fond bleu."
     notif:
       answer_saved: "Votre vote a été pris en compte."
       too_many_answers: "Trop de réponses fournies."
@@ -676,6 +678,7 @@ fr:
       delegate: "Seuls les délégués ont accès à cette page."
       communication: "Seuls les responsables communication ont accès à cette page."
       votes: "Seuls les administrateurs des votes ont accès à cette page."
+      sub_votes: "Seuls les adhérent·es ont accès à cette page."
       generic: "Vous n'êtes pas autorisé à accéder à cette page."
     no_results: "Aucun résultat pour la requête"
     successful_import: "Utilisateur %{user} importé avec succès"
