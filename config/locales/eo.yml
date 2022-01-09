@@ -45,7 +45,7 @@ eo:
     #original_hash: d542376
     minx: Megaminkso
     #original_hash: 8216a66
-    pyram: Pyraminkso
+    pyram: Piraminkso
     #original_hash: 64a56a2
     skewb: Skjubo
     #original_hash: 1551a2c
@@ -387,6 +387,14 @@ eo:
         create: Krei la eventon
         #original_hash: 9ada143
         update: Konservi
+      vote:
+        #original_hash: 89f072d
+        create: Krei la voĉdonon
+        #original_hash: b233727
+        update: Ĝisdatigi la voĉdonon
+      vote_answer:
+        #original_hash: 1fde29d
+        update: Savi vian voĉdonon
       post:
         #original_hash: f37940d
         create: Krei la afiŝon
@@ -424,6 +432,9 @@ eo:
         create: Krei sakon
         #original_hash: 25135b2
         update: Ĝisdatigi la sakon
+      subscription:
+        #original_hash: 6bc41fe
+        update: Redakti tiun membriĝon
   views:
     pagination:
       #original_hash: 1647b81
@@ -444,13 +455,13 @@ eo:
     create:
       #original_hash: dab4f04
       title: Krei enretan konkurson
-      #original_hash: 6c34ee4
+      #original_hash: 4ac6110
       success: La enreta konkurso estis sukcese kreita.
     update:
-      #original_hash: 045866d
+      #original_hash: da5eeba
       success: La enreta konkurso estis sukcese ĝisdatigita.
     destroy:
-      #original_hash: dac7bcf
+      #original_hash: aebc829
       success: La enreta konkurso estis sukcese forigita.
     edit:
       #original_hash: 72e3042
@@ -531,6 +542,8 @@ eo:
     association: Asocio
     #original_hash: 2d6a723
     subscriptions: Membriĝoj
+    #original_hash: b66c4b2
+    votes: Voĉdonoj
     #original_hash: 687c828
     documents: Dokumentoj
     #original_hash: 83fce83
@@ -765,6 +778,21 @@ eo:
       svg_with_text: Logotipo kun teksto en vektora versio (svg)
       #original_hash: 03682e1
       eps_with_text: Logotipo kun teksto kiel eps-dosiero
+      #original_hash: 065e2fd
+      history_html: 'Vi povas trovi la historion de la logotipoj ĉe %{this_page}.'
+      #original_hash: 2e41e07
+      this_page: tiu paĝo
+    logo_history:
+      #original_hash: 880f2c0
+      title: Historio de la logotipo
+      #original_hash: de2110b
+      period: Periodo
+      #original_hash: 9253f8e
+      noletters: Logotipo sen teksto
+      #original_hash: 35f4519
+      letters: Logotipo kun teksto
+      #original_hash: 3e8dd37
+      current: Nuna (ekde 2017)
     coupedefrance:
       #original_hash: 5e1af86
       title: Franca Pokalo
@@ -1019,6 +1047,31 @@ eo:
     youtube_reup: Jutubo (Twitch-aj kaj aliaj reelŝutadoj)
     #original_hash: 5721bbe
     instagram: Instagramo
+    #original_hash: bccc14e
+    discord: Diskordo
+  votes:
+    show:
+      #original_hash: 3a9175d
+      vote_title: 'Voĉdono: %{name}'
+      #original_hash: 30cbfd1
+      vote_not_visible: Tiu voĉdono ne estas publike videbla.
+      #original_hash: 3e63253
+      vote_below: 'Sendu vian voĉdonon ĉi-sube:'
+      #original_hash: b2e384a
+      vote_results: 'Rezultoj de la voĉdono:'
+      #original_hash: cb2d8c4
+      sign_in: Ensaluto necesas por voĉdoni
+      #original_hash: cc7f22f
+      cant_vote_subscribe: Nur la membroj povas partopreni en tiu voĉdono.
+      #original_hash: ed4aadb
+      highlight: 'Se vi voĉdonis, via voĉdono estas montrita kun blua fono.'
+    notif:
+      #original_hash: c9b9798
+      answer_saved: Via voĉdono estis registrita.
+      #original_hash: 2d5624b
+      too_many_answers: Tro multe da respondoj elektitaj.
+      #original_hash: 4c5617c
+      no_valid_answers: Bonvolu elekti almenaŭ unu respondon.
   posts:
     #original_hash: aeb1be5
     dates: 'De %{start} ĝis %{end}.'
@@ -1149,8 +1202,12 @@ eo:
     import_contributions: Importi tiujn kontribuojn
     #original_hash: 631a788
     nothing_to_import: Neniu importonta kontribuo
-    #original_hash: 14de0f2
+    #original_hash: 63b5b11
     already_in_db: La ĉi-subaj kontribuoj jam estas en la datumbazo kaj estos ignorataj.
+    #original_hash: 0ecfe4d
+    edit_title: 'Redakto de la membriĝo de %{firstname} %{name} (%{email})'
+    #original_hash: 6e7acb0
+    successful_update: Membriĝo ĝisdatigita.
   tags:
     #original_hash: f287ae9
     successful_update: Etikedo ĝisdatigita.
@@ -1181,6 +1238,10 @@ eo:
       delegate: Nur la Delegitoj povas aliri tiun paĝon.
       #original_hash: ba25025
       communication: Nur membroj de la Komunikada Teamo povas aliri tiun paĝon.
+      #original_hash: 39e4929
+      votes: Nur la administrantoj de la voĉdonoj povas aliri tiun paĝon.
+      #original_hash: 521f78b
+      sub_votes: Nur la membroj povas aliri tiun paĝon.
       #original_hash: 43336fd
       generic: Vi ne rajtas aliri tiun paĝon.
     #original_hash: 1e94e8f
@@ -1289,4 +1350,3 @@ eo:
   results:
     #original_hash: dc78e29
     successfully_destroyed: Rezultoj sukcese forigitaj
-
