@@ -2,6 +2,9 @@
 
 module Locales
   AVAILABLE = {
+    "frp": {
+      "name": "Arpetan",
+    },
     "en": {
       "name": "English",
     },
