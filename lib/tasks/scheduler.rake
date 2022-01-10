@@ -64,33 +64,37 @@ namespace :scheduler do
 
   desc "Daily task to sync mailing lists"
   task :sync_groups => :environment do
-    sync_job_messages = []
-    delegates_emails = User.french_delegates.map(&:email)
-    # Delegates mailing list
-    sync_job_messages << GsuiteMailingLists.sync_group("delegates@speedcubingfrance.org", delegates_emails)
-    subscribers_with_notifications = User.subscription_notification_enabled.with_active_subscription.map(&:email)
-    subscribers_with_notifications << "contact@speedcubingfrance.org"
-    # Subscribers notifications list (new competition announced)
-    sync_job_messages << GsuiteMailingLists.sync_group("adherents-notifications@speedcubingfrance.org", subscribers_with_notifications)
+    begin
+      sync_job_messages = []
+      delegates_emails = User.french_delegates.map(&:email)
+      # Delegates mailing list
+      sync_job_messages << GsuiteMailingLists.sync_group("delegates@speedcubingfrance.org", delegates_emails)
+      subscribers_with_notifications = User.subscription_notification_enabled.with_active_subscription.map(&:email)
+      subscribers_with_notifications << "contact@speedcubingfrance.org"
+      # Subscribers notifications list (new competition announced)
+      sync_job_messages << GsuiteMailingLists.sync_group("adherents-notifications@speedcubingfrance.org", subscribers_with_notifications)
 
-    all_subscribers = Subscription.active.includes(:user).map { |s| s.user&.email || s.email }.uniq
-    # Subscribers mailing list
-    sync_job_messages << GsuiteMailingLists.sync_group("adherents@speedcubingfrance.org", all_subscribers)
-    # Subscribers discussion list
-    subscribers_with_discussion = User.subscription_discussion_enabled.with_active_subscription.map(&:email)
-    subscribers_with_discussion << "contact@speedcubingfrance.org"
-    sync_job_messages << GsuiteMailingLists.sync_group("adherents-discussions@speedcubingfrance.org", subscribers_with_discussion)
-    # Subscribers newsletter
-    subscribers_with_newsletter = User.subscription_newsletter_enabled.with_active_subscription.map(&:email)
-    subscribers_with_newsletter << "contact@speedcubingfrance.org"
-    sync_job_messages << GsuiteMailingLists.sync_group("newsletter@speedcubingfrance.org", subscribers_with_newsletter)
+      all_subscribers = Subscription.active.includes(:user).map { |s| s.user&.email || s.email }.uniq
+      # Subscribers mailing list
+      sync_job_messages << GsuiteMailingLists.sync_group("adherents@speedcubingfrance.org", all_subscribers)
+      # Subscribers discussion list
+      subscribers_with_discussion = User.subscription_discussion_enabled.with_active_subscription.map(&:email)
+      subscribers_with_discussion << "contact@speedcubingfrance.org"
+      sync_job_messages << GsuiteMailingLists.sync_group("adherents-discussions@speedcubingfrance.org", subscribers_with_discussion)
+      # Subscribers newsletter
+      subscribers_with_newsletter = User.subscription_newsletter_enabled.with_active_subscription.map(&:email)
+      subscribers_with_newsletter << "contact@speedcubingfrance.org"
+      sync_job_messages << GsuiteMailingLists.sync_group("newsletter@speedcubingfrance.org", subscribers_with_newsletter)
 
-    message = "La synchronisation des groupes a été effectuée.\n"
-    if sync_job_messages.empty?
-      message += "Aucun changement n'a été nécessaire." if sync_job_messages.empty?
-    else
-      message += sync_job_messages.join("\n")
+      message = "La synchronisation des groupes a été effectuée.\n"
+      if sync_job_messages.empty?
+        message += "Aucun changement n'a été nécessaire." if sync_job_messages.empty?
+      else
+        message += sync_job_messages.join("\n")
+      end
+      NotificationMailer.with(task_name: "sync_groups", message: message).notify_team_of_job_done.deliver_now
+    rescue => err
+      NotificationMailer.with(task_name: "sync_groups", error: err).notify_team_of_failed_job.deliver_now
     end
-    NotificationMailer.with(task_name: "sync_groups", message: message).notify_team_of_job_done.deliver_now
   end
 end
