@@ -72,19 +72,19 @@ namespace :scheduler do
       subscribers_with_notifications = User.subscription_notification_enabled.with_active_subscription.map(&:email)
       subscribers_with_notifications << "contact@speedcubingfrance.org"
       # Subscribers notifications list (new competition announced)
-      sync_job_messages << GsuiteMailingLists.sync_group("adherents-notifications@speedcubingfrance.org", subscribers_with_notifications)
+      sync_job_messages << GsuiteMailingLists.sync_group("adherents-notifications@speedcubingfrance.org", subscribers_with_notifications.uniq)
 
-      all_subscribers = Subscription.active.includes(:user).map { |s| s.user&.email || s.email }.uniq
+      all_subscribers = Subscription.active.includes(:user).map { |s| s.user&.email || s.email }
       # Subscribers mailing list
-      sync_job_messages << GsuiteMailingLists.sync_group("adherents@speedcubingfrance.org", all_subscribers)
+      sync_job_messages << GsuiteMailingLists.sync_group("adherents@speedcubingfrance.org", all_subscribers.uniq)
       # Subscribers discussion list
       subscribers_with_discussion = User.subscription_discussion_enabled.with_active_subscription.map(&:email)
       subscribers_with_discussion << "contact@speedcubingfrance.org"
-      sync_job_messages << GsuiteMailingLists.sync_group("adherents-discussions@speedcubingfrance.org", subscribers_with_discussion)
+      sync_job_messages << GsuiteMailingLists.sync_group("adherents-discussions@speedcubingfrance.org", subscribers_with_discussion.uniq)
       # Subscribers newsletter
       subscribers_with_newsletter = User.subscription_newsletter_enabled.with_active_subscription.map(&:email)
       subscribers_with_newsletter << "contact@speedcubingfrance.org"
-      sync_job_messages << GsuiteMailingLists.sync_group("newsletter@speedcubingfrance.org", subscribers_with_newsletter)
+      sync_job_messages << GsuiteMailingLists.sync_group("newsletter@speedcubingfrance.org", subscribers_with_newsletter.uniq)
 
       message = "La synchronisation des groupes a été effectuée.\n"
       if sync_job_messages.empty?
