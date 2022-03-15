@@ -657,13 +657,33 @@ frp:
       title: Presentacion de l'associacion
       #original_hash: aa245f5
       introduction: Presentacion
-      #original_hash: ff3f5c9
+      #original_hash: f85bdfb
       p1: >-
-        L'Associacion Francêsa de Speedcubing at étâ crèâye por encoragiér lo
-        dèvelopament de la pratica du cubo u nivél nacionâl. Una partia de son
-        activitât est sacrâye a suportar l'organisacion de compèticions
-        oficièles sur lo sol francês. Cen pôt betar dedens lo prèt de matèrièl,
-        la participacion ux frés de locacion de sâla, etc.
+        L'Associacion Francêsa de Speedcubing (AFS) est una associacion louè
+        1901, rassemblant des volontèros et membros passionâs u tôrn de la
+        pratica des damâjo-téta de rotacion, que lo cubo enventâ per Ernö Rubik
+        est lo més cèlèbro reprèsentant.
+      #original_hash: f85a76b
+      p2: >-
+        El at por ciba d'encoragiér la disciplina, spècialament en facilitant
+        l'organisacion sur lo tèrritouèro francês de compèticions oficièles
+        (règies per la World Cube Association). A ceti titro, nos sotenens los
+        enganciors de difèrentes maniéres (prèsto de matèrièl, éde u financement
+        de sâles, assurence, maneyance des frés d'enscripcion, etc.) Nos
+        entèrvenens asse-ben règuliérement dens lo câdro de difèrents èvènements
+        (culturèls, associatifs, comèrcials, mèdiaticos, charitât) en proposant
+        dèmonstracions et iniciacions.
+      #original_hash: 0392653
+      p3_html: 'Vos pouede enscrire a l''associacion sur ceta %{link_page}.'
+      #original_hash: 767013c
+      page: pâge
+      #original_hash: 64b1e10
+      p4_html: >-
+        L'associacion est gllètâye ni a la mârca Rubik's, ni a gins d'ôtra mârca
+        ou entreprêsa fasent ou revendent des damâjo-téta ou artimbales de
+        %{link_speedcubing}.
+      #original_hash: 456c5a0
+      speedcubing: speedcubing
       board:
         #original_hash: 70d4735
         title: Bureau
@@ -671,12 +691,12 @@ frp:
         desc_html: 'Lo %{link} est ora constituâ de :'
         #original_hash: fe22b52
         name: bureau
-        #original_hash: 33488e2
-        president: 'Lina Tissier, prèsidenta'
-        #original_hash: cc7ab97
-        treasurer: 'Jules Desjardin,  trèsoriér'
-        #original_hash: d7caf31
-        secretary: 'Antoine Piau, secrètèro'
+        #original_hash: 13b644e
+        president: 'Pauline Bonnaudet, Prèsidenta'
+        #original_hash: a688da0
+        treasurer: 'Hippolyte Moreau, Trèsoriér'
+        #original_hash: 253e66d
+        secretary: 'Maxime Lefebvre, Secrètèro'
       teams:
         #original_hash: 39ba91a
         title: Èquipes
@@ -684,50 +704,76 @@ frp:
         desc: >-
           Plusiors èquipes sont rèsponsâbles de tâches prècises dedens
           l'associacion :
-        #original_hash: 0e4d990
-        website: 'Sito entèrnète : Antoine Piau, Philippe Virouleau (rèsponsâblo)'
-        #original_hash: 0fbce36
+        #original_hash: e2f9163
+        website: 'Sito entèrnète : Philippe Virouleau et Antoine Piau'
+        #original_hash: 8290088
+        contact: >-
+          Contacto : Pauline Bonnaudet, Hippolyte Moreau, Maxime Lefebvre,
+          Antoine Piau, Mario Laurent et Atalis Safont
+        #original_hash: 56c795c
+        social_medias: 'Malyâjos Socials : Delphine Tran et Nicolas Gertner'
+        #original_hash: a5615af
         communication: >-
-          Comunicacion : Pauline Bonnaudet, Jules Desjardin, Mario Laurent,
-          Maxime Lefebvre, Hippolyte Moreau, Antoine Piau
-        #original_hash: 560b6a8
+          Comunicacion: èquipes Contacto et Malyâjos Socials, Lina Tissier et
+          Jules Desjardin
+        #original_hash: 4356eeb
         streaming: >-
-          Streaming : Vincent Colin, Jules Desjardin, Mario Laurent
-          (rèsponsâblo), Hippolyte Moreau, Rui Reis
+          Streaming : Hippolyte Moreau, Mario Laurent, Rui Reis, Vincent Colin
+          et Jules Desjardin
     #original_hash: 2d6a723
     subscriptions:
       #original_hash: 2d6a723
       title: Enscripcions
-      #original_hash: a6f7301
+      #original_hash: dc406f2
       p1: >-
-        Tota pèrsona de nacionalitât francêsa ou ètrangiére pôt enscrire a
-        l'associacion en s'aquitant d'una cotisacion de 10 uros, cen que rebalye
-        l'enscripcion veretâbla por una durâ d'un an.
-      #original_hash: 1dbba73
+        Tota pèrsona, quints que seyont sa nacionalitât ou son âjo, pôt devenir
+        membro de l'associacion per simpla enscripcion et profitar des avantâjos
+        siuvents :
+      #original_hash: a5b04c2
       p2_html: >-
+        L'enscripcion est asse-ben una maniére d'aportar voutron solas financiér
+        a l'associacion et est (avouéc los dons) noutra principâla sôrsa de
+        financement (%{link_minutes}).
+      #original_hash: 6d11140
+      minutes: vêre los comptos-rebalyês
+      #original_hash: bce3f46
+      p3_html: >-
         L'enscripcion s'èfèctue sur lo malyâjo : l'AFS utilise HelloAsso por
-        rècoltar sos dons et enscripcion, vos pouede donc alar sur la
-        %{link_ha}, et clicar sur lo lim “S'agllètar”.
+        rècoltar sos dons et enscripcions ! Vos pouede donc vos rebalyér sur la
+        %{link_ha}, et clicar sur lo lim “S'agllètar”. Lo montant de la
+        cotisacion est de 10 uros, et rebalye l'enscripcion veretâbla por una
+        durâ d'un an.
       #original_hash: f44d2b4
-      afs_page: pâge de l'AFS
-      #original_hash: 6c44c78
-      p3: 'Los avantâjos que dispôsont los membros sont :'
-      #original_hash: b093e7c
+      afs_pages: pâge de l'AFS
+      #original_hash: c633865
+      asso_life: >-
+        La possibilitât de participar a la via de l'associacion, spècialament en
+        votant durent les assemblâs gènèrales ou en sè presentant ux èlèccions ;
+      #original_hash: db22a7f
       free_dues: >-
-        pas avêr a payér los WCA Dues por les compèticions sotenues per
-        l'associacion
-      #original_hash: 6999a60
-      hardware: la possibilitât d'emprontar du matèrièl de l'associacion
-      #original_hash: 6183231
+        L'enscripcion gratuita a la plepârt des compèticions enganciêes avouéc
+        lo solas de l'AFS en France ;
+      #original_hash: e39b304
+      orga: >-
+        La possibilitât, coment engancior de compèticion, de bènèficiyér d'un
+        partenariat et de l'éde de l'associacion (outils por maneyér les
+        enscripcions, cuvèrta de l'èvènement per noutra assurence, etc.) ;
+      #original_hash: d483255
+      hardware: >-
+        La possibilitât d'emprontar du matèrièl de l'associacion (sot
+        condicions) ;
+      #original_hash: e21f321
       notifs_html: >-
-        la possibilitât d'activar les notificacions des anonces de compèticions
-        francêses dens %{link_profile}
-      #original_hash: 1b63799
-      profile: son profil
-      #original_hash: 1e5d670
+        La possibilitât d'activar les notificacions des anonces de compèticions
+        francêses (%{link_profile}) ;
+      #original_hash: d592bf4
+      profile: mon profil
+      #original_hash: 940ec6c
+      newsletter: La possibilitât de recevêr les lètres d'enfos de l'associacion ;
+      #original_hash: 1d57740
       events: >-
-        de potencièls avantâjos ou envitacions por los èvènements gllètâs a
-        l'associacion (Copa de l'AFS et Copa de France dens lo passâ)
+        L'accès a de possiblos avantâjos ponctuèls (comandes de vetures
+        resèrvâyes ux membros, participacion a des èvènements, etc.)
     documents:
       #original_hash: 687c828
       title: Documents
@@ -765,16 +811,18 @@ frp:
     logos:
       #original_hash: 3089591
       title: Simbolos
-      #original_hash: 07f61b4
+      #original_hash: 289c2a9
       p1: >-
         Lo simbolo de l'AFS est utilisâblo per tôs los enganciors et Dèlègâs WCA
-        dens los outils de comunicacion (tâls que lo sito entèrnète, les
-        afiches, les vetures), dèpleyê dens lo câdro d'una compèticion en
-        partenariat avouéc l'AFS.
-      #original_hash: 994ea81
+        dens lo câdro de la comunicacion (sito entèrnète, afiches, vetures,
+        etc.) gllètâye a l'organisacion d'una compèticion en partenariat avouéc
+        l'AFS.
+      #original_hash: 7428f8d
       p2_html: >-
-        Por un usâjo dens un câdro difèrent, marci de contactar lo
-        %{board_mail_link} por en nègociyér son usâjo.
+        Tot ôtro usâjo qu'arêt pas étâ uvèrtament ôtorisâye per l'AFS est
+        dèfendua. Por nègociyér l'usâjo du simbolo, spècialament sur des supôrts
+        comèrcials ou en câs de dôbte regârd a son usâjo, marci de contactar lo
+        Burô a ceta adrèce : %{board_mail_link}.
       #original_hash: 553b59e
       p3_before_ul: 'Lo simbolo ègziste dens les vèrsions siuventes :'
       #original_hash: 58f36af
@@ -863,7 +911,7 @@ frp:
         Vos pouede asse-ben utilisar la vèrsion iCal por apondre ceti calendriér
         coment un calendriér èxtèrno a voutra agendâ (nota : solètes les
         compèticions WCA a venir sont apondues dens lo calendriér iCal).
-      #original_hash: 96bb64c
+      #original_hash: 97570b2
       ical_url_html: 'L''URL a utilisar est <code>%{url}</code>'
       old_comps_pages:
         #original_hash: 949d635
@@ -1259,8 +1307,8 @@ frp:
     no_rights:
       #original_hash: 4b92909
       admin: Solèts los administrators ant accès a ceta pâge.
-      #original_hash: 72c9b8e
-      delegate: Solèts los dèlègâs ant accès a ceta pâge.
+      #original_hash: 858d875
+      delegate: Solèts los Dèlègâs ant accès a ceta pâge.
       #original_hash: ba25025
       communication: Solèts los rèsponsâblos comunicacion ant accès a ceta pâge.
       #original_hash: 39e4929
@@ -1316,7 +1364,7 @@ frp:
       contact_html: >-
         Se vos pensâd que les enformacions cé d'avâl sont fôsses, marci de
         contactar l'ensemblo du burô en passant per l'adrèce %{email}.
-      #original_hash: b11363e
+      #original_hash: ede0701
       no_subscription_html: >-
         Vos éd gins de cotisacion encartâye. Rebalyéd vos sur %{helloasso} por
         s'agllètar !
@@ -1382,3 +1430,4 @@ frp:
   results:
     #original_hash: dc78e29
     successfully_destroyed: Rèsultats suprimâs avouéc reusséta
+

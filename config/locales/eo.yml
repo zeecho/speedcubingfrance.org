@@ -175,7 +175,7 @@ eo:
         french_delegate: Franca Delegito
         #original_hash: a06e15b
         notify_subscription: >-
-          Mi volas ŝalti sciigojn (averto pri fino de membriĝo, novaj konkursoj
+          Mi volas ŝalti sciigojn (averto pri fino de membreco, novaj konkursoj
           anoncitaj en Francio) *
         #original_hash: fa1eb62
         discussion_subscription: >-
@@ -226,7 +226,7 @@ eo:
         #original_hash: 55f8ebc
         description: Priskribo
         #original_hash: 83fce83
-        logo: Logotipo
+        logo: Emblemo
         #original_hash: 3d7c87c
         department: Departemento
         #original_hash: 9721761
@@ -424,9 +424,9 @@ eo:
         update: Ĝisdatigi la risurcon
       hardware:
         #original_hash: 70b9f96
-        create: Krei materialon
+        create: Krei ekipaĵon
         #original_hash: 0084ac2
-        update: Ĝisdatigi materialon
+        update: Ĝisdatigi ekipaĵon
       bag:
         #original_hash: a97cbd5
         create: Krei sakon
@@ -434,7 +434,7 @@ eo:
         update: Ĝisdatigi la sakon
       subscription:
         #original_hash: 6bc41fe
-        update: Redakti tiun membriĝon
+        update: Redakti tiun membrecon
   views:
     pagination:
       #original_hash: 1647b81
@@ -541,13 +541,13 @@ eo:
     #original_hash: 1948b8a
     association: Asocio
     #original_hash: 2d6a723
-    subscriptions: Membriĝoj
+    subscriptions: Membrecoj
     #original_hash: b66c4b2
     votes: Voĉdonoj
     #original_hash: 687c828
     documents: Dokumentoj
     #original_hash: 83fce83
-    logo: Logotipo
+    logo: Emblemo
     speedcubing:
       #original_hash: 7fadbaa
       title: Rapidkubumado
@@ -585,7 +585,7 @@ eo:
       competitions: Konkursoj
     delegate:
       #original_hash: c39e887
-      hardware: Materialo
+      hardware: Ekipaĵo
   button:
     #original_hash: 8a754f1
     show: Vidi
@@ -652,13 +652,32 @@ eo:
       title: Prezentado de la asocio
       #original_hash: aa245f5
       introduction: Prezentado
-      #original_hash: ff3f5c9
+      #original_hash: f85bdfb
       p1: >-
-        La Franca Asocio de Rapidkubumado estis kreita kun la celo promocii la
-        disvolvon de la praktiko de kubumado je la nacia nivelo. Parto de ĝia
-        agado konsistas el subtenado de organizo de oficialaj konkursoj sur la
-        franca teritorio. Tiu povas esti per pruntedono de materialo, partopreno
-        en pago de la konkursejo, ktp.
+        La Franca Asocio de Rapidkubumado (AFS) estas asocio leĝo 1901,
+        kunigante volontulojn kaj pasiajn membrojn ĉirkaŭ la praktiko de
+        rotaciaj puzloj, el kiuj la kubo inventita de Ernö Rubik estas la plej
+        fama reprezentanto.
+      #original_hash: f85a76b
+      p2: >-
+        Ĝia celo estas antaŭenigi la disciplinon, precipe faciligante la
+        organizon sur franca teritorio de oficialaj konkursoj (regitaj de la
+        World Cube Association (Monda Kubo-Asocio)). Kiel tia, ni subtenas la
+        organizantojn diversmaniere (ekipaĵoprunto, asistado pri financado de
+        konkursejoj, asekuro, administrado de registriĝkostoj, ktp.) Ni regule
+        intervenas ankaŭ en la kunteksto de diversaj aranĝoj (kulturaj, asociaj,
+        bonfaraj, komercaj, amaskomunikilaj) proponante prezentadoj.
+      #original_hash: 0392653
+      p3_html: 'Vi povas aliĝi al la asocio ĉe ĉi tiu %{link_page}.'
+      #original_hash: 767013c
+      page: paĝo
+      #original_hash: 64b1e10
+      p4_html: >-
+        La asocio ne estas aligita kun la marko Rubik's aŭ ajna alia marko aŭ
+        kompanio kiu produktas aŭ vendas puzloj aŭ akcesoraĵojn rilate al
+        %{link_speedcubing}.
+      #original_hash: 456c5a0
+      speedcubing: rapidkubumado
       board:
         #original_hash: 70d4735
         title: Estraro
@@ -666,58 +685,82 @@ eo:
         desc_html: 'La aktuala %{link} estas:'
         #original_hash: fe22b52
         name: estraro
-        #original_hash: 33488e2
-        president: 'Lina Tissier, prezidanto'
-        #original_hash: cc7ab97
-        treasurer: 'Jules Desjardin, kasisto'
-        #original_hash: d7caf31
-        secretary: 'Antoine Piau, sekretario'
+        #original_hash: 13b644e
+        president: 'Pauline Bonnaudet, Prezidanto'
+        #original_hash: a688da0
+        treasurer: 'Hippolyte Moreau, Kasisto'
+        #original_hash: 253e66d
+        secretary: 'Maxime Lefebvre, Sekretario'
       teams:
         #original_hash: 39ba91a
         title: Teamoj
         #original_hash: 90f2a41
         desc: 'Pluraj teamoj respondecas pri specifaj taskoj ene de la asocio:'
-        #original_hash: 0e4d990
-        website: 'Retejo: Antoine Piau, Philippe Virouleau (responsulo)'
-        #original_hash: 0fbce36
+        #original_hash: e2f9163
+        website: 'Retejo: Philippe Virouleau kaj Antoine Piau'
+        #original_hash: 8290088
+        contact: >-
+          Kontakto: Pauline Bonnaudet, Hippolyte Moreau, Maxime Lefebvre,
+          Antoine Piau, Mario Laurent kaj Atalis Safont
+        #original_hash: 56c795c
+        social_medias: 'Sociaj Retejoj: Delphine Tran ha Nicolas Gertner'
+        #original_hash: a5615af
         communication: >-
-          Komunikado: Pauline Bonnaudet, Jules Desjardin, Mario Laurent, Maxime
-          Lefebvre, Hippolyte Moreau, Antoine Piau
-        #original_hash: 560b6a8
+          Komunikado: teamoj Kontakto kaj Sociaj Retejoj, Lina Tissier kaj Jules
+          Desjardin
+        #original_hash: 4356eeb
         streaming: >-
-          Elsendfluo: Vincent Colin, Jules Desjardin, Mario Laurent
-          (responsulo), Hippolyte Moreau, Rui Reis
+          Elsendfluo: Hippolyte Moreau, Mario Laurent, Rui Reis, Vincent Colin
+          kaj Jules Desjardin
     #original_hash: 2d6a723
     subscriptions:
       #original_hash: 2d6a723
-      title: Membriĝoj
-      #original_hash: a6f7301
+      title: Membrecoj
+      #original_hash: dc406f2
       p1: >-
-        Parto de la financaj rimedoj kiujn havas la asocio venas de la
-        membriĝoj. Ĉiu persono kun franca aŭ eksterlanda nacieco povas membriĝi
-        per pago de kotizo de 10 eŭroj kiu iĝas la membriĝo valida por 1 jaro.
-      #original_hash: 1dbba73
+        Ĉiu, sendepende de nacieco aŭ aĝo, povas iĝi membro de la asocio per
+        simpla membreco kaj ĝui la jenajn avantaĝojn:
+      #original_hash: a5b04c2
       p2_html: >-
-        Membriĝo okazas rete: AFS akiras siajn donacojn kaj membriĝojn per
-        HelloAsso, vi povas iri ĉe %{link_ha} kaj alklaki la ligilon "Adhérer".
+        Membreco ankaŭ estas maniero alporti vian financan subtenon al la asocio
+        kaj estas (kune kun donacoj) nia ĉefa fonto de financado
+        (%{link_minutes}).
+      #original_hash: 6d11140
+      minutes: vidi protokolojn
+      #original_hash: bce3f46
+      p3_html: >-
+        Membreco estas farita interrete: la AFS uzas HelloAsso por kolekti siajn
+        donacojn kaj membrecojn! Vi povas do iri al la %{link_ha}, kaj alklaki
+        la ligilon "Aliĝi". La kontribuo estas 10 eŭroj, kaj efektivigas
+        membrecon por periodo de unu jaro.
       #original_hash: f44d2b4
-      afs_page: paĝo de AFS
-      #original_hash: 6c44c78
-      p3: 'Avantaĝoj kiujn havas la membroj estas:'
-      #original_hash: b093e7c
-      free_dues: senpageco de WCA-kotizoj por la konkursoj subtenaj de la asocio
-      #original_hash: 6999a60
-      hardware: eblo pruntepreni materialon de la asocio
-      #original_hash: 6183231
+      afs_pages: AFS-paĝo
+      #original_hash: c633865
+      asso_life: >-
+        La ebleco partopreni en la vivo de la asocio, precipe per voĉdonado ĉe
+        ĝeneralaj kunvenoj aŭ per kandidato en balotado
+      #original_hash: db22a7f
+      free_dues: >-
+        Senpaga registriĝo por la plej multaj konkursoj organizitaj kun la
+        subteno de la AFS en Francio
+      #original_hash: e39b304
+      orga: >-
+        La ebleco, kiel konkursorganizanto, profiti de partnereco kaj helpo de
+        la asocio (iloj por administri registriĝojn, uzo de nia asekuro, ktp.)
+      #original_hash: d483255
+      hardware: La ebleco prunti ekipaĵon de la asocio (sub kondiĉoj)
+      #original_hash: e21f321
       notifs_html: >-
-        eblo ŝalti sciigojn de la anoncoj de francaj konkursoj en
-        %{link_profile}
-      #original_hash: 1b63799
-      profile: sia profilo
-      #original_hash: 1e5d670
+        La ebleco aktivigi sciigojn pri anoncoj de francaj konkursoj
+        (%{link_profile})
+      #original_hash: d592bf4
+      profile: mia profilo
+      #original_hash: 940ec6c
+      newsletter: La ebleco ricevi la novaĵleterojn de la asocio
+      #original_hash: 1d57740
       events: >-
-        eblaj avantaĝoj aŭ invitoj por eventoj ligataj al la asocio (pasintece
-        AFS-Pokalo kaj Pokalo de Francio)
+        Aliro al iuj unufojaj avantaĝoj (mendoj de vestaĵoj rezervitaj por
+        membroj, partopreno en eventoj, ktp.)
     documents:
       #original_hash: 687c828
       title: Dokumentoj
@@ -732,9 +775,9 @@ eo:
       #original_hash: 8e4e1fc
       ag_of: 'Jara Kunsido je la %{date}'
       #original_hash: 83fce83
-      logo: Logotipo
+      logo: Emblemo
       #original_hash: 6e58a3f
-      logo_html: 'Malsamaj versioj de la logotipo de la asocio disponeblas %{ici}.'
+      logo_html: 'Diversaj versioj de la emblemo de la asocio disponeblas %{ici}.'
       #original_hash: 084c402
       here: tie
     board_history:
@@ -752,45 +795,49 @@ eo:
       ongoing: nuna
     logos:
       #original_hash: 3089591
-      title: Logotipoj
-      #original_hash: 07f61b4
+      title: Emblemoj
+      #original_hash: 289c2a9
       p1: >-
-        La logotipo de AFS uzeblas de ĉiuj organizantoj kaj WCA-Delegitoj en
-        komunikiloj (kiel retejoj, afiŝoj, vestaĵoj) kadre de konkurso subtenata
-        de la asocio.
-      #original_hash: 994ea81
-      p2_html: 'Por uzi ĝin alimaniere, bonvolu kontakti la %{board_mail_link}.'
+        La AFS-emblemo povas esti uzata de ĉiuj organizantoj kaj WCA-Delegitoj
+        en la kunteksto de komunikado (retejo, afiŝoj, vestaĵoj, ktp.)
+        efektivigita dum la organizo de konkurso en partnereco kun la AFS.
+      #original_hash: 7428f8d
+      p2_html: >-
+        Ĉiu alia uzo, kiu ne estis eksplicite rajtigita de AFS, estas
+        malpermesita. Por negoci la uzon de la emblemo, precipe pri komercaj
+        subtenoj aŭ en kazo de dubo pri ĝia uzo, bonvolu kontakti la Estraron ĉe
+        ĉi tiu adreso: %{board_mail_link}.
       #original_hash: 553b59e
-      p3_before_ul: 'La logotipo ekzistas en la sekvaj versioj:'
+      p3_before_ul: 'La emblemo ekzistas en la sekvaj versioj:'
       #original_hash: 58f36af
       p3_after_ul: >-
         Ĝi estis kreita kaj ofertita de François Grassard, dankon al li. Dankon
         ankaŭ al Delphine Tran por la eps-versio.
       #original_hash: 1aea1f5
-      png: Logotipo en matrica versio (png)
+      png: Emblemo en matrica versio (png)
       #original_hash: f43e407
-      svg: Logotipo en vektora versio (svg)
+      svg: Emblemo en vektora versio (svg)
       #original_hash: 0cddf73
-      eps: Logotipo kiel eps-dosiero
+      eps: Emblemo kiel eps-dosiero
       #original_hash: 98b3bda
-      png_with_text: Logotipo kun teksto en matrica versio (png)
+      png_with_text: Emblemo kun teksto en matrica versio (png)
       #original_hash: 2c97df6
-      svg_with_text: Logotipo kun teksto en vektora versio (svg)
+      svg_with_text: Emblemo kun teksto en vektora versio (svg)
       #original_hash: 03682e1
-      eps_with_text: Logotipo kun teksto kiel eps-dosiero
+      eps_with_text: Emblemo kun teksto kiel eps-dosiero
       #original_hash: 065e2fd
-      history_html: 'Vi povas trovi la historion de la logotipoj ĉe %{this_page}.'
+      history_html: 'Vi povas trovi la historion de la emblemoj ĉe %{this_page}.'
       #original_hash: 2e41e07
       this_page: tiu paĝo
     logo_history:
       #original_hash: 880f2c0
-      title: Historio de la logotipo
+      title: Historio de la emblemo
       #original_hash: de2110b
       period: Periodo
       #original_hash: 9253f8e
-      noletters: Logotipo sen teksto
+      noletters: Emblemo sen teksto
       #original_hash: 35f4519
-      letters: Logotipo kun teksto
+      letters: Emblemo kun teksto
       #original_hash: 3e8dd37
       current: Nuna (ekde 2017)
     coupedefrance:
@@ -847,7 +894,7 @@ eo:
         Vi ankaŭ povas uzi la iCal-version por aldoni tiun kalendaron kiel
         eksteran kalendaron al via agendo (notu: nur la venontaj WCA-konkursoj
         estas en la iCal-kalendaro).
-      #original_hash: 96bb64c
+      #original_hash: 97570b2
       ical_url_html: 'La ligilo estas <code>%{url}</code>'
       old_comps_pages:
         #original_hash: 949d635
@@ -940,7 +987,7 @@ eo:
       #original_hash: 8fecbfa
       add_element: Aldoni elementon
       #original_hash: c83d20d
-      logo_alt: 'Logotipo %{resource_name}'
+      logo_alt: 'Emblemo %{resource_name}'
       #original_hash: c9b2d0d
       link_html: 'Ligilo: %{lien}'
       #original_hash: aa468ae
@@ -954,10 +1001,10 @@ eo:
       destroy: La ekstera risurco estis sukcese forigita.
   hardware:
     #original_hash: 8c255be
-    title_list_owners: Listo de la personoj kiuj havas materialon
+    title_list_owners: Listo de la personoj kiuj havas ekipaĵon
     new:
       #original_hash: 21daf10
-      title: Kreado de nova materialo
+      title: Kreado de nova ekipaĵo
     edit:
       #original_hash: 7ab709b
       page_title: 'Redakto de %{hardware_name}'
@@ -965,7 +1012,7 @@ eo:
       title: 'Redakto de %{hardware_name} (%{type})'
     index:
       #original_hash: c39e887
-      title: Materialo
+      title: Ekipaĵo
       #original_hash: c02d9f1
       manage_bags: Administri la sakojn
       #original_hash: 7ff2037
@@ -983,7 +1030,7 @@ eo:
       #original_hash: c3cd636
       actions: Agoj
       #original_hash: f55f8a2
-      add: Aldoni novan materialon
+      add: Aldoni novan ekipaĵon
     show:
       #original_hash: 51b39e6
       title: 'Informoj pri %{hardware_name}'
@@ -995,11 +1042,11 @@ eo:
       in_bag_html: 'En la sako %{bag_link}'
     notif:
       #original_hash: 6de8d76
-      create: La materialo estis sukcese kreita.
+      create: La ekipaĵo estis sukcese kreita.
       #original_hash: b43e974
-      update: La materialo estis sukcese ĝisdatigita.
+      update: La ekipaĵo estis sukcese ĝisdatigita.
       #original_hash: b2efea5
-      destroy: La materialo estis sukcese forigita.
+      destroy: La ekipaĵo estis sukcese forigita.
   bags:
     #original_hash: 17e55c0
     owner_title: Listo de la personoj kiuj havas la sakon
@@ -1011,7 +1058,7 @@ eo:
       #original_hash: e64bf50
       title: Sakoj
       #original_hash: 6d2f60c
-      manage_hardware: Administri materialon
+      manage_hardware: Administri ekipaĵon
       #original_hash: 692de2e
       in_it: 'Ene estas:'
       #original_hash: 1c32835
@@ -1026,7 +1073,7 @@ eo:
       #original_hash: 9c0bd8d
       name: 'Nomo:'
       #original_hash: 17f280f
-      hardware_name: Nomo de la materialo
+      hardware_name: Nomo de la ekipaĵo
     notif:
       #original_hash: 0235722
       create: La sako estis sukcese kreita.
@@ -1133,7 +1180,7 @@ eo:
     #original_hash: 9721761
     city: Urbo
     #original_hash: 99d0157
-    end_of_subscription: Fino de membriĝo
+    end_of_subscription: Fino de membreco
     #original_hash: 2a78f0e
     country: Lando
     #original_hash: 334f58a
@@ -1181,11 +1228,11 @@ eo:
     deleted: Kotizo forigita
     #original_hash: b7c4546
     members: Membroj
-    subscriptions: Membriĝoj
+    subscriptions: Membrecoj
     #original_hash: b571927
     members_nb: '%{nb} membroj je %{date}'
     #original_hash: e821a1a
-    none: 'Neniu membro, provu importi membriĝojn el HelloAsso.'
+    none: 'Neniu membro, provu importi membrecojn el HelloAsso.'
     #original_hash: 0953ab2
     import_html: 'Importi CSV-dosieron el %{helloasso}.'
     #original_hash: bbd4838
@@ -1205,9 +1252,9 @@ eo:
     #original_hash: 63b5b11
     already_in_db: La ĉi-subaj kontribuoj jam estas en la datumbazo kaj estos ignorataj.
     #original_hash: 0ecfe4d
-    edit_title: 'Redakto de la membriĝo de %{firstname} %{name} (%{email})'
+    edit_title: 'Redakto de la membreco de %{firstname} %{name} (%{email})'
     #original_hash: 6e7acb0
-    successful_update: Membriĝo ĝisdatigita.
+    successful_update: Membreco ĝisdatigita.
   tags:
     #original_hash: f287ae9
     successful_update: Etikedo ĝisdatigita.
@@ -1234,7 +1281,7 @@ eo:
     no_rights:
       #original_hash: 4b92909
       admin: Nur la administrantoj povas aliri tiun paĝon.
-      #original_hash: 72c9b8e
+      #original_hash: 858d875
       delegate: Nur la Delegitoj povas aliri tiun paĝon.
       #original_hash: ba25025
       communication: Nur membroj de la Komunikada Teamo povas aliri tiun paĝon.
@@ -1274,7 +1321,7 @@ eo:
       disclaimer: >-
         Noto: vi devas havi aktivan kotizon por ke la kampoj kun * estu
         konsiderataj. Vi estos aŭtomate forigita el la dissendolistoj se via
-        membriĝo finiĝas sen esti repagita.
+        membreco finiĝas sen esti repagita.
       #original_hash: cdc7dfd
       notif_should_work: >-
         Kiel nuna membro de la asocio, aktivado de tiuj sciigoj/dissendolistoj
@@ -1289,8 +1336,8 @@ eo:
       contact_html: >-
         Se vi pensas ke malveras la informoj ĉi-sube, bonvolu kontakti la
         estraron je la retpoŝtadreso %{email}.
-      #original_hash: b11363e
-      no_subscription_html: 'Vi havas neniun registritan kotizon. Iru ĉe %{helloasso} por membriĝi!'
+      #original_hash: ede0701
+      no_subscription_html: 'Vi ne havas registritajn kontribuojn. Iru al %{helloasso} por aliĝi!'
       #original_hash: f7f8d86
       active_subscription: 'Pagita je %{date}, tiu kotizo ankoraŭ aktivas.'
       #original_hash: 3ac1a0c
@@ -1350,3 +1397,4 @@ eo:
   results:
     #original_hash: dc78e29
     successfully_destroyed: Rezultoj sukcese forigitaj
+
