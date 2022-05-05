@@ -8,7 +8,7 @@ class User < ApplicationRecord
   scope :subscription_notification_enabled, -> { where(notify_subscription: true).where.not(email: nil) }
   scope :subscription_discussion_enabled, -> { where(discussion_subscription: true).where.not(email: nil) }
   scope :subscription_newsletter_enabled, -> { where(newsletter_subscription: true).where.not(email: nil) }
-  scope :french_delegates, -> { where(french_delegate: true).where.not(delegate_status: [nil, ""]) }
+  scope :french_delegates, -> { where(french_delegate: true) }
 
   # NOTE: /!\ Important: this is *not* the list of subscribers.
   # This is a list of person who *did* log in the website, and are subscribers.
@@ -69,7 +69,7 @@ class User < ApplicationRecord
   end
 
   def french_delegate?
-    delegate? && french_delegate
+    french_delegate
   end
 
   def country_name
