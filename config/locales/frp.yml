@@ -4,7 +4,7 @@ frp:
     please_sign_in: Marci de vos branchiér por arrevar a ceta partia
     form:
       #original_hash: 9020b58
-      invalid: Lo formuléro est envalido. Marci d'adobar les èrrors cé desot.
+      invalid: Lo formuléro est envalido. Marci d'adobar les èrrors cé d'avâl.
     #original_hash: c95a78a
     are_you_sure: Éte-vos sûr ?
   new_session:
@@ -12,13 +12,13 @@ frp:
     title: Conèccion avouéc un compto WCA
     #original_hash: c8e290a
     p1: >-
-      Por vos branchiér u sito de noutra associacion, vos dête avêr un compto
-      sur lo sito de la %{wca}.
+      Por vos branchiér u seto de noutra associacion, vos dête avêr un compto
+      sur lo seto de la %{wca}.
     #original_hash: fd96bc3
     p2: >-
       En clicant sur "Sè branchiér avouéc la WCA", vos seréd redirigiê vers lo
-      sito de la WCA por vos identifeyér, que vos redirigierat pués-cen vers lo
-      sito de l'AFS yô vos seréd adonc branchiê.
+      seto de la WCA por vos identifeyér, que vos redirigierat pués-cen vers lo
+      seto de l'AFS yô vos seréd adonc branchiê.
   events:
     #original_hash: e6046af
     '222': Cubo 2x2x2
@@ -37,9 +37,9 @@ frp:
     #original_hash: 5c72376
     333fm: 3x3x3 rèsolucion optimisâye
     #original_hash: 7834086
-    333oh: 3x3x3 a una man
+    333oh: 3x3x3 a yona man
     #original_hash: ee71abe
-    333ft: 3x3x3 avouéc los pieds
+    333ft: 3x3x3 avouéc los pièds
     #original_hash: 04f6b3e
     clock: Clock
     #original_hash: d542376
@@ -151,7 +151,7 @@ frp:
         #original_hash: a1b04b2
         draft: Ceta publecacion est una bredolye
         #original_hash: f2be489
-        feature: Metre en valor sur la pâge d'acuely
+        feature: Betar en valor sur la pâge d'acuely
         #original_hash: 0bbf74d
         competition_page: Ceta publecacion est una pâge de compèticion
       import_user:
@@ -175,16 +175,16 @@ frp:
         french_delegate: Dèlègâ Francês
         #original_hash: a06e15b
         notify_subscription: >-
-          Je souhèto activar les notificacions (avèrtissement de fin
+          Je vuelo activar les notificacions (avèrtissement de fin
           d'enscripcion, novèles compèticions anonciêes en France) *
         #original_hash: fa1eb62
         discussion_subscription: >-
-          Je souhèto étre dens la lista de discussion membros
+          Je vuelo étre dens la lista de discussion membros
           (adherents-discussion@speedcubingfrance.org) *
         #original_hash: 0f2da1b
-        newsletter_subscription: Je souhèto recevêr les lètres d'enformacions *
+        newsletter_subscription: Je vuelo recevêr les lètres d'enformacions *
         #original_hash: 7da36e9
-        city: Vela de rèsidence (code postâl)
+        city: Vela de rèsidence (codo postâl)
       tag:
         #original_hash: b019b38
         name: Alias de l'ètiquèta
@@ -199,7 +199,7 @@ frp:
           #original_hash: 8481498
           start: Du
           #original_hash: 7a1732d
-          end: A lo
+          end: U
       bag:
         #original_hash: 7ff2037
         name: Nom
@@ -218,7 +218,7 @@ frp:
         #original_hash: 7ff2037
         name: Nom
         #original_hash: bcabc83
-        website: Sito entèrnète
+        website: Séto vouebe
         #original_hash: 84add5b
         email: Corrièl
         #original_hash: 82da67b
@@ -228,7 +228,7 @@ frp:
         #original_hash: 83fce83
         logo: Simbolo
         #original_hash: 3d7c87c
-        department: Dèpartement
+        department: Dèpartament
         #original_hash: 9721761
         city: Vela
       external_resource:
@@ -370,9 +370,9 @@ frp:
           Pratico por chavonar a la man la compèticion (les dâtes ant pas d'hora
           associyêe !)
         #original_hash: 0b68ac1
-        slug: 'Solament des caractèros alfanumèrico et pués ''-'' et ''_'', sen èspâço !'
+        slug: 'Solament des caractèros alfanumèricos et pués ''-'' et ''_'', sen èspâço !'
         #original_hash: bad0932
-        scrambles: Ils s'afichieront durent la sêsia des temps
+        scrambles: Ils s'afichieront durant la sêsia des temps
   helpers:
     submit:
       session:
@@ -385,7 +385,7 @@ frp:
         #original_hash: 895bffd
         create: Crèar la compèticion
         #original_hash: 06b42b2
-        update: Metre a jorn la compèticion
+        update: Betar a jorn la compèticion
       calendar_event:
         #original_hash: 154dd8d
         create: Crèar l'èvènament
@@ -395,7 +395,7 @@ frp:
         #original_hash: 89f072d
         create: Crèar lo voto
         #original_hash: b233727
-        update: Metre a jorn lo voto
+        update: Betar a jorn lo voto
       vote_answer:
         #original_hash: 1fde29d
         update: Sôvagouardar voutron voto
@@ -406,7 +406,7 @@ frp:
         update: Sôvagouardar
       import_user:
         #original_hash: 4844932
-        submit: Envoyér la requéta
+        submit: Mandar la requéta
       import_form:
         #original_hash: 8e43954
         submit: Importar lo CSV
@@ -420,22 +420,22 @@ frp:
         #original_hash: 0c67981
         create: Crèar lo clube/l'associacion
         #original_hash: 567d3f9
-        update: Metre a jorn lo clube/l'associacion
+        update: Betar a jorn lo clube/l'associacion
       external_resource:
         #original_hash: d3c9924
         create: Crèar la ressôrsa
         #original_hash: 9db5eab
-        update: Metre a jorn la ressôrsa
+        update: Betar a jorn la ressôrsa
       hardware:
         #original_hash: 70b9f96
         create: Crèar un matèrièl
         #original_hash: 0084ac2
-        update: Metre a jorn lo matèrièl
+        update: Betar a jorn lo matèrièl
       bag:
         #original_hash: a97cbd5
         create: Crèar un sac
         #original_hash: 25135b2
-        update: Metre a jorn lo sac
+        update: Betar a jorn lo sac
       subscription:
         #original_hash: 6bc41fe
         update: Modifiar ceta enscripcion
@@ -458,12 +458,12 @@ frp:
     stayathome: '#réstâdchiézvos'
     create:
       #original_hash: dab4f04
-      title: Crèar una compèticion en legne
+      title: Crèar na compèticion en legne
       #original_hash: 4ac6110
       success: La compèticion en legne at étâ crèe avouéc reusséta.
     update:
       #original_hash: da5eeba
-      success: La compèticion en legne at étâ mêsa a jorn avouéc reusséta.
+      success: La compèticion en legne at étâ betâye a jorn avouéc reusséta.
     destroy:
       #original_hash: aebc829
       success: La compèticion en legne at étâ dètruita avouéc reusséta.
@@ -483,7 +483,7 @@ frp:
       none: pas yon
     index:
       #original_hash: 5e53224
-      range: 'Du %{start_date} a lo %{end_date}'
+      range: 'Du %{start_date} u %{end_date}'
       #original_hash: c95a78a
       confirm: Éte-vos sûr ?
     show:
@@ -500,9 +500,9 @@ frp:
       #original_hash: 988afa2
       comp_over: 'La compèticion est chavonâye, il y at avu %{n} participants.'
       #original_hash: 603b6e6
-      comp_ongoing: 'La compèticion est en cors, vos pouede envoyér voutros rèsultats.'
+      comp_ongoing: 'La compèticion est en cors, vos pouede mandar voutros rèsultats.'
       #original_hash: 18039d0
-      comp_not_started: 'Revenéd més târd, la compèticion at pas oncor dèmarrâye !'
+      comp_not_started: 'Revenéd més târd, la compèticion at pas oncora comenciê !'
       #original_hash: d82aeca
       comp_not_public: Ceta compèticion est pas visibla
       #original_hash: abc5681
@@ -520,7 +520,7 @@ frp:
       #original_hash: a0a0e6e
       scrambles: >-
         Afichiér los mècllos de l'èprôva (por los importar dens una aplicacion
-        coment cstimer)
+        come cstimer)
       #original_hash: a7a4a79
       save_before_switch: Pensâd a sôvagouardar devant que de changiér d'èprôva
       #original_hash: 9ada143
@@ -532,7 +532,7 @@ frp:
       #original_hash: fc7c5ad
       extra: 'Èxtra %{n}'
       #original_hash: c0463eb
-      best: Meilleur
+      best: Melyor
       #original_hash: ef33304
       average: Moyèna
   nav:
@@ -566,7 +566,7 @@ frp:
       #original_hash: 83843d0
       tutos: Tutoriéls
       #original_hash: e91d268
-      local_clubs: Clubes et associacions locales
+      local_clubs: Clubes et associacions locâles
       #original_hash: fc5404d
       extern_resources: Ressôrses èxtèrnes
     #original_hash: b37456c
@@ -607,7 +607,7 @@ frp:
     #original_hash: e2dfef7
     international: Championats Entèrnacionâls
     #original_hash: 30d7113
-    no_comp_in_france: Gins de compèticion en France a venir por lo moment.
+    no_comp_in_france: Gins de compèticion en France a vegnir por lo moment.
     #original_hash: 0855684
     posts: Publecacions
     #original_hash: 9b65f18
@@ -617,7 +617,7 @@ frp:
     title: Coment entrar sos temps ?
     #original_hash: 5c798bb
     p1: >-
-      Vos pouede envoyér, adobar, ou suprimar voutra participacion tant que la
+      Vos pouede mandar, adobar, ou suprimar voutra participacion tant que la
       compèticion est en cors. Los temps dêvont étre entrâs, sen pouent,
       doux-pouents ni virgules, la programerie ferat la résta. Per ègzemplo :
     #original_hash: 103ec05
@@ -649,8 +649,8 @@ frp:
     #original_hash: 505e642
     enjoying: >-
       Cen vos plét ? Bôna novèla, o est ègzactament ense que nos rentrens los
-      temps durent les compèticions oficièles ! Margalyéd pas a venir proposar
-      voutra éde a la sêsia des temps durent la compèticion que vint ;)
+      temps durant les compèticions oficièles ! Margalyéd pas a vegnir proposar
+      voutra éde a la sêsia des temps durant la compèticion que vint ;)
   association:
     introduction:
       #original_hash: 06494ee
@@ -659,7 +659,7 @@ frp:
       introduction: Presentacion
       #original_hash: f85bdfb
       p1: >-
-        L'Associacion Francêsa de Speedcubing (AFS) est una associacion louè
+        L'Associacion Francêsa de Speedcubing (AFS) est na associacion louè
         1901, rassemblant des volontèros et membros passionâs u tôrn de la
         pratica des damâjo-téta de rotacion, que lo cubo enventâ per Ernö Rubik
         est lo més cèlèbro reprèsentant.
@@ -670,9 +670,9 @@ frp:
         (règies per la World Cube Association). A ceti titro, nos sotenens los
         enganciors de difèrentes maniéres (prèsto de matèrièl, éde u financement
         de sâles, assurence, maneyance des frés d'enscripcion, etc.) Nos
-        entèrvenens asse-ben règuliérement dens lo câdro de difèrents èvènements
-        (culturèls, associatifs, comèrcials, mèdiaticos, charitât) en proposant
-        dèmonstracions et iniciacions.
+        entèrvenens ètot règuliérement por difèrents èvènements (culturèls,
+        associatifs, comèrcials, mèdiaticos, charitât) avouéc des dèmonstracions
+        et des iniciacions.
       #original_hash: 0392653
       p3_html: 'Vos pouede enscrire a l''associacion sur ceta %{link_page}.'
       #original_hash: 767013c
@@ -686,11 +686,11 @@ frp:
       speedcubing: speedcubing
       board:
         #original_hash: 70d4735
-        title: Bureau
+        title: Burô
         #original_hash: 274e83b
         desc_html: 'Lo %{link} est ora constituâ de :'
         #original_hash: fe22b52
-        name: bureau
+        name: burô
         #original_hash: 13b644e
         president: 'Pauline Bonnaudet, Prèsidenta'
         #original_hash: a688da0
@@ -702,10 +702,10 @@ frp:
         title: Èquipes
         #original_hash: 90f2a41
         desc: >-
-          Plusiors èquipes sont rèsponsâbles de tâches prècises dedens
+          Plusiors èquipes sont rèsponsâblles de tâches prècises dedens
           l'associacion :
         #original_hash: e2f9163
-        website: 'Sito entèrnète : Philippe Virouleau et Antoine Piau'
+        website: 'Seto vouebe : Philippe Virouleau et Antoine Piau'
         #original_hash: 8290088
         contact: >-
           Contacto : Pauline Bonnaudet, Hippolyte Moreau, Maxime Lefebvre,
@@ -726,13 +726,13 @@ frp:
       title: Enscripcions
       #original_hash: dc406f2
       p1: >-
-        Tota pèrsona, quints que seyont sa nacionalitât ou son âjo, pôt devenir
-        membro de l'associacion per simpla enscripcion et profitar des avantâjos
-        siuvents :
+        Tota pèrsona, quints que seyont sa nacionalitât ou son âjo, pôt devegnir
+        membro de l'associacion avouéc na simpla enscripcion et profitar des
+        avantâjos cé d'avâl :
       #original_hash: a5b04c2
       p2_html: >-
-        L'enscripcion est asse-ben una maniére d'aportar voutron solas financiér
-        a l'associacion et est (avouéc los dons) noutra principâla sôrsa de
+        L'enscripcion est ètot na maniére de balyér voutron solas financiér a
+        l'associacion et est (avouéc los dons) noutra principâla sôrsa de
         financement (%{link_minutes}).
       #original_hash: 6d11140
       minutes: vêre los comptos-rebalyês
@@ -742,13 +742,13 @@ frp:
         rècoltar sos dons et enscripcions ! Vos pouede donc vos rebalyér sur la
         %{link_ha}, et clicar sur lo lim “S'agllètar”. Lo montant de la
         cotisacion est de 10 uros, et rebalye l'enscripcion veretâbla por una
-        durâ d'un an.
+        durâ de yon an.
       #original_hash: f44d2b4
       afs_pages: pâge de l'AFS
       #original_hash: c633865
       asso_life: >-
         La possibilitât de participar a la via de l'associacion, spècialament en
-        votant durent les assemblâs gènèrales ou en sè presentant ux èlèccions ;
+        votant durant les assemblâs gènèrales ou en sè presentant ux èlèccions ;
       #original_hash: db22a7f
       free_dues: >-
         L'enscripcion gratuita a la plepârt des compèticions enganciêes avouéc
@@ -760,7 +760,7 @@ frp:
         enscripcions, cuvèrta de l'èvènement per noutra assurence, etc.) ;
       #original_hash: d483255
       hardware: >-
-        La possibilitât d'emprontar du matèrièl de l'associacion (sot
+        La possibilitât d'emprontar du matèrièl de l'associacion (avouéc
         condicions) ;
       #original_hash: e21f321
       notifs_html: >-
@@ -786,12 +786,12 @@ frp:
       #original_hash: fee09cd
       reports: Compte-rebalyês
       #original_hash: 8e4e1fc
-      ag_of: 'Assemblâ Gènèrala du %{date}'
+      ag_of: 'Assemblâ Gènèrâla du %{date}'
       #original_hash: 83fce83
       logo: Simbolo
       #original_hash: 6e58a3f
       logo_html: >-
-        Lo simbolo de l'associacion dens ses difèrentes vèrsions est disponibla
+        Lo simbolo de l'associacion dens ses difèrentes vèrsions est disponibllo
         %{ici}.
       #original_hash: 084c402
       here: cé
@@ -813,8 +813,8 @@ frp:
       title: Simbolos
       #original_hash: 289c2a9
       p1: >-
-        Lo simbolo de l'AFS est utilisâblo per tôs los enganciors et Dèlègâs WCA
-        dens lo câdro de la comunicacion (sito entèrnète, afiches, vetures,
+        Lo simbolo de l'AFS pôt étre utilisâ per tôs los enganciors et Dèlègâs
+        WCA dens lo câdro de la comunicacion (seto vouebe, afiches, vetures,
         etc.) gllètâye a l'organisacion d'una compèticion en partenariat avouéc
         l'AFS.
       #original_hash: 7428f8d
@@ -828,7 +828,7 @@ frp:
       #original_hash: 58f36af
       p3_after_ul: >-
         Il at étâ crèâ et nos at étâ ofèrt per François Grassard, marci a lui.
-        Marci asse-ben a Delphine Tran por la vèrsion eps.
+        Marci ètot a Delphine Tran por la vèrsion eps.
       #original_hash: 1aea1f5
       png: Simbolo en vèrsion "cârta de bites" (png)
       #original_hash: f43e407
@@ -863,7 +863,7 @@ frp:
     #original_hash: 0c5a479
     create: Crèar un èvènement
     #original_hash: 7a0e6b9
-    edit: 'Metre a jorn %{event}'
+    edit: 'Betar a jorn %{event}'
     #original_hash: 5ab4ec6
     close: Cllôre
     #original_hash: 8bf112d
@@ -874,10 +874,10 @@ frp:
       title: Èdicion d'una associacion ou d'un clube
     index:
       #original_hash: e91d268
-      title: Clubes et associacions locales
+      title: Clubes et associacions locâles
       #original_hash: 361ed26
       disclaimer: >-
-        Ora, les associacions locales et los clubes de speedcubing sont pas
+        Ora, les associacions locâles et los clubes de speedcubing sont pas
         enrolâs a l'AFS. Pas-muens, nos vos listens cé celos que nos cognessens
         l'ègzistence en France.
       #original_hash: 8fecbfa
@@ -891,7 +891,7 @@ frp:
       #original_hash: a57e6ad
       create: Lo clube at étâ crèâ avouéc reusséta.
       #original_hash: 93de9ed
-      update: Lo clube at étâ metu a jorn.
+      update: Lo clube at étâ betâ a jorn.
       #original_hash: ded8138
       destroy: Lo clube at étâ dètruit avouéc reusséta.
   competitions:
@@ -908,9 +908,9 @@ frp:
       afs_events: Los ôtros èvènements AFS
       #original_hash: 758121a
       ical: >-
-        Vos pouede asse-ben utilisar la vèrsion iCal por apondre ceti calendriér
+        Vos pouede ètot utilisar la vèrsion iCal por apondre ceti calendriér
         coment un calendriér èxtèrno a voutra agendâ (nota : solètes les
-        compèticions WCA a venir sont apondues dens lo calendriér iCal).
+        compèticions WCA a vegnir sont apondues dens lo calendriér iCal).
       #original_hash: 97570b2
       ical_url_html: 'L''URL a utilisar est <code>%{url}</code>'
       old_comps_pages:
@@ -918,7 +918,7 @@ frp:
         title: Ancianes pâges de compèticions
         #original_hash: 7a19e96
         p_html: >-
-          Devant que lo sito de la World Cuba Associacion propôse d'hèbèrgiér
+          Devant que lo seto de la World Cuba Associacion propôse d'hèbèrgiér
           les pâges de compèticions, l'AFS hèbèrgiêve cèrtênes pâges de
           compèticions francêses : els sont disponibles %{ici}.
         #original_hash: 084c402
@@ -931,7 +931,7 @@ frp:
         Cen formuléro controle les enformacions afichiêes sur la pâge d'acuely
         que regârde les compèticions majores que vegnont. Se un ID de
         compèticion est present, adonc les enformacions a propôs de la
-        compèticion seront rècupèrâyes sur lo sito de la WCA et afichiêes, senon
+        compèticion seront rècupèrâyes sur lo seto de la WCA et afichiêes, senon
         lo nom et lo tèxto altèrnatif seront utilisâs.
       #original_hash: 1556349
       comp_index_link_html: >-
@@ -957,20 +957,20 @@ frp:
       #original_hash: 419d8cc
       error: 'Una èrror est survenua : %{error}'
       #original_hash: fa23b6a
-      not_announced: Ceta compèticion est pas oncor anonciêe.
+      not_announced: Ceta compèticion est pas oncora anonciêe.
       #original_hash: fcce909
-      none: Vos éd gins de compèticion a venir coment Dèlègâ ou engancior.
+      none: Vos éd gins de compèticion a vegnir coment Dèlègâ ou engancior.
     old_comps_pages:
       #original_hash: 6cf9b8c
       title: Compèticions
       #original_hash: c383422
       intro: >-
         Historicament l'AFS at proposâ ux enganciors de compèticions d'hèbèrgiér
-        lors pâges de compèticions sur lo sito de l'AFS. Lo sito de la WCA
+        lors pâges de compèticions sur lo seto de l'AFS. Lo seto de la WCA
         propôse dês mantegnent quârques anâs un sèrvicio semblent avouéc més de
-        fonccionalitâts, que rebalye donc dèpassâ les pâges sur lo sito de
+        fonccionalitâts, que rebalye donc dèpassâ les pâges sur lo seto de
         l'AFS. La lista cé d'avâl rassemble l'ensemblo des compèticions qu'ant
-        avu una pâge sur lo sito de l'AFS.
+        avu una pâge sur lo seto de l'AFS.
     registrations:
       #original_hash: 7f029fd
       title: 'Enscripcions por %{competition}'
@@ -1018,7 +1018,7 @@ frp:
       #original_hash: 5e2b085
       create: La ressôrsa èxtèrna at étâ crèâye avouéc reusséta.
       #original_hash: e3f96e6
-      update: La ressôrsa èxtèrna at étâ mêsa a jorn.
+      update: La ressôrsa èxtèrna at étâ beta a jorn.
       #original_hash: 4d73533
       destroy: La ressôrsa èxtèrna at étâ dètruita avouéc reusséta.
   hardware:
@@ -1066,7 +1066,7 @@ frp:
       #original_hash: 6de8d76
       create: Lo matèrièl at étâ crèâ avouéc reusséta.
       #original_hash: b43e974
-      update: Lo matèrièl at étâ metu a jorn.
+      update: Lo matèrièl at étâ betâ a jorn.
       #original_hash: b2efea5
       destroy: Lo matèrièl at étâ dètruit avouéc reusséta.
   bags:
@@ -1086,7 +1086,7 @@ frp:
       #original_hash: 1c32835
       comment: 'Comentèro : %{comment}'
       #original_hash: cc2f1ac
-      no_comment: Pas de comentèro
+      no_comment: Gins de comentèro
       #original_hash: 2e60722
       nothing: ren por lo moment.
     show:
@@ -1100,7 +1100,7 @@ frp:
       #original_hash: 0235722
       create: Lo sac at étâ crèâ avouéc reusséta.
       #original_hash: c4f12f6
-      update: Lo sac at étâ metu a jorn.
+      update: Lo sac at étâ beta a jorn.
       #original_hash: e126f12
       destroy: Lo sac at étâ dètruit avouéc reusséta.
   social_medias:
@@ -1140,12 +1140,12 @@ frp:
       #original_hash: 2d5624b
       too_many_answers: Trop de rèponses balyêes.
       #original_hash: 4c5617c
-      no_valid_answers: Marci de chouèsir a muens una rèponsa.
+      no_valid_answers: Marci de chouèsir a muens yona rèponsa.
   posts:
     #original_hash: aeb1be5
-    dates: 'Du %{start} a lo %{end}.'
+    dates: 'Du %{start} u %{end}.'
     #original_hash: d217175
-    visit_website: Vesitar lo sito
+    visit_website: Vesitar lo seto
     #original_hash: a833b79
     read_more: Liére la suite...
     edit:
@@ -1181,7 +1181,7 @@ frp:
       #original_hash: e3f5db8
       create: La publecacion at étâ crèâye avouéc reusséta.
       #original_hash: 4c1d5d8
-      update: La publecacion at étâ mêsa a jorn.
+      update: La publecacion at étâ beta a jorn.
       #original_hash: 646fa09
       destroy: La publecacion at étâ dètruita avouéc reusséta.
   table_headers:
@@ -1246,7 +1246,7 @@ frp:
     #original_hash: 8481498
     from: Du
     #original_hash: 7a1732d
-    to: A lo
+    to: U
   subscriptions:
     #original_hash: 50cbb06
     deleted: Cotisacion suprimâye
@@ -1254,9 +1254,9 @@ frp:
     members: Membros
     subscriptions: Enscripcions
     #original_hash: b571927
-    members_nb: '%{nb} membros a lo %{date}'
+    members_nb: '%{nb} membros u %{date}'
     #original_hash: e821a1a
-    none: 'Pas de membros, èsseyéd d''importar des enscripcions dês HelloAsso.'
+    none: 'Gins de membros, èsseyéd d''importar des enscripcions dês HelloAsso.'
     #original_hash: 0953ab2
     import_html: 'Importar un CSV de %{helloasso}.'
     #original_hash: bbd4838
@@ -1267,12 +1267,12 @@ frp:
     review_title: Changements a sometre
     #original_hash: adad64b
     detected_contributions: >-
-      Les contribucions cé d'avâl ant étâ dètèctâyes, marci de los reliére et de
+      Les contribucions cé d'avâl ant étâ dètèctâyes, marci d'y reliére et de
       sometre lo formuléro solament se tot semble corrècto !
     #original_hash: 4c130d9
     import_contributions: Importar cetes contribucions
     #original_hash: 631a788
-    nothing_to_import: Pas de contribucions a importar.
+    nothing_to_import: Gins de contribucions a importar.
     #original_hash: 63b5b11
     already_in_db: >-
       Les contribucions cé d'avâl sont ja presentes dens la bâsa de donâs et
@@ -1280,15 +1280,15 @@ frp:
     #original_hash: 0ecfe4d
     edit_title: 'Èdicion de l''enscripcion de %{firstname} %{name} (%{email})'
     #original_hash: 6e7acb0
-    successful_update: Enscripcion mêsa a jorn.
+    successful_update: Enscripcion betâ a jorn.
   tags:
     #original_hash: f287ae9
-    successful_update: Ètiquèta mêsa a jorn.
+    successful_update: Ètiquèta betâ a jorn.
     edit:
       #original_hash: d0ec9a2
       title: 'Modifiar l''ètiquèta %{tag}'
       #original_hash: ee690ff
-      back: Revenir a la lista des ètiquètes
+      back: Revegnir a la lista des ètiquètes
     index:
       #original_hash: e26c690
       title: Ètiquètes
@@ -1299,11 +1299,11 @@ frp:
   users:
     update_locale:
       #original_hash: 4a867ef
-      success: Lengoua mêsa a jorn.
+      success: Lengoua betâ a jorn.
       #original_hash: ce495ed
-      failure: Empossiblo de metre a jorn voutron profil.
+      failure: Empossiblo de betar a jorn voutron profil.
       #original_hash: e24f182
-      unavailable: La lengoua demandâye est pas disponibla.
+      unavailable: La lengoua demandâye est pas disponiblla.
     no_rights:
       #original_hash: 4b92909
       admin: Solèts los administrators ant accès a ceta pâge.
@@ -1322,9 +1322,9 @@ frp:
     #original_hash: 90ffee4
     successful_import: 'Usagiér %{user} importâ avouéc reusséta'
     #original_hash: 4855673
-    request_error: Èrror durent la requéta u sito de la WCA
+    request_error: Èrror durant la requéta u seto de la WCA
     #original_hash: e6af7da
-    successful_update: Usagiér metu a jorn avouéc reusséta
+    successful_update: Usagiér betâ a jorn avouéc reusséta
     #original_hash: f9c4b3b
     cannot_edit: Vos pouede pas èditar ceti usagiér
     icons:
@@ -1338,7 +1338,7 @@ frp:
       #original_hash: faa6d32
       my_profile: Mon profil
       #original_hash: 62ac306
-      you_are_a_member: 'Vos éte membro de l''AFS tant qu''a lo %{date}.'
+      you_are_a_member: 'Vos éte membro de l''AFS tant qu''u %{date}.'
       #original_hash: 4ddd81e
       you_are_no_more_a_member: 'Vos éte pas més membro de l''AFS dês lo %{date}.'
       #original_hash: fb679a7
@@ -1384,7 +1384,7 @@ frp:
       title: Importar un usagiér
       #original_hash: 0f3b03d
       use_search: >-
-        Utilisâd lo champ "Rechèrche" por importar un usagiér dês lo sito de la
+        Utilisâd lo champ "Rechèrche" por importar un usagiér dês lo seto de la
         WCA.
       #original_hash: 3a54c1d
       scenarios: >-
@@ -1397,16 +1397,16 @@ frp:
     title: Contacto
     #original_hash: 408cb59
     competition_questions: >-
-      Se vos éd una demanda que regârde una compèticion, marci d'envoyér
+      Se vos éd una demanda que regârde una compèticion, marci de mandar
       dirèctament un corrièl a l'èquipa d'organisacion de ceta-ce. Lor contacto
       sè trôve sur la pâge WCA de la compèticion en demanda.
     #original_hash: e5f169d
     afs_questions_html: >-
-      Por tota demanda, remârca, ou suggèstion que regârde l'AFS : marci
-      d'envoyér un corrièl a %{email}.
+      Por tota demanda, remârca, ou suggèstion que regârde l'AFS : marci de
+      mandar un corrièl a %{email}.
     #original_hash: ceec99a
     website_questions_html: >-
-      Se vos constatâd un problèmo avouéc lo sito entèrnète, vos pouede
+      Se vos constatâd un problèmo avouéc lo seto entèrnète, vos pouede
       dirèctament uvrir una "issue" sur %{github}, ou contactar los
       administrators a l'adrèce %{email}.
     #original_hash: 5442e2b
