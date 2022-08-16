@@ -751,7 +751,6 @@ fr:
       visible: "Visible"
       over: "Terminé"
       options_header: "Options de vote :"
-      add_option: "Ajouter option"
       votes_already: "Il y a déjà des votes, vous ne pouvez pas changer les attributs suivants !"
       add_option: "Ajouter une option"
     show:
