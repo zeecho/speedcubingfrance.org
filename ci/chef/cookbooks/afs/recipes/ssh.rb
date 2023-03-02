@@ -1,7 +1,7 @@
 apt_package "openssh-server"
 
 # Our sshd conf
-template "/etc/ssh/ssh_config.d/afs.conf" do
+template "/etc/ssh/sshd_config.d/afs.conf" do
   source "sshd_afs.conf"
 end
 
