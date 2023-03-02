@@ -1,5 +1,10 @@
 apt_package "openssh-server"
 
+# Our sshd conf
+template "/etc/ssh/ssh_config.d/afs.conf" do
+  source "sshd_afs.conf"
+end
+
 # This also installs the CI pubkey
 bash "install authorized_keys" do
   cwd node[:home]
