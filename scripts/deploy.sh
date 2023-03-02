@@ -3,7 +3,7 @@
 source /etc/profile.d/afs.sh
 
 pull_latest() {
-  git pull
+  git pull --ff-only
 }
 
 rebuild_rails() {
