@@ -13,7 +13,8 @@ end
 cron "daily jobs" do
   command "#{node[:repo_home]}/scripts/deploy.sh scheduled_jobs"
   user node[:user]
-  time :daily
+  hour 4
+  minute 4
   # A bit dirty, but prevent registering this cron on "semi-prod" environment
   # like us testing on dev.afs.
   only_if { node[:domain_name] == "www.speedcubingfrance.org" }
