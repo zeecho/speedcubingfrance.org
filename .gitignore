@@ -21,6 +21,7 @@ yarn-debug.log*
 .byebug_history
 credentials.json
 oauth_credentials.json
+secret
 
 /public/packs
 /public/packs-test
