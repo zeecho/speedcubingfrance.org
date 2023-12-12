@@ -3,6 +3,7 @@ include_recipe "apt"
 
 apt_package %w(git
                vim
+               cron
                htop
                autoconf
                bison
