@@ -61,14 +61,14 @@ class SubscriptionsController < ApplicationController
         # Code promo;Nom;Prénom;Date;Email;Attestation;Champ additionnel: ID WCA (si connu)
         # The actual code promo is at most 10 chars.
         code_promo = row["Code promo"].blank? ? "" : row["Code promo"][0..9]
-        receipt_url = row["Attestation"] || code_promo
-        subscription = Subscription.find_or_initialize_by(payed_at: DateTime.parse(row["Date"]),
+        receipt_url = code_promo
+        subscription = Subscription.find_or_initialize_by(payed_at: DateTime.parse(row["Date de la commande"]),
                                                           receipt_url: receipt_url)
         if subscription.new_record?
-          subscription.assign_attributes(name: row["Nom"].strip,
-                                         firstname: row["Prénom"].strip,
-                                         email: row["Email"]&.strip,
-                                         wca_id: row["Champ additionnel: ID WCA (si connu)"])
+          subscription.assign_attributes(name: row["Nom adhérent"].strip,
+                                         firstname: row["Prénom adhérent"].strip,
+                                         email: row["Email payeur"]&.strip,
+                                         wca_id: row["ID WCA (si connu)"])
           @new_subscriptions << subscription
         else
           @subscriptions << subscription
