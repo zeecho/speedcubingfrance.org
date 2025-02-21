@@ -55,7 +55,8 @@ class VotesController < ApplicationController
     if answers.blank?
       return redirect_to @vote, flash: { danger: I18n.t("votes.notif.no_valid_answers") }
     end
-    if !@vote.multiple_choices && answers.size > 1
+    # TODO this is temporary (for french cup vote). We need to either make this an option or just purely revert it in one month
+    if (!@vote.multiple_choices && answers.size > 1) || answers.size > 8
       return redirect_to @vote, flash: { danger: I18n.t("votes.notif.too_many_answers") }
     end
 
