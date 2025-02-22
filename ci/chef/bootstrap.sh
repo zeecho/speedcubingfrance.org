@@ -24,11 +24,16 @@ export DEBIAN_FRONTEND=noninteractive
 export PATH=/opt/chef/embedded/bin:$PATH
 
 apt-get install -yq --no-install-recommends \
-  apt-transport-https curl sudo wget ca-certificates lsb-release
+  apt-transport-https curl sudo wget ca-certificates lsb-release build-essential libffi-dev
 
 curl -L https://omnitruck.chef.io/install.sh | bash -s -- -v 18.0.185
 mkdir -p /opt/vendor_cookbooks
-gem install berkshelf -v "7.2.2"
+# FIXME: there is a weird chicken/egg problem here; we want chef to control the
+# ruby version available on the server, but in order to run a specific version
+# of chef/berkshelf we also need a specific version of ruby.
+# Maybe we should just dump a specific ruby binary in /usr/local to bootstrap
+# the thing, and let chef properly provide the ruby version the website expects?
+gem install berkshelf -v "8.0.15"
 berks install
 berks vendor /opt/vendor_cookbooks
 
