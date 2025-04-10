@@ -58,10 +58,6 @@ class VotesController < ApplicationController
     if !@vote.multiple_choices && answers.size > 1
       return redirect_to @vote, flash: { danger: I18n.t("votes.notif.too_many_answers") }
     end
-    # TODO this is temporary (for french cup vote). We need to either make this an option or just purely revert it in one month
-    if answers.size != 8
-      return redirect_to @vote, flash: { danger: "Vous devez choisir exactement 8 réponses" }
-    end
 
     @user.with_lock do
       @vote.answers_for_user(@user).delete_all
@@ -108,7 +104,7 @@ class VotesController < ApplicationController
 
     def redirect_unless_can_vote!
       unless @vote.user_can_vote?(current_user)
-        redirect_to root_url, :alert => "Vous devez avoir un ID WCA pour pouvoir voter"
+        redirect_to root_url, :alert => I18n.t("users.no_rights.sub_votes")
       end
     end
 end

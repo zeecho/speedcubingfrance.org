@@ -12,7 +12,6 @@ class Vote < ApplicationRecord
   end
 
   def user_can_vote?(user)
-    # TODO this is temporary (for french cup vote). We need to either make this an option or just purely revert it in one month
-    user&.wca_id?
+    user&.has_active_subscription?
   end
 end
